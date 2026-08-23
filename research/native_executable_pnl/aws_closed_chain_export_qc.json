@@ -1,0 +1,50 @@
+{
+  "schema": "crypto-hft-native-qc-v1",
+  "source": "native_binance_usdm",
+  "raw_file": "BTCUSDT-LONDON-20260820T000000Z.chft.zst",
+  "file_index": 3,
+  "symbol": "BTCUSDT",
+  "tick_size": "0.10",
+  "step_size": "0.001",
+  "file": {
+    "raw_records": 8475493,
+    "depth_events": 1816470,
+    "applied_depth_events": 1816463,
+    "stale_depth_events": 7,
+    "trade_events": 6659009,
+    "snapshots": 3,
+    "depth_stream_opens": 3,
+    "trade_stream_opens": 3,
+    "sequence_gaps": 0,
+    "parse_failures": 0,
+    "crossed_book_states": 0,
+    "empty_bid_states": 0,
+    "empty_ask_states": 0,
+    "first_local_receive_ns": 1787257570531416241,
+    "last_local_receive_ns": 1787443199952105918,
+    "first_exchange_time_ms": 1787257571335,
+    "last_exchange_time_ms": 1787443199838,
+    "final_update_id": 11359975835436,
+    "final_checksum": "0x6e4043a873c41f82",
+    "duration_s": 185629.42069
+  },
+  "dataset": {
+    "rows": 1856235,
+    "segments": 3,
+    "depth_events_in_segment": 1816459,
+    "trade_events_in_segment": 6659006,
+    "depth_events_outside_segment": 11,
+    "valid_research_s": 185623.45445,
+    "grid_ms": 100,
+    "order_lots": 5,
+    "adverse_threshold_half_ticks": 2,
+    "fill_horizon_ms": 30000,
+    "weight_lambda": 0.5
+  },
+  "segments": [
+    {"segment_id": 1, "start_ns": 1787257571767793307, "end_ns": 1787340372025035999, "duration_s": 82800.2572427, "first_exchange_time_ms": 1787257571651, "last_exchange_time_ms": 1787340371375, "first_update_id": 11335825569454, "final_update_id": 11347566696598, "depth_events": 811697, "trade_events": 4496637, "rows": 828003, "bid_full_fills": 689981, "ask_full_fills": 694672, "close_reason": "depth_desync"},
+    {"segment_id": 2, "start_ns": 1787340374336207873, "end_ns": 1787423174622798081, "duration_s": 82800.2865902, "first_exchange_time_ms": 1787340374230, "last_exchange_time_ms": 1787423174287, "first_update_id": 11347566932311, "final_update_id": 11358239485065, "depth_events": 808462, "trade_events": 2010994, "rows": 828003, "bid_full_fills": 649276, "ask_full_fills": 669716, "close_reason": "depth_desync"},
+    {"segment_id": 3, "start_ns": 1787423177041488521, "end_ns": 1787443199952105918, "duration_s": 20022.9106174, "first_exchange_time_ms": 1787423176895, "last_exchange_time_ms": 1787443199838, "first_update_id": 11358239709964, "final_update_id": 11359975835436, "depth_events": 196300, "trade_events": 151375, "rows": 200229, "bid_full_fills": 124949, "ask_full_fills": 126044, "close_reason": "end_of_input"}
+  ],
+  "failures": []
+}

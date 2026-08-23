@@ -1,0 +1,4 @@
+{
+  "decision": "NO_ROBUST_CONFIG_FOUND",
+  "reason": "no candidate passed both exploration and validation within 2 rounds"
+}

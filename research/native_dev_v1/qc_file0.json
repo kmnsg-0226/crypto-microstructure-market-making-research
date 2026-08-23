@@ -1,0 +1,48 @@
+{
+  "schema": "crypto-hft-native-qc-v1",
+  "source": "native_binance_usdm",
+  "raw_file": "BTCUSDT-LONDON-20260817T210035Z.chft.zst",
+  "file_index": 0,
+  "symbol": "BTCUSDT",
+  "tick_size": "0.10",
+  "step_size": "0.001",
+  "file": {
+    "raw_records": 64060,
+    "depth_events": 44687,
+    "applied_depth_events": 44686,
+    "stale_depth_events": 1,
+    "trade_events": 19367,
+    "snapshots": 1,
+    "depth_stream_opens": 1,
+    "trade_stream_opens": 1,
+    "sequence_gaps": 0,
+    "parse_failures": 0,
+    "crossed_book_states": 0,
+    "empty_bid_states": 0,
+    "empty_ask_states": 0,
+    "first_local_receive_ns": 1787000436379982129,
+    "last_local_receive_ns": 1787004996150602605,
+    "first_exchange_time_ms": 1787000437345,
+    "last_exchange_time_ms": 1787004995469,
+    "final_update_id": 11308285715933,
+    "final_checksum": "0x427ab1966b6b4308",
+    "duration_s": 4559.77062048
+  },
+  "dataset": {
+    "rows": 45584,
+    "segments": 1,
+    "depth_events_in_segment": 44685,
+    "trade_events_in_segment": 19367,
+    "depth_events_outside_segment": 2,
+    "valid_research_s": 4558.38222306,
+    "grid_ms": 100,
+    "order_lots": 5,
+    "adverse_threshold_half_ticks": 2,
+    "fill_horizon_ms": 30000,
+    "weight_lambda": 0.5
+  },
+  "segments": [
+    {"segment_id": 1, "start_ns": 1787000437557482658, "end_ns": 1787004995939705713, "duration_s": 4558.38222306, "first_exchange_time_ms": 1787000437447, "last_exchange_time_ms": 1787004995469, "first_update_id": 11307986197284, "final_update_id": 11308285715933, "depth_events": 44685, "trade_events": 19367, "rows": 45584, "bid_full_fills": 20593, "ask_full_fills": 18332, "close_reason": "depth_desync"}
+  ],
+  "failures": []
+}

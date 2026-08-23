@@ -1,0 +1,139 @@
+{
+  "schema": "crypto-hft-continuous-inventory-mm-v1",
+  "status": "frozen_before_continuous_inventory_mm_outcomes",
+  "experiment_id": "btc-neutral-vs-obi-aware-continuous-mm-2026-v1",
+  "audit": {
+    "repository_commit_before_freeze": "b5ca20c0d6bc477e6ba001ed253255acd2c622d5",
+    "passive_label_methodology_previously_seen": true,
+    "continuous_inventory_policy_outcomes_seen": false,
+    "all_historical_dates_seen_in_other_research": true,
+    "directional_loop_search_stopped": true
+  },
+  "interpretation": {
+    "neutral_and_obi_aware_are_frozen_before_first_mm_run": true,
+    "no_policy_or_threshold_tuning_between_splits": true,
+    "historical_validation_is_retrospective_not_pristine_live_oos": true,
+    "positive_historical_result_does_not_prove_live_profitability": true
+  },
+  "chronological_splits": {
+    "development_no_tuning": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01"
+    ],
+    "frozen_validation": [
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "replication_only_if_validation_passes": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ]
+  },
+  "market": {
+    "symbol": "BTCUSDT",
+    "venue": "binance_futures",
+    "feature_clock_ms": 100,
+    "quote_decision_cadence_ms": 1000,
+    "quote_lifetime_ms": 1000,
+    "quote_price": "actual_same-decision_best_bid_or_best_ask",
+    "quote_qty_btc": 0.005,
+    "queue_model": "pessimistic_visible_queue",
+    "one_active_order_per_side": true,
+    "reenter_only_on_next_fixed_cadence": true
+  },
+  "inventory": {
+    "start_each_disjoint_day_btc": 0.0,
+    "soft_limit_abs_btc": 0.015,
+    "hard_limit_abs_btc": 0.025,
+    "quantity_tolerance_btc": 0.000000001,
+    "at_or_above_positive_soft_limit": "suppress_bid_inventory_increase",
+    "at_or_below_negative_soft_limit": "suppress_ask_inventory_increase",
+    "hard_limit_may_never_be_breached": true,
+    "day_end": "force_flatten_at_actual_opposite_bbo"
+  },
+  "policies": {
+    "neutral": {
+      "signal_filter": "none",
+      "quote_rule": "both_sides_unless_inventory_soft_or_hard_limit_suppresses_risk_increasing_side"
+    },
+    "obi_aware": {
+      "signal": "weighted_obi_l10",
+      "absolute_threshold": 0.8,
+      "positive_obi": "suppress_ask_unless_ask_reduces_positive_inventory",
+      "negative_obi": "suppress_bid_unless_bid_reduces_negative_inventory",
+      "inside_threshold": "same_as_neutral",
+      "non_finite_signal": "same_as_neutral",
+      "inventory_reducing_side_always_allowed_subject_to_active_order_rule": true,
+      "threshold_is_fixed_not_distribution_fitted": true
+    }
+  },
+  "fill_accounting": {
+    "full_fill_qty": "labeled_filled_qty",
+    "full_fill_inventory_time": "first_fill_local_time_us_conservative_full_qty_recognition",
+    "full_order_active_until": "full_fill_local_time_us",
+    "partial_fill_qty": "labeled_filled_qty",
+    "partial_fill_inventory_time": "first_fill_local_time_us",
+    "partial_order_active_until": "expiry_local_time_us",
+    "unfilled_order_active_until": "expiry_local_time_us",
+    "invalid_at_placement": "do_not_place",
+    "fills_processed_before_later_quote_decisions": true,
+    "same_price_fill_cashflow": true
+  },
+  "costs": {
+    "maker_fee_bps": 2.0,
+    "day_end_taker_fee_bps": 5.0,
+    "depth_slippage_ticks": 0.0,
+    "market_impact": 0.0,
+    "interpretation": "optimistic_on_forced_liquidation_depth_and_impact"
+  },
+  "metrics": [
+    "maker_quote_attempts",
+    "full_fill_orders",
+    "partial_fill_orders",
+    "maker_filled_qty_btc",
+    "maker_turnover_usdt",
+    "maker_fees_usdt",
+    "forced_liquidation_qty_btc",
+    "forced_liquidation_fee_usdt",
+    "gross_pnl_usdt",
+    "net_pnl_usdt",
+    "net_bps_on_one_way_notional",
+    "maximum_absolute_inventory_btc",
+    "inventory_limit_violations",
+    "suppressed_by_inventory",
+    "suppressed_by_obi",
+    "active_order_conflicts",
+    "invalid_placements"
+  ],
+  "frozen_validation_gate": {
+    "obi_aware_net_pnl_positive_each_day": true,
+    "obi_aware_pooled_net_pnl_positive": true,
+    "obi_aware_pooled_net_pnl_greater_than_neutral": true,
+    "obi_aware_maker_fill_orders_minimum_total": 500,
+    "inventory_limit_violations": 0,
+    "all_conditions_required": true
+  },
+  "replication_gate_if_validation_passes": {
+    "obi_aware_net_pnl_positive_each_day": true,
+    "obi_aware_pooled_net_pnl_greater_than_neutral": true,
+    "inventory_limit_violations": 0
+  },
+  "run_policy": {
+    "development_then_validation_without_changes": true,
+    "validation_receipt_prevents_second_trial": true,
+    "do_not_open_replication_split_if_validation_fails": true
+  },
+  "prohibited": [
+    "tune_obi_threshold_after_any_mm_outcome",
+    "change_quote_lifetime_after_any_mm_outcome",
+    "ignore_partial_fills",
+    "ignore_end_inventory",
+    "mark_inventory_at_mid_as_realized_exit",
+    "fabricate_queue_priority",
+    "open_replication_after_failed_validation",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

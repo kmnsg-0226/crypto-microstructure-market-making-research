@@ -1,0 +1,12 @@
+{
+  "excluded_before_first_validation_block": 85544,
+  "mean_decision_instants": 83.70078686871987,
+  "mean_observation_window_ms": 29987.182371247553,
+  "mean_scored_fraction_of_window": 0.31591848500670255,
+  "mean_scored_window_ms": 9472.388421922182,
+  "median_decision_instants": 35.0,
+  "median_scored_window_ms": 4500.0,
+  "note": "a decision instant exists only while the order's own quote price is still the best price on its side; once it is not, the level-sweep score no longer refers to the order's level and no cancellation decision is taken",
+  "opportunities": 428534,
+  "orders_with_no_decision_instant": 0.05456276514815627
+}

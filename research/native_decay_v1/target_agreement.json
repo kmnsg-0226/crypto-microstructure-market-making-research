@@ -1,0 +1,33 @@
+{
+  "agreement_passes": true,
+  "problems": [],
+  "rows_total": 2570379,
+  "rows_with_every_signal": 2142647,
+  "rule": "regenerated 1 s and 5 s must equal the frozen phase 1 columns exactly; disagreement stops the phase",
+  "target_agreement_vs_frozen_phase1": {
+    "markout_1s": {
+      "censoring_disagreements": 0,
+      "frozen_column": "markout_1000ms_ticks",
+      "max_abs_difference_ticks": 0.0,
+      "rows_compared": 2570299,
+      "rows_differing": 0
+    },
+    "markout_5s": {
+      "censoring_disagreements": 0,
+      "frozen_column": "markout_5000ms_ticks",
+      "max_abs_difference_ticks": 0.0,
+      "rows_compared": 2569979,
+      "rows_differing": 0
+    }
+  },
+  "target_agreement_vs_phase5a_reconstruction": {
+    "markout_2s": {
+      "censoring_disagreements": 0,
+      "max_abs_difference_ticks": 148.5,
+      "phase5a_column": "markout_2000ms_ticks",
+      "published_tolerance_rows": 32,
+      "rows_compared": 2142528,
+      "rows_differing": 16
+    }
+  }
+}

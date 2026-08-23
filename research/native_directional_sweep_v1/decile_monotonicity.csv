@@ -1,0 +1,7 @@
+population,ordered_by,statistic,steps,non_decreasing,non_increasing,spearman
+all,decile,markout_500ms_mean_ticks,9,False,False,0.3696969697
+all,decile,realised_sweep_rate_500ms,9,True,False,1
+all,decile,p_next_move_follows_sweep,9,True,False,1
+all,decile,markout_1000ms_mean_ticks,9,False,False,0.4424242424
+all,decile,first_move_mean_ticks,9,False,False,0.9636363636
+all,decile,markout_500ms_frac_favourable,9,True,False,1

@@ -1,0 +1,756 @@
+{
+  "execution_sample": {
+    "requested": 30,
+    "selected": 30,
+    "source_status": 200
+  },
+  "reconciliation": {
+    "sampled_executions": 30,
+    "maker_placed_in_window": 30,
+    "rate": 1.0,
+    "records": [
+      {
+        "execution_uid": "851716c5-95e4-4ea9-95e5-b613dbbd0d0e",
+        "timestamp": "2026-08-22T23:18:16.205000+00:00",
+        "maker_order_uid": "a29118c1-1dd8-4339-9816-735d0830a5b2",
+        "maker_placed_in_window": true,
+        "execution_price": "76960.5",
+        "maker_price": "76960.5",
+        "executed_quantity": "184",
+        "original_quantity": "13562.0",
+        "remaining_quantity_fields": [
+          "13378.0"
+        ],
+        "terminal_state_in_window": [
+          "OrderCancelled"
+        ],
+        "partial_vs_full_single_execution": "partial_fill_then_cancel",
+        "cancel_after_execution_in_window": true,
+        "window_event_count": 453
+      },
+      {
+        "execution_uid": "8cda99d4-01cd-4306-b1f2-38632747b655",
+        "timestamp": "2026-08-22T23:18:16.205000+00:00",
+        "maker_order_uid": "a29118c0-e417-4894-a589-4a7b92826fe3",
+        "maker_placed_in_window": true,
+        "execution_price": "76972.0",
+        "maker_price": "76972.0",
+        "executed_quantity": "36",
+        "original_quantity": "36",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 453
+      },
+      {
+        "execution_uid": "c9d8ec3e-8573-4cc1-93db-4ba5dfb6e994",
+        "timestamp": "2026-08-22T22:52:54.713000+00:00",
+        "maker_order_uid": "a2910fb3-8c02-4267-a46e-c78af02a95d2",
+        "maker_placed_in_window": true,
+        "execution_price": "77091.0",
+        "maker_price": "77091.0",
+        "executed_quantity": "1.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [
+          "8.0"
+        ],
+        "terminal_state_in_window": [
+          "OrderCancelled"
+        ],
+        "partial_vs_full_single_execution": "partial_fill_then_cancel",
+        "cancel_after_execution_in_window": true,
+        "window_event_count": 543
+      },
+      {
+        "execution_uid": "384c6388-309b-4543-a999-ea92a2c1e0f0",
+        "timestamp": "2026-08-22T22:52:54.713000+00:00",
+        "maker_order_uid": "a2910fb4-e170-4378-af26-3a0def0ac20e",
+        "maker_placed_in_window": true,
+        "execution_price": "77104.0",
+        "maker_price": "77104.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 543
+      },
+      {
+        "execution_uid": "a8a40925-bf90-4272-b306-0b1cb649ad6a",
+        "timestamp": "2026-08-22T22:52:54.397000+00:00",
+        "maker_order_uid": "a2910fb3-2e94-48ff-bd71-d46d76927064",
+        "maker_placed_in_window": true,
+        "execution_price": "77103.0",
+        "maker_price": "77103.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 532
+      },
+      {
+        "execution_uid": "ee2c613f-a7cb-471f-b3fb-42c59adb5f34",
+        "timestamp": "2026-08-22T22:52:54.397000+00:00",
+        "maker_order_uid": "a2910fb3-8a0a-4186-83b8-191c927d6db6",
+        "maker_placed_in_window": true,
+        "execution_price": "77103.5",
+        "maker_price": "77103.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 532
+      },
+      {
+        "execution_uid": "9632d26d-758d-4d3b-8b64-54218614347f",
+        "timestamp": "2026-08-22T22:52:26.894000+00:00",
+        "maker_order_uid": "a2910f8a-7318-4169-84d9-ce5ca90b982e",
+        "maker_placed_in_window": true,
+        "execution_price": "77129.5",
+        "maker_price": "77129.5",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 466
+      },
+      {
+        "execution_uid": "77c59d78-2cc2-4157-b42d-9427dc5d08cb",
+        "timestamp": "2026-08-22T22:52:26.894000+00:00",
+        "maker_order_uid": "a2910f8a-7339-4c87-887a-a20c84be0872",
+        "maker_placed_in_window": true,
+        "execution_price": "77130.0",
+        "maker_price": "77130.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 466
+      },
+      {
+        "execution_uid": "322fc0db-7b07-46b4-b083-a9be86f92312",
+        "timestamp": "2026-08-22T22:52:26.664000+00:00",
+        "maker_order_uid": "a2910f89-0d1e-4c90-ab49-82856df67a14",
+        "maker_placed_in_window": true,
+        "execution_price": "77129.0",
+        "maker_price": "77129.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 447
+      },
+      {
+        "execution_uid": "87eb1c5e-feb1-4c95-bd1b-d9bddccfc247",
+        "timestamp": "2026-08-22T22:52:26.664000+00:00",
+        "maker_order_uid": "a2910f89-6c70-4ed8-ae61-b61ec64a1407",
+        "maker_placed_in_window": true,
+        "execution_price": "77129.5",
+        "maker_price": "77129.5",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 447
+      },
+      {
+        "execution_uid": "9660874b-c671-4b7b-9aa3-da499c0503f6",
+        "timestamp": "2026-08-22T22:48:20.617000+00:00",
+        "maker_order_uid": "a2910e12-a93c-41cf-8fb4-34bfb86af23a",
+        "maker_placed_in_window": true,
+        "execution_price": "77048.0",
+        "maker_price": "77048.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 560
+      },
+      {
+        "execution_uid": "ea0b726d-ff3f-4a5a-afd6-7d0a0be28d20",
+        "timestamp": "2026-08-22T22:48:20.617000+00:00",
+        "maker_order_uid": "a2910e12-9e9b-4f56-95a7-a74c513f3f5f",
+        "maker_placed_in_window": true,
+        "execution_price": "77048.0",
+        "maker_price": "77048.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 560
+      },
+      {
+        "execution_uid": "13156598-6c6c-4058-ba54-c2d9c5803a3c",
+        "timestamp": "2026-08-22T22:48:20.385000+00:00",
+        "maker_order_uid": "a2910e11-fdcd-41ef-811b-c6f243ae0c53",
+        "maker_placed_in_window": true,
+        "execution_price": "77046.0",
+        "maker_price": "77046.0",
+        "executed_quantity": "10.0",
+        "original_quantity": "10.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 561
+      },
+      {
+        "execution_uid": "d0e08dc5-b957-4231-81c1-862046ce83c0",
+        "timestamp": "2026-08-22T22:48:20.385000+00:00",
+        "maker_order_uid": "a2910e11-fe43-425d-964b-22e51b98ba17",
+        "maker_placed_in_window": true,
+        "execution_price": "77047.5",
+        "maker_price": "77047.5",
+        "executed_quantity": "35",
+        "original_quantity": "35",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 561
+      },
+      {
+        "execution_uid": "fc7b31cb-13a7-4054-aa91-a8332a7c1d83",
+        "timestamp": "2026-08-22T22:34:35.170000+00:00",
+        "maker_order_uid": "a2910927-20e6-4f85-bc57-1ce55e22b149",
+        "maker_placed_in_window": true,
+        "execution_price": "76914.5",
+        "maker_price": "76914.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 687
+      },
+      {
+        "execution_uid": "2e1ddacc-f6c5-4c45-905c-5674cb0fca9c",
+        "timestamp": "2026-08-22T22:34:35.110000+00:00",
+        "maker_order_uid": "a2910927-099c-4720-bc5b-41a9d5e38557",
+        "maker_placed_in_window": true,
+        "execution_price": "76902.5",
+        "maker_price": "76902.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 686
+      },
+      {
+        "execution_uid": "88e4888e-a721-41d1-a596-6c75ce38a59f",
+        "timestamp": "2026-08-22T22:34:35.102000+00:00",
+        "maker_order_uid": "a2910927-064c-4ba6-9c8d-9b9655ef5cf5",
+        "maker_placed_in_window": true,
+        "execution_price": "76902.5",
+        "maker_price": "76902.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 686
+      },
+      {
+        "execution_uid": "ad92e649-ebf6-4ddf-a743-8c75f135a83d",
+        "timestamp": "2026-08-22T22:34:34.944000+00:00",
+        "maker_order_uid": "a2910926-75d4-43df-bdc0-60198604854a",
+        "maker_placed_in_window": true,
+        "execution_price": "76915.0",
+        "maker_price": "76915.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 684
+      },
+      {
+        "execution_uid": "a01ad988-bbd0-4022-93f6-1d8b4674e6b0",
+        "timestamp": "2026-08-22T22:34:34.942000+00:00",
+        "maker_order_uid": "a2910925-bf7d-4010-8794-b8e01045f5df",
+        "maker_placed_in_window": true,
+        "execution_price": "76907.0",
+        "maker_price": "76907.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 684
+      },
+      {
+        "execution_uid": "6d747f2c-0647-484d-ab1f-f0a9c8114886",
+        "timestamp": "2026-08-22T22:34:34.871000+00:00",
+        "maker_order_uid": "a2910926-739b-42c3-8cee-2012bb7d30c9",
+        "maker_placed_in_window": true,
+        "execution_price": "76903.0",
+        "maker_price": "76903.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 675
+      },
+      {
+        "execution_uid": "6a70ca06-da67-4d60-85c1-3d16dd37b061",
+        "timestamp": "2026-08-22T22:34:34.871000+00:00",
+        "maker_order_uid": "a2910926-6fa0-4eff-a4b3-6b598e839bc3",
+        "maker_placed_in_window": true,
+        "execution_price": "76903.0",
+        "maker_price": "76903.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 675
+      },
+      {
+        "execution_uid": "baade282-568c-48b6-a62d-d452e3260c00",
+        "timestamp": "2026-08-22T22:12:32.093000+00:00",
+        "maker_order_uid": "a2910144-457d-4f54-99d7-4f44b6a017d7",
+        "maker_placed_in_window": true,
+        "execution_price": "77007.5",
+        "maker_price": "77007.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 768
+      },
+      {
+        "execution_uid": "1d4455dc-709a-4e10-93ec-81454e237c2b",
+        "timestamp": "2026-08-22T22:12:32.093000+00:00",
+        "maker_order_uid": "a2910144-457c-4021-a586-396818b9b688",
+        "maker_placed_in_window": true,
+        "execution_price": "77007.5",
+        "maker_price": "77007.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 768
+      },
+      {
+        "execution_uid": "a493b3e9-b253-4ede-b6b2-eb35ecebef97",
+        "timestamp": "2026-08-22T22:12:31.855000+00:00",
+        "maker_order_uid": "a2910143-e8f9-48a3-92a1-c66a09ddb94c",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.0",
+        "maker_price": "77008.0",
+        "executed_quantity": "36",
+        "original_quantity": "36",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 756
+      },
+      {
+        "execution_uid": "870b2447-1134-4595-bc80-d5b90ec07433",
+        "timestamp": "2026-08-22T22:12:31.855000+00:00",
+        "maker_order_uid": "a2910143-e884-4606-b562-a6bb1b4568be",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.0",
+        "maker_price": "77008.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 756
+      },
+      {
+        "execution_uid": "8504a045-262d-414b-b327-7078ed66c248",
+        "timestamp": "2026-08-22T22:12:31.855000+00:00",
+        "maker_order_uid": "a2910143-e884-4d4b-a1cd-a42996ee5a40",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.0",
+        "maker_price": "77008.0",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 756
+      },
+      {
+        "execution_uid": "8d9f2409-8e66-42ce-b249-313abb8b5793",
+        "timestamp": "2026-08-22T22:12:31.616000+00:00",
+        "maker_order_uid": "a2910142-d3ff-498f-840e-a34a335f1d28",
+        "maker_placed_in_window": true,
+        "execution_price": "77009.0",
+        "maker_price": "77009.0",
+        "executed_quantity": "18.0",
+        "original_quantity": "36",
+        "remaining_quantity_fields": [
+          "9.0"
+        ],
+        "terminal_state_in_window": [
+          "OrderCancelled"
+        ],
+        "partial_vs_full_single_execution": "partial_or_prior_fill_unknown",
+        "cancel_after_execution_in_window": true,
+        "window_event_count": 767
+      },
+      {
+        "execution_uid": "c98a9a98-8ac8-4468-aba7-379d91225a5c",
+        "timestamp": "2026-08-22T22:12:31.616000+00:00",
+        "maker_order_uid": "a2910143-8b9f-4559-a814-a1de5e209078",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.5",
+        "maker_price": "77008.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 767
+      },
+      {
+        "execution_uid": "b9ea8e08-9536-46c6-b2f5-6414ad7e7da3",
+        "timestamp": "2026-08-22T22:12:31.616000+00:00",
+        "maker_order_uid": "a2910143-8b9f-4400-97cc-08f8f3b6e3a5",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.5",
+        "maker_price": "77008.5",
+        "executed_quantity": "9.0",
+        "original_quantity": "9.0",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 767
+      },
+      {
+        "execution_uid": "151d8756-3b27-4ef3-b8e2-6aac5af8d466",
+        "timestamp": "2026-08-22T22:12:31.616000+00:00",
+        "maker_order_uid": "a2910143-6897-4bad-8a98-cebf46984dc8",
+        "maker_placed_in_window": true,
+        "execution_price": "77008.5",
+        "maker_price": "77008.5",
+        "executed_quantity": "36",
+        "original_quantity": "36",
+        "remaining_quantity_fields": [],
+        "terminal_state_in_window": [],
+        "partial_vs_full_single_execution": "full",
+        "cancel_after_execution_in_window": false,
+        "window_event_count": 767
+      }
+    ]
+  },
+  "fifo_ambiguity": {
+    "ambiguous_same_ms_side_price_cohorts": 1523,
+    "orders_in_ambiguous_cohorts": 9581,
+    "executions_with_ambiguous_maker": 30,
+    "ambiguous_makers_at_execution_price": 30,
+    "maker_cohort_size_median": 7.0,
+    "maker_cohort_size_p95": 18,
+    "maker_cohort_size_max": 18,
+    "records": [
+      {
+        "execution_uid": "851716c5-95e4-4ea9-95e5-b613dbbd0d0e",
+        "maker_order_uid": "a29118c1-1dd8-4339-9816-735d0830a5b2",
+        "cohort_size": 2,
+        "cohort_quantity": 27124.0,
+        "execution_price": "76960.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "8cda99d4-01cd-4306-b1f2-38632747b655",
+        "maker_order_uid": "a29118c0-e417-4894-a589-4a7b92826fe3",
+        "cohort_size": 2,
+        "cohort_quantity": 72.0,
+        "execution_price": "76972.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "c9d8ec3e-8573-4cc1-93db-4ba5dfb6e994",
+        "maker_order_uid": "a2910fb3-8c02-4267-a46e-c78af02a95d2",
+        "cohort_size": 4,
+        "cohort_quantity": 36.0,
+        "execution_price": "77091.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "384c6388-309b-4543-a999-ea92a2c1e0f0",
+        "maker_order_uid": "a2910fb4-e170-4378-af26-3a0def0ac20e",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77104.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "a8a40925-bf90-4272-b306-0b1cb649ad6a",
+        "maker_order_uid": "a2910fb3-2e94-48ff-bd71-d46d76927064",
+        "cohort_size": 4,
+        "cohort_quantity": 36.0,
+        "execution_price": "77103.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "ee2c613f-a7cb-471f-b3fb-42c59adb5f34",
+        "maker_order_uid": "a2910fb3-8a0a-4186-83b8-191c927d6db6",
+        "cohort_size": 4,
+        "cohort_quantity": 36.0,
+        "execution_price": "77103.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "9632d26d-758d-4d3b-8b64-54218614347f",
+        "maker_order_uid": "a2910f8a-7318-4169-84d9-ce5ca90b982e",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77129.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "77c59d78-2cc2-4157-b42d-9427dc5d08cb",
+        "maker_order_uid": "a2910f8a-7339-4c87-887a-a20c84be0872",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77130.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "322fc0db-7b07-46b4-b083-a9be86f92312",
+        "maker_order_uid": "a2910f89-0d1e-4c90-ab49-82856df67a14",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77129.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "87eb1c5e-feb1-4c95-bd1b-d9bddccfc247",
+        "maker_order_uid": "a2910f89-6c70-4ed8-ae61-b61ec64a1407",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77129.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "9660874b-c671-4b7b-9aa3-da499c0503f6",
+        "maker_order_uid": "a2910e12-a93c-41cf-8fb4-34bfb86af23a",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77048.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "ea0b726d-ff3f-4a5a-afd6-7d0a0be28d20",
+        "maker_order_uid": "a2910e12-9e9b-4f56-95a7-a74c513f3f5f",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77048.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "13156598-6c6c-4058-ba54-c2d9c5803a3c",
+        "maker_order_uid": "a2910e11-fdcd-41ef-811b-c6f243ae0c53",
+        "cohort_size": 4,
+        "cohort_quantity": 40.0,
+        "execution_price": "77046.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "d0e08dc5-b957-4231-81c1-862046ce83c0",
+        "maker_order_uid": "a2910e11-fe43-425d-964b-22e51b98ba17",
+        "cohort_size": 4,
+        "cohort_quantity": 140.0,
+        "execution_price": "77047.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "fc7b31cb-13a7-4054-aa91-a8332a7c1d83",
+        "maker_order_uid": "a2910927-20e6-4f85-bc57-1ce55e22b149",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76914.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "2e1ddacc-f6c5-4c45-905c-5674cb0fca9c",
+        "maker_order_uid": "a2910927-099c-4720-bc5b-41a9d5e38557",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76902.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "88e4888e-a721-41d1-a596-6c75ce38a59f",
+        "maker_order_uid": "a2910927-064c-4ba6-9c8d-9b9655ef5cf5",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76902.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "ad92e649-ebf6-4ddf-a743-8c75f135a83d",
+        "maker_order_uid": "a2910926-75d4-43df-bdc0-60198604854a",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76915.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "a01ad988-bbd0-4022-93f6-1d8b4674e6b0",
+        "maker_order_uid": "a2910925-bf7d-4010-8794-b8e01045f5df",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76907.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "6d747f2c-0647-484d-ab1f-f0a9c8114886",
+        "maker_order_uid": "a2910926-739b-42c3-8cee-2012bb7d30c9",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76903.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "6a70ca06-da67-4d60-85c1-3d16dd37b061",
+        "maker_order_uid": "a2910926-6fa0-4eff-a4b3-6b598e839bc3",
+        "cohort_size": 7,
+        "cohort_quantity": 63.0,
+        "execution_price": "76903.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "baade282-568c-48b6-a62d-d452e3260c00",
+        "maker_order_uid": "a2910144-457d-4f54-99d7-4f44b6a017d7",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77007.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "1d4455dc-709a-4e10-93ec-81454e237c2b",
+        "maker_order_uid": "a2910144-457c-4021-a586-396818b9b688",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77007.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "a493b3e9-b253-4ede-b6b2-eb35ecebef97",
+        "maker_order_uid": "a2910143-e8f9-48a3-92a1-c66a09ddb94c",
+        "cohort_size": 9,
+        "cohort_quantity": 324.0,
+        "execution_price": "77008.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "870b2447-1134-4595-bc80-d5b90ec07433",
+        "maker_order_uid": "a2910143-e884-4606-b562-a6bb1b4568be",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77008.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "8504a045-262d-414b-b327-7078ed66c248",
+        "maker_order_uid": "a2910143-e884-4d4b-a1cd-a42996ee5a40",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77008.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "8d9f2409-8e66-42ce-b249-313abb8b5793",
+        "maker_order_uid": "a2910142-d3ff-498f-840e-a34a335f1d28",
+        "cohort_size": 9,
+        "cohort_quantity": 324.0,
+        "execution_price": "77009.0",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "c98a9a98-8ac8-4468-aba7-379d91225a5c",
+        "maker_order_uid": "a2910143-8b9f-4559-a814-a1de5e209078",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77008.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "b9ea8e08-9536-46c6-b2f5-6414ad7e7da3",
+        "maker_order_uid": "a2910143-8b9f-4400-97cc-08f8f3b6e3a5",
+        "cohort_size": 18,
+        "cohort_quantity": 162.0,
+        "execution_price": "77008.5",
+        "at_executed_quote": true
+      },
+      {
+        "execution_uid": "151d8756-3b27-4ef3-b8e2-6aac5af8d466",
+        "maker_order_uid": "a2910143-6897-4bad-8a98-cebf46984dc8",
+        "cohort_size": 9,
+        "cohort_quantity": 324.0,
+        "execution_price": "77008.5",
+        "at_executed_quote": true
+      }
+    ],
+    "queue_ahead_effect": "For each ambiguous maker cohort, FIFO position can vary from first to last within the cohort; cohort treatment yields an interval/conservative bound, not an exact fill time.",
+    "conservative_convention": "Treat same-millisecond, same-side, same-price placements as one unordered queue cohort; report queue-ahead as a range or use the worst-case position."
+  },
+  "lifetimes": {
+    "order_pages": [
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000,
+      1000
+    ],
+    "fully_matched_lifecycles": 4965,
+    "median_seconds": 1.001,
+    "p95_seconds": 3.192,
+    "p99_seconds": 12.716,
+    "max_seconds": 88.337,
+    "unknown_pre_window_inventory_proxy_after_warmup": {
+      "1h": 0.0,
+      "6h": 0.0,
+      "24h": 0.0,
+      "7d": 0.0
+    },
+    "proxy_definition": "estimated steady-state count of observed-lifetime orders older than each warm-up; excludes right-censored/unmatched orders and is not exact reconstruction"
+  },
+  "verdict": "B2"
+}

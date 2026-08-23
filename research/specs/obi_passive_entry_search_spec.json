@@ -1,0 +1,110 @@
+{
+  "schema": "crypto-hft-obi-passive-entry-search-v1",
+  "status": "declared_after_loop2_failure_before_passive_entry_outcomes",
+  "experiment_id": "btc-tardis-obi-passive-entry-search-2026-v1",
+  "audit": {
+    "repository_commit_before_search": "518217d23e5ebf8362a40c788fa514e8006273ef",
+    "loop1_and_loop2_results_seen": true,
+    "known_results": [
+      "fixed_horizon_taker_had_no_positive_development_upper_bound",
+      "persistent_pressure_had_positive_pooled_cells_but_none_positive_on_all_five_days"
+    ],
+    "passive_label_methodology_seen": true,
+    "passive_approach_thresholds_sha256": "15523628391fcdbc74d8a6263a3c76e408cc67c7f99f0ff71d1502ee719ff6f2",
+    "obi_stage1_thresholds_sha256": "f30d5d9824538e4395d257e78c1b672536d7562f67c79431755d56c4a9b8d5a8"
+  },
+  "interpretation": {
+    "historical_search_is_exploratory": true,
+    "all_eight_historical_dates_already_seen": true,
+    "june_july_august_not_used_for_selection": true,
+    "historical_positive_cannot_complete_profitability_goal": true
+  },
+  "data": {
+    "development_search": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_only_if_development_gate_passes": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "passive_labels": "data/research/tardis/passive/YYYY-MM-DD/labeled_probes.parquet",
+    "features": "data/research/tardis/YYYY-MM-DD/features_100ms.parquet",
+    "queue_model": "pessimistic_visible_queue",
+    "full_fills_only": true,
+    "partial_fills_count_as_no_completed_entry": true
+  },
+  "entry": {
+    "side_rule": "maker_contrarian_quotes_bid_for_negative_signal_and_ask_for_positive_signal_or_reverse_for_maker_trend",
+    "signals": [
+      "obi_l1",
+      "obi_l5",
+      "weighted_obi_l10",
+      "weighted_mid_minus_mid_ticks",
+      "combined_prediction_1s_ticks",
+      "ti_1s"
+    ],
+    "absolute_tail_quantiles": [0.8, 0.9, 0.95],
+    "directions": ["maker_contrarian", "maker_trend"],
+    "quote_lifetimes_ms": [100, 500, 1000, 5000],
+    "order_size_btc": 0.005,
+    "quote_price": "decision_time_bbo_fixed_until_fill_or_cancel",
+    "maker_fee_bps_scenarios": [0.0, 1.0, 2.0],
+    "primary_maker_fee_bps": 2.0
+  },
+  "dynamic_cancel": {
+    "modes": ["fixed_lifetime", "cancel_on_sign_exit", "cancel_on_tail_exit", "cancel_on_opposite_tail"],
+    "cancel_latency_ms": 100,
+    "clock": "exchange_100ms_feature_clock",
+    "fill_at_or_before_cancel_effective_time_counts": true,
+    "cancel_condition_uses_only_signal_values_observed_after_placement": true
+  },
+  "placement_regimes": [
+    "all",
+    "queue_bottom20",
+    "utc_00_08",
+    "utc_08_16",
+    "utc_16_24",
+    "queue_bottom20_utc_00_08",
+    "queue_bottom20_utc_08_16",
+    "queue_bottom20_utc_16_24"
+  ],
+  "exit": {
+    "style": "taker_at_actual_opposite_bbo_after_fill",
+    "horizons_ms": [5000, 30000, 60000, 300000, 900000, 1800000, 3600000],
+    "taker_fee_bps": 5.0,
+    "latency_after_target_ms": 100,
+    "depth_slippage_ticks": 0.0,
+    "market_impact": 0.0,
+    "reject_if_fill_and_exit_cross_feature_segment": true,
+    "screen_is_optimistic_upper_bound": true
+  },
+  "development_gate": {
+    "minimum_completed_fills_total": 500,
+    "minimum_completed_fills_each_day": 50,
+    "pooled_primary_fee_net_bps_positive": true,
+    "all_five_days_primary_fee_net_bps_positive": true,
+    "shortlist_size": 25
+  },
+  "exact_followup_if_gate_passes": {
+    "one_pending_or_open_position_at_a_time": true,
+    "top10_taker_exit": true,
+    "fixed_notional_usdt": 1000.0,
+    "fee_and_latency_stress": true
+  },
+  "forward_gate_inherited_from": "research/specs/obi_profitability_search_spec.json",
+  "prohibited": [
+    "optimistic_front_of_queue_for_primary",
+    "count_partial_fill_as_full_entry",
+    "future_signal_in_placement_decision",
+    "zero_fee_profitability_claim",
+    "select_on_june_july_august",
+    "call_historical_result_profitable",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

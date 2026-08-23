@@ -1,0 +1,175 @@
+{
+  "schema": "crypto-hft-microstructure-research-v1",
+  "status": "draft_before_feature_results",
+  "instrument": {
+    "exchange": "binance-futures",
+    "symbol": "BTCUSDT",
+    "tick_size": "0.10",
+    "step_size": "0.001"
+  },
+  "split": {
+    "development": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "validation": [
+      "2026-06-01"
+    ],
+    "oos": [
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "maximum_label_horizon_ms": 5000,
+    "split_embargo_ms": 5000
+  },
+  "time_semantics": {
+    "research_clock": "exchange_timestamp",
+    "ordering": "preserve_source_row_order",
+    "local_timestamp_use": [
+      "deterministic_ordering_qc",
+      "reconnect_gap_diagnostics",
+      "vendor_latency_metadata_only"
+    ],
+    "vendor_local_timestamp_is_trading_latency": false
+  },
+  "grid_ms": 100,
+  "windows_ms": [
+    100,
+    500,
+    1000,
+    5000
+  ],
+  "label_horizons_ms": [
+    100,
+    500,
+    1000,
+    5000
+  ],
+  "book_depths": [
+    1,
+    5,
+    10
+  ],
+  "weighted_obi": {
+    "lambda": 0.5,
+    "weight": "exp(-lambda * (level - 1))"
+  },
+  "ofi": {
+    "definition": "canonical_l1_cont_et_al_style_event_contribution",
+    "windows_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "normalization": "raw_window_ofi_divided_by_current_l1_bid_plus_ask_qty",
+    "mlofi_enabled": false
+  },
+  "trade_flow": {
+    "aggressor_side_field": "Tardis normalized side",
+    "buy_mapping": "side=buy",
+    "sell_mapping": "side=sell",
+    "unknown_policy": "reject_file_if_present",
+    "windows_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "legacy_baseline": "(aggressive_buy_qty-aggressive_sell_qty)/(aggressive_buy_qty+aggressive_sell_qty)"
+  },
+  "gap_policy": {
+    "forward_fill_across_reconnect": false,
+    "invalidate_from_previous_message_to_replacement_snapshot": true,
+    "reset_rolling_features_on_book_segment_change": true,
+    "require_full_valid_trailing_window": true,
+    "labels_crossing_segment_change_are_null": true
+  },
+  "canonical_signals": [
+    "obi_l1",
+    "obi_l5",
+    "obi_l10",
+    "weighted_obi_l10",
+    "weighted_mid_minus_mid_ticks",
+    "ofi_100ms",
+    "ofi_500ms",
+    "ofi_1s",
+    "ti_100ms",
+    "ti_500ms",
+    "ti_1s"
+  ],
+  "deciles": {
+    "count": 10,
+    "threshold_fit_split": "development",
+    "apply_frozen_to": [
+      "validation",
+      "oos"
+    ]
+  },
+  "inference": {
+    "primary": "Newey-West HAC",
+    "lag_rule": "label_horizon_ms / grid_ms",
+    "report_naive_sample_count_separately": true
+  },
+  "standardization": {
+    "fit_split": "development",
+    "method": "mean_and_population_standard_deviation",
+    "zero_variance_policy": "drop_feature"
+  },
+  "models": {
+    "type": "OLS",
+    "horizons_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "specifications": {
+      "ti_only": [
+        "ti_1s"
+      ],
+      "obi_only": [
+        "obi_l10"
+      ],
+      "ofi_only": [
+        "normalized_ofi_1s"
+      ],
+      "weighted_mid_only": [
+        "weighted_mid_minus_mid_ticks"
+      ],
+      "ti_obi": [
+        "ti_1s",
+        "obi_l10"
+      ],
+      "ti_ofi": [
+        "ti_1s",
+        "normalized_ofi_1s"
+      ],
+      "combined": [
+        "ti_1s",
+        "obi_l10",
+        "normalized_ofi_1s",
+        "weighted_mid_minus_mid_ticks"
+      ]
+    }
+  },
+  "regime_classification": {
+    "spread": "day_median_spread_above_or_below_development_day_median",
+    "volatility": "day_mid_return_std_above_or_below_development_day_median",
+    "threshold_fit_split": "development"
+  },
+  "prohibited": [
+    "trading_strategy",
+    "pnl_backtest",
+    "fees",
+    "slippage",
+    "market_making",
+    "oos_feature_selection",
+    "future_fill",
+    "centered_windows",
+    "full_day_future_normalization"
+  ]
+}

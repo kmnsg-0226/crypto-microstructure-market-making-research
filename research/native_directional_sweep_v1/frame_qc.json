@@ -1,0 +1,45 @@
+{
+  "columns": 116,
+  "first_move": {
+    "compared_rows": 3781274,
+    "direction_disagreements": 2,
+    "median_timing_difference_ms": 3.775000004679896e-05
+  },
+  "mid_at_decision_instant": {
+    "compared_rows": 4285294,
+    "rows_differing": 16
+  },
+  "reconstruction": {
+    "1000ms": {
+      "censoring_disagreements": 0,
+      "compared_rows": 4285176,
+      "max_abs_difference_ticks": 148.5,
+      "rows_differing": 32
+    },
+    "100ms": {
+      "censoring_disagreements": 0,
+      "compared_rows": 4285284,
+      "max_abs_difference_ticks": 148.5,
+      "rows_differing": 32
+    },
+    "250ms": {
+      "censoring_disagreements": 0,
+      "compared_rows": 4285260,
+      "max_abs_difference_ticks": 452.5,
+      "rows_differing": 32
+    },
+    "5000ms": {
+      "censoring_disagreements": 0,
+      "compared_rows": 4284696,
+      "max_abs_difference_ticks": 148.5,
+      "rows_differing": 32
+    },
+    "500ms": {
+      "censoring_disagreements": 0,
+      "compared_rows": 4285236,
+      "max_abs_difference_ticks": 148.5,
+      "rows_differing": 32
+    }
+  },
+  "rows": 4285294
+}

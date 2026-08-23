@@ -1,0 +1,53 @@
+{
+  "schema": "crypto-hft-native-qc-v1",
+  "source": "native_binance_usdm",
+  "raw_file": "BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+  "file_index": 2,
+  "symbol": "BTCUSDT",
+  "tick_size": "0.10",
+  "step_size": "0.001",
+  "file": {
+    "raw_records": 7184834,
+    "depth_events": 2185984,
+    "applied_depth_events": 2185973,
+    "stale_depth_events": 11,
+    "trade_events": 4998828,
+    "snapshots": 5,
+    "depth_stream_opens": 5,
+    "trade_stream_opens": 3,
+    "sequence_gaps": 0,
+    "parse_failures": 0,
+    "crossed_book_states": 0,
+    "empty_bid_states": 0,
+    "empty_ask_states": 0,
+    "first_local_receive_ns": 1787034559640900219,
+    "last_local_receive_ns": 1787257569913449151,
+    "first_exchange_time_ms": 1787034560637,
+    "last_exchange_time_ms": 1787257569203,
+    "final_update_id": 11335825079071,
+    "final_checksum": "0xf2e1fea4c7a85f84",
+    "duration_s": 223010.272549
+  },
+  "dataset": {
+    "rows": 2229969,
+    "segments": 6,
+    "depth_events_in_segment": 2185938,
+    "trade_events_in_segment": 4998683,
+    "depth_events_outside_segment": 46,
+    "valid_research_s": 222996.617733,
+    "grid_ms": 100,
+    "order_lots": 5,
+    "adverse_threshold_half_ticks": 2,
+    "fill_horizon_ms": 30000,
+    "weight_lambda": 0.5
+  },
+  "segments": [
+    {"segment_id": 1, "start_ns": 1787034560861536259, "end_ns": 1787117361028023824, "duration_s": 82800.1664876, "first_exchange_time_ms": 1787034560737, "last_exchange_time_ms": 1787117360488, "first_update_id": 11310885101397, "final_update_id": 11318308153229, "depth_events": 811744, "trade_events": 520217, "rows": 828002, "bid_full_fills": 408819, "ask_full_fills": 384871, "close_reason": "depth_desync"},
+    {"segment_id": 2, "start_ns": 1787117363645538205, "end_ns": 1787190000204730265, "duration_s": 72636.5591921, "first_exchange_time_ms": 1787117363445, "last_exchange_time_ms": 1787190000010, "first_update_id": 11318308375270, "final_update_id": 11327150882306, "depth_events": 711875, "trade_events": 2097906, "rows": 726366, "bid_full_fills": 482836, "ask_full_fills": 493372, "close_reason": "trade_stream_down"},
+    {"segment_id": 3, "start_ns": 1787190002382201923, "end_ns": 1787190120140290577, "duration_s": 117.758088654, "first_exchange_time_ms": 1787190002254, "last_exchange_time_ms": 1787190119972, "first_update_id": 11327151268390, "final_update_id": 11327163810125, "depth_events": 1154, "trade_events": 1847, "rows": 1178, "bid_full_fills": 768, "ask_full_fills": 1118, "close_reason": "depth_desync"},
+    {"segment_id": 4, "start_ns": 1787190122867887515, "end_ns": 1787207160126192608, "duration_s": 17037.2583051, "first_exchange_time_ms": 1787190122724, "last_exchange_time_ms": 1787207159922, "first_update_id": 11327164201760, "final_update_id": 11328820081481, "depth_events": 167026, "trade_events": 278660, "rows": 170373, "bid_full_fills": 130847, "ask_full_fills": 119655, "close_reason": "depth_desync"},
+    {"segment_id": 5, "start_ns": 1787207162387631389, "end_ns": 1787223360129494079, "duration_s": 16197.7418627, "first_exchange_time_ms": 1787207162267, "last_exchange_time_ms": 1787223359900, "first_update_id": 11328820435305, "final_update_id": 11330781272028, "depth_events": 158792, "trade_events": 796838, "rows": 161978, "bid_full_fills": 131964, "ask_full_fills": 131987, "close_reason": "depth_desync"},
+    {"segment_id": 6, "start_ns": 1787223362690976062, "end_ns": 1787257569824773317, "duration_s": 34207.1337973, "first_exchange_time_ms": 1787223362555, "last_exchange_time_ms": 1787257569203, "first_update_id": 11330781503059, "final_update_id": 11335825079071, "depth_events": 335347, "trade_events": 1303215, "rows": 342072, "bid_full_fills": 283383, "ask_full_fills": 290282, "close_reason": "depth_desync"}
+  ],
+  "failures": []
+}

@@ -1,0 +1,8 @@
+Auto Search Hybrid Report
+exploration_day: BTCUSDT-aggTrades-2026-03-23.csv
+validation_days: BTCUSDT-aggTrades-2026-03-24.csv, BTCUSDT-aggTrades-2026-03-25.csv, BTCUSDT-aggTrades-2026-03-26.csv, BTCUSDT-aggTrades-2026-03-27.csv
+exploration_configs_tested: 14
+validation_configs_tested: 14
+decision: NO_ROBUST_CONFIG_FOUND
+reason: no candidate passed both exploration and validation within 2 rounds
+best_config_id: none

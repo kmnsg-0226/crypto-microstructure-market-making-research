@@ -1,0 +1,145 @@
+{
+  "schema": "crypto-hft-obi-profitability-search-v1",
+  "status": "declared_after_all_eight_historical_dates_were_seen_before_new_search",
+  "experiment_id": "btc-tardis-obi-profitability-search-2026-v1",
+  "audit": {
+    "repository_commit_before_search": "1ac07cfbba295249df9289157c7565f393cc7888",
+    "historical_alpha_results_seen": true,
+    "historical_taker_results_seen": true,
+    "historical_passive_results_seen": true,
+    "known_failures": [
+      "taker_1s_combined_alpha_did_not_cover_5bps_per_side",
+      "fixed_lifetime_bbo_maker_quotes_had_negative_prefee_markout",
+      "post_v1_passive_filters_reduced_but_did_not_remove_adverse_selection"
+    ]
+  },
+  "interpretation": {
+    "historical_search_is_exploratory": true,
+    "june_july_august_are_not_new_unseen_validation": true,
+    "historical_positive_result_cannot_complete_profitability_goal": true,
+    "genuine_success_requires_post_freeze_native_binance_data": true,
+    "profitability_may_not_be_forced_by_relaxing_costs_or_sample_floors": true
+  },
+  "data": {
+    "development_search": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_replication_only": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "source": "data/research/tardis/YYYY-MM-DD/features_100ms.parquet",
+    "decision_clock_ms": 100,
+    "threshold_distribution_sample_every_n_rows": 10
+  },
+  "stage_1_optimistic_taker_upper_bound": {
+    "purpose": "reject_large_families_cheaply_before_exact_top10_execution",
+    "entry": "actual_opposite_bbo_at_decision_plus_100ms",
+    "exit": "actual_opposite_bbo_at_fixed_horizon",
+    "latency_ms": 100,
+    "fee_bps_per_side": 5.0,
+    "depth_slippage_ticks": 0.0,
+    "market_impact": 0.0,
+    "overlap": "all_signal_observations_for_screening_only",
+    "why_upper_bound": "depth_slippage_impact_and_nonoverlap_capacity_can_only_worsen_or_reduce_the_screen"
+  },
+  "signals": [
+    "obi_l1",
+    "obi_l5",
+    "obi_l10",
+    "weighted_obi_l10",
+    "weighted_mid_minus_mid_ticks",
+    "normalized_ofi_100ms",
+    "normalized_ofi_1s",
+    "normalized_ofi_5s",
+    "ti_100ms",
+    "ti_1s",
+    "ti_5s",
+    "combined_prediction_1s_ticks",
+    "obi_depth_mean",
+    "micro_consensus_z"
+  ],
+  "absolute_signal_tail_quantiles": [
+    0.5,
+    0.7,
+    0.8,
+    0.9,
+    0.95,
+    0.975,
+    0.99,
+    0.995
+  ],
+  "directions": ["trend", "contrarian"],
+  "regimes": [
+    "all",
+    "ti_1s_aligned",
+    "ofi_1s_aligned",
+    "ti_and_ofi_aligned",
+    "one_tick_spread",
+    "trade_volume_1s_high",
+    "trade_volume_1s_low",
+    "book_updates_1s_high",
+    "book_updates_1s_low",
+    "backward_volatility_5s_high",
+    "backward_volatility_5s_low",
+    "utc_00_08",
+    "utc_08_16",
+    "utc_16_24"
+  ],
+  "fixed_horizons_ms": [500, 1000, 2000, 5000, 10000, 30000, 60000, 300000],
+  "development_ranking": {
+    "minimum_observations_total": 5000,
+    "minimum_observations_each_day": 500,
+    "sort": [
+      "positive_development_days_desc",
+      "worst_development_day_net_bps_desc",
+      "pooled_development_net_bps_desc",
+      "observations_desc",
+      "policy_name_asc"
+    ],
+    "shortlist_size_for_exact_nonoverlap_execution": 25
+  },
+  "stage_2_exact_execution": {
+    "only_candidates_with_positive_upper_bound_advance": true,
+    "top10_depth_walk": true,
+    "one_position_at_a_time": true,
+    "fixed_notional_usdt": 1000.0,
+    "quantity_step_btc": 0.001,
+    "reject_cross_segment": true,
+    "fee_bps_per_side": 5.0,
+    "minimum_completed_trades_total": 500,
+    "minimum_completed_trades_each_development_day": 50
+  },
+  "historical_survival_gate": {
+    "development_net_bps_positive": true,
+    "all_five_development_days_positive": true,
+    "june_retrospective_net_bps_positive": true,
+    "july_and_august_each_positive": true,
+    "must_pass_fee_and_latency_stress": true,
+    "does_not_itself_prove_profitability": true
+  },
+  "forward_success_gate": {
+    "rule_and_thresholds_frozen_before_forward_start": true,
+    "native_binance_consecutive_days_minimum": 7,
+    "completed_trades_minimum": 500,
+    "net_after_actual_account_fees_positive": true,
+    "each_day_reported": true,
+    "block_bootstrap_95pct_lower_bound_net_bps_above_zero": true,
+    "no_refit_during_forward_window": true
+  },
+  "prohibited": [
+    "call_seen_historical_dates_new_oos",
+    "select_on_june_july_august",
+    "ignore_fees",
+    "assume_mid_price_execution",
+    "fabricate_queue_priority",
+    "optimize_sharpe_on_eight_days",
+    "live_order_placement",
+    "modify_or_stop_live_collector"
+  ]
+}

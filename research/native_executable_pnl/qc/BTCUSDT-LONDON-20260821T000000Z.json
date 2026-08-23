@@ -1,0 +1,45 @@
+{
+  "first_event_timestamp_ns": 1787270400022110900,
+  "first_event_timestamp_utc": "2026-08-21T00:00:00.022110900Z",
+  "last_event_timestamp_ns": 1787356799942440864,
+  "last_event_timestamp_utc": "2026-08-21T23:59:59.942440864Z",
+  "note": "AWS closed segments are allocated from its ordered three-file continuation replay.",
+  "qc": {
+    "applied_depth_events": 161029,
+    "crossed_book_states": 0,
+    "depth_events": 846967,
+    "empty_ask_states": 0,
+    "empty_bid_states": 0,
+    "parse_failures": 0,
+    "raw_records": 5648968,
+    "sequence_gaps": 0,
+    "snapshots": 1,
+    "stale_depth_events": 3,
+    "trade_events": 4801996
+  },
+  "raw_file": "BTCUSDT-LONDON-20260821T000000Z.chft.zst",
+  "relative_path": "data/raw/aws_closed/BTCUSDT-LONDON-20260821T000000Z.chft.zst",
+  "schema": "crypto-hft-native-executable-pnl-file-qc-v1",
+  "sha256": "c62a43b43aaf6e734cd66dd5c4fc89957a99b7450a07ed6b6d325eddef033e2b",
+  "source_group": "aws_closed_rotation_chain",
+  "synchronized_segments": [
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 69972002925099,
+      "end_ns": 1787340372025035999,
+      "end_utc": "2026-08-21T19:26:12.025035999Z",
+      "start_ns": 1787270400022110900,
+      "start_utc": "2026-08-21T00:00:00.022110900Z"
+    },
+    {
+      "close_reason": "file_boundary_continuation",
+      "duration_ns": 16425606232991,
+      "end_ns": 1787356799942440864,
+      "end_utc": "2026-08-21T23:59:59.942440864Z",
+      "start_ns": 1787340374336207873,
+      "start_utc": "2026-08-21T19:26:14.336207873Z"
+    }
+  ],
+  "synchronized_usable_duration_ns": 86397609158090,
+  "synchronized_usable_duration_s": 86397.60915809
+}

@@ -1,0 +1,94 @@
+{
+  "schema": "crypto-hft-passive-approach-combinations-v1",
+  "status": "declared_after_phase1_results_before_phase2_combination_sweep",
+  "experiment_id": "btc-tardis-passive-approach-combinations-2026-v1",
+  "audit": {
+    "phase1_spec": "research/specs/passive_approach_exploration_spec.json",
+    "phase1_spec_sha256": "50f7f1c4ec84aec11db5ac16d54657eb9216d09a60e481494888ecaf6506d660",
+    "phase1_results_seen": true,
+    "known_phase1_finding": "contrarian_tail_and_low_queue_filters_improved_markout_but_every_primary_and_sensitivity_cell_remained_negative"
+  },
+  "interpretation": {
+    "research_type": "post_phase1_combinatorial_diagnostic",
+    "all_eight_dates_already_seen": true,
+    "new_unseen_validation_claimed": false,
+    "profitability_claim_allowed": false,
+    "selection_bias_warning": "combination_families_were_motivated_by_seen_phase1_results"
+  },
+  "data": {
+    "development_description_only": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_description_only": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "frozen_probe_labels": "data/research/tardis/passive/YYYY-MM-DD/labeled_probes.parquet",
+    "recompute_fills": false,
+    "change_alpha_features": false
+  },
+  "fixed_evaluation": {
+    "queue_model": "pessimistic_visible_queue",
+    "quote_lifetime_ms": 1000,
+    "markout_horizon_ms": 1000,
+    "side_results": ["both", "bid", "ask"],
+    "thresholds": "phase1_development_only_threshold_artifact"
+  },
+  "combination_families": {
+    "single_signal_x_queue": {
+      "signals": 8,
+      "directions": [
+        "trend_tail20",
+        "contrarian_tail20",
+        "trend_half",
+        "contrarian_half"
+      ],
+      "queue_bands": ["bottom20", "middle60", "top20"],
+      "policies": 96
+    },
+    "single_signal_tail_x_utc_session": {
+      "signals": 8,
+      "directions": ["trend_tail20", "contrarian_tail20"],
+      "utc_sessions": ["00_08", "08_16", "16_24"],
+      "policies": 48
+    },
+    "composite_signal_x_queue": {
+      "signals": [
+        "obi_depth_majority_tail",
+        "micro_majority_tail",
+        "prediction_obi_l5_joint_tail"
+      ],
+      "directions": ["trend", "contrarian"],
+      "queue_bands": ["bottom20", "middle60", "top20"],
+      "policies": 18
+    },
+    "queue_x_utc_session": {
+      "queue_bands": ["bottom20", "middle60", "top20"],
+      "utc_sessions": ["00_08", "08_16", "16_24"],
+      "policies": 9
+    },
+    "total_combination_policies": 171
+  },
+  "descriptive_ranking": {
+    "development_dates_only": true,
+    "minimum_candidate_retention": 0.01,
+    "minimum_labeled_fills": 10000,
+    "shortlist_size": 10,
+    "ranking_is_not_confirmatory": true
+  },
+  "prohibited": [
+    "claim_new_unseen_validation",
+    "refit_frozen_alpha",
+    "modify_fill_labels",
+    "full_market_maker_backtest",
+    "inventory_simulation",
+    "portfolio_PnL",
+    "maker_Sharpe",
+    "live_order_placement"
+  ]
+}

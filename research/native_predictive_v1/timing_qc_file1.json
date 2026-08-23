@@ -1,0 +1,18 @@
+{
+  "schema": "crypto-hft-cross-stream-timing-v1",
+  "raw_file": "BTCUSDT-LONDON-20260817T221753Z.chft.zst",
+  "file_index": 1,
+  "observation_window_ms": 5000,
+  "raw_records": 446700,
+  "parse_failures": 0,
+  "trades_seen": 157655,
+  "trades_recorded": 157654,
+  "at_quote": 79022,
+  "through_quote": 66728,
+  "outside_quote": 11904,
+  "discarded_on_desync": 24,
+  "unresolved_qty_reaction": 6558,
+  "unresolved_quote_removal": 64432,
+  "unresolved_best_change": 48667,
+  "unresolved_mid_adverse": 64274
+}

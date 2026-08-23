@@ -1,0 +1,83 @@
+{
+  "ablation": "static",
+  "code_commit_at_plan_freeze": "192945d",
+  "development_dates": [
+    "2026-01-01",
+    "2026-02-01",
+    "2026-03-01",
+    "2026-04-01",
+    "2026-05-01"
+  ],
+  "development_gate": {
+    "checks": {
+      "minimum_fills": false,
+      "pooled_gross_positive": false,
+      "pooled_net_positive": false,
+      "positive_folds": false,
+      "worst_fold_tolerance": true,
+      "zero_inventory_violations": true
+    },
+    "passes": false
+  },
+  "features": [
+    "side_obi_l1",
+    "side_obi_l5",
+    "side_obi_l10",
+    "side_weighted_obi_l10",
+    "side_weighted_mid_minus_mid_ticks",
+    "spread_ticks",
+    "bid_depth_l1_lots",
+    "ask_depth_l1_lots",
+    "bid_depth_l5_lots",
+    "ask_depth_l5_lots",
+    "bid_depth_l10_lots",
+    "ask_depth_l10_lots"
+  ],
+  "fill_target": "binary_fill_classifier",
+  "margin_ticks": -1.0,
+  "markout_target": "conditional_1s_maker_markout_regressor_on_filled_training_examples",
+  "model_artifact_sha256": null,
+  "model_id": "lightgbm_static_p0_margin_-1",
+  "parameter_index": 0,
+  "parameters": {
+    "learning_rate": 0.05,
+    "max_depth": 5,
+    "min_child_samples": 200,
+    "num_leaves": 15
+  },
+  "plan_sha256": "98c055b7a27f68e98b15d057ca28265f5d2532e9f2d75d6fb002927877a7d767",
+  "queue_and_execution": {
+    "cancellations_or_unexplained_reductions": "never_advance_queue",
+    "depth_slippage_ticks": 0.0,
+    "fees": {
+      "forced_liquidation_taker_bps": 5.0,
+      "maker_bps": 2.0
+    },
+    "initial_queue_ahead": "displayed_quantity_at_fixed_quote_price",
+    "inventory": {
+      "day_end": "flatten_at_actual_opposite_BBO",
+      "hard_limit_abs_btc": 0.025,
+      "hard_limit_may_never_be_breached": true,
+      "risk_increasing_quotes_at_soft_limit": "suppress",
+      "risk_reducing_selector_override": "allow_even_if_model_rejects_subject_to_active_order_and_hard_cap",
+      "soft_limit_abs_btc": 0.015,
+      "start_each_day_btc": 0.0
+    },
+    "later_additions": "behind_hypothetical_order",
+    "market_impact": 0.0,
+    "one_active_order_per_side": true,
+    "partial_fills": true,
+    "placement_local_time": "max(decision_event_local_time,latest_book_local_time,latest_trade_local_time)",
+    "pnl": "existing_actual_cashflow_accounting_without_spread_double_count",
+    "queue_model": "existing_pessimistic_visible_queue",
+    "quote_lifetime_ms": 1000,
+    "quote_price": "actual_same-decision_best_bid_or_best_ask_fixed_for_lifetime",
+    "quote_quantity_btc": 0.005,
+    "same_price_opposite_aggressor_trades": "consume_queue_then_order",
+    "strict_trade_through": "full_fill"
+  },
+  "schema": "lightgbm-selective-maker-frozen-v1",
+  "seed": 20260816,
+  "status": "rejected_development_gate",
+  "transforms": "training_fold_finite_median_IQR_clip_plus_minus_10"
+}

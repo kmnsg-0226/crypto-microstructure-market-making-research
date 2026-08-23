@@ -1,0 +1,96 @@
+{
+  "schema": "crypto-hft-obi-persistent-search-v1",
+  "status": "declared_after_loop1_failure_before_persistent_signal_outcomes",
+  "experiment_id": "btc-tardis-obi-persistent-search-2026-v1",
+  "audit": {
+    "repository_commit_before_search": "840dada2193a6a6d6f3bb74d281b52572e1926e2",
+    "loop1_results_seen": true,
+    "loop1_thresholds_sha256": "f30d5d9824538e4395d257e78c1b672536d7562f67c79431755d56c4a9b8d5a8",
+    "known_loop1_result": "zero_of_25088_fixed_horizon_taker_cells_positive_after_fee",
+    "loop1_best_optimistic_gross_bps": 1.659402,
+    "loop1_primary_round_trip_fee_bps": 10.0
+  },
+  "interpretation": {
+    "historical_search_is_exploratory": true,
+    "all_eight_historical_dates_already_seen": true,
+    "june_july_august_not_used_for_selection": true,
+    "historical_positive_cannot_complete_profitability_goal": true
+  },
+  "data": {
+    "development_search": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_only_if_development_gate_passes": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "source": "data/research/tardis/YYYY-MM-DD/features_100ms.parquet",
+    "decision_clock_ms": 100,
+    "rolling_windows_are_trailing_and_include_current_observation": true,
+    "rolling_windows_reset_at_feature_segment_boundary": true,
+    "rolling_min_periods": "full_window_with_all_finite_values",
+    "threshold_sample_every_n_rows": 10
+  },
+  "signals": [
+    "obi_l1_mean_1s",
+    "obi_l1_mean_5s",
+    "obi_l1_mean_30s",
+    "obi_l1_mean_60s",
+    "obi_l5_mean_5s",
+    "obi_l5_mean_30s",
+    "weighted_obi_l10_mean_5s",
+    "weighted_obi_l10_mean_30s",
+    "obi_l1_sign_persistence_5s",
+    "obi_l1_sign_persistence_30s",
+    "ti_1s_mean_5s",
+    "ti_1s_mean_30s",
+    "ofi_1s_z_mean_5s",
+    "ofi_1s_z_mean_30s",
+    "micro_consensus_z_mean_5s",
+    "micro_consensus_z_mean_30s"
+  ],
+  "absolute_signal_tail_quantiles": [0.7, 0.8, 0.9, 0.95, 0.975, 0.99],
+  "directions": ["trend", "contrarian"],
+  "regimes": [
+    "all",
+    "one_tick_spread",
+    "trade_volume_1s_high",
+    "book_updates_1s_high",
+    "backward_volatility_5s_high",
+    "backward_volatility_5s_low",
+    "utc_00_08",
+    "utc_08_16",
+    "utc_16_24"
+  ],
+  "fixed_horizons_ms": [60000, 300000, 900000, 1800000, 3600000, 7200000, 14400000],
+  "optimistic_execution_upper_bound": {
+    "latency_ms": 100,
+    "entry_and_exit": "actual_opposite_bbo",
+    "fee_bps_per_side": 5.0,
+    "depth_slippage_ticks": 0.0,
+    "market_impact": 0.0,
+    "screen_uses_overlapping_observations": true
+  },
+  "development_gate": {
+    "minimum_observations_total": 5000,
+    "minimum_observations_each_day": 500,
+    "pooled_net_bps_positive": true,
+    "all_five_days_net_bps_positive": true,
+    "shortlist_size": 25
+  },
+  "forward_gate_inherited_from": "research/specs/obi_profitability_search_spec.json",
+  "prohibited": [
+    "select_on_june_july_august",
+    "centered_or_future_rolling_window",
+    "cross_feature_segment_rolling_state",
+    "ignore_fees",
+    "call_historical_result_profitable",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "crypto-hft-loop6-frozen-ablation-result-v1",
+  "spec_sha256": "9231b940c8ae80ed4caf28572986e24406a97bc4cdaedf00887088976bddbb72",
+  "validation_evaluation_count": 1,
+  "development": {
+    "momentum_only": {
+      "completed_roundtrips": 99249,
+      "pooled_primary_net_mean_bps": 7.00130401159021,
+      "positive_days": 4,
+      "worst_day_net_bps": -2.919953152948613
+    },
+    "obi_plus_momentum": {
+      "completed_roundtrips": 6911,
+      "pooled_primary_net_mean_bps": 9.648952620489936,
+      "positive_days": 5,
+      "worst_day_net_bps": 4.517861957233039
+    }
+  },
+  "june_july_august": {
+    "momentum_only": {
+      "completed_roundtrips": 25602,
+      "pooled_primary_net_mean_bps": 7.399852728966201,
+      "positive_months": 2,
+      "worst_month_net_bps": -19.755842762102958
+    },
+    "obi_plus_momentum": {
+      "completed_roundtrips": 1481,
+      "pooled_primary_net_mean_bps": 0.39881859750989435,
+      "positive_months": 1,
+      "worst_month_net_bps": -3.977174501512373,
+      "monthly_net_bps": {
+        "2026-06-01": 7.002346496364615,
+        "2026-07-01": -3.977174501512373,
+        "2026-08-01": -1.4359925604
+      }
+    }
+  },
+  "retrospective_success_gate_passes": false,
+  "gate_failures": [
+    "obi_plus_momentum_not_positive_each_month",
+    "obi_plus_momentum_did_not_outperform_momentum_only_pooled"
+  ],
+  "intraday_branch_created": false,
+  "exact_capacity_failure_still_applies": true,
+  "directional_loop_search_stopped": true,
+  "artifact_hashes": {
+    "development_day_metrics_sha256": "ababca3572bee70dab9a4f60566b7d9a666167c5754cf9ca24941ad31b82a66d",
+    "development_summary_sha256": "cb4879692b2301ec6d78dd3e3e4cf01556632176fc53e786dccd0b6074c7e07d",
+    "validation_day_metrics_sha256": "b8d9efcb14d7f10b17dcc7eb69362dbcbee6575d398cf4f3257e5ff835e2b823",
+    "validation_summary_sha256": "889e9d2cb9f09c9baaa416255c335825be058cae9104bc1267c5f542b1d9d863",
+    "single_use_receipt_sha256": "aabff2f395a8c01eaa721eed92bb94f39a063e52c813609134857427eb5c87f8"
+  }
+}

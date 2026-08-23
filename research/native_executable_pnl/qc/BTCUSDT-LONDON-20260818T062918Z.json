@@ -1,0 +1,77 @@
+{
+  "first_event_timestamp_ns": 1787034559640900219,
+  "first_event_timestamp_utc": "2026-08-18T06:29:19.640900219Z",
+  "last_event_timestamp_ns": 1787257569913449151,
+  "last_event_timestamp_utc": "2026-08-20T20:26:09.913449151Z",
+  "note": "Frozen native_dev_v1 file replayed independently.",
+  "qc": {
+    "applied_depth_events": 2185973,
+    "crossed_book_states": 0,
+    "depth_events": 2185984,
+    "empty_ask_states": 0,
+    "empty_bid_states": 0,
+    "parse_failures": 0,
+    "raw_records": 7184834,
+    "sequence_gaps": 0,
+    "snapshots": 5,
+    "stale_depth_events": 11,
+    "trade_events": 4998828
+  },
+  "raw_file": "BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+  "relative_path": "data/raw/aws_london/native_dev_v1/BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+  "schema": "crypto-hft-native-executable-pnl-file-qc-v1",
+  "sha256": "2867d44487ec066dfb66581ea2da4faa0b5b571c7f9787f0b8b5b110085d3f25",
+  "source_group": "frozen_native_dev_v1",
+  "synchronized_segments": [
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 82800166487565,
+      "end_ns": 1787117361028023824,
+      "end_utc": "2026-08-19T05:29:21.028023824Z",
+      "start_ns": 1787034560861536259,
+      "start_utc": "2026-08-18T06:29:20.861536259Z"
+    },
+    {
+      "close_reason": "trade_stream_down",
+      "duration_ns": 72636559192060,
+      "end_ns": 1787190000204730265,
+      "end_utc": "2026-08-20T01:40:00.204730265Z",
+      "start_ns": 1787117363645538205,
+      "start_utc": "2026-08-19T05:29:23.645538205Z"
+    },
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 117758088654,
+      "end_ns": 1787190120140290577,
+      "end_utc": "2026-08-20T01:42:00.140290577Z",
+      "start_ns": 1787190002382201923,
+      "start_utc": "2026-08-20T01:40:02.382201923Z"
+    },
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 17037258305093,
+      "end_ns": 1787207160126192608,
+      "end_utc": "2026-08-20T06:26:00.126192608Z",
+      "start_ns": 1787190122867887515,
+      "start_utc": "2026-08-20T01:42:02.867887515Z"
+    },
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 16197741862690,
+      "end_ns": 1787223360129494079,
+      "end_utc": "2026-08-20T10:56:00.129494079Z",
+      "start_ns": 1787207162387631389,
+      "start_utc": "2026-08-20T06:26:02.387631389Z"
+    },
+    {
+      "close_reason": "depth_desync",
+      "duration_ns": 34207133797255,
+      "end_ns": 1787257569824773317,
+      "end_utc": "2026-08-20T20:26:09.824773317Z",
+      "start_ns": 1787223362690976062,
+      "start_utc": "2026-08-20T10:56:02.690976062Z"
+    }
+  ],
+  "synchronized_usable_duration_ns": 222996617733317,
+  "synchronized_usable_duration_s": 222996.617733317
+}

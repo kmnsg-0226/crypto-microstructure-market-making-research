@@ -1,0 +1,252 @@
+{
+  "schema": "crypto-hft-event-model-comparison-plan-v1",
+  "status": "frozen_before_event_model_profitability",
+  "experiment_id": "btc-event-selective-maker-2026-v1",
+  "audit": {
+    "repository_commit_before_freeze": "192945d",
+    "prior_static_obi_and_neutral_mm_results_seen": true,
+    "event_rule_profitability_seen": false,
+    "lightgbm_profitability_seen": false,
+    "deep_model_profitability_seen": false,
+    "june_july_august_event_model_results_seen": false,
+    "directional_threshold_loop_search_stopped": true
+  },
+  "interpretation": {
+    "june_july_august_are_retrospective_historical_evaluation_not_untouched_oos": true,
+    "native_collector_data_after_model_freeze_is_the_only_forward_oos": true,
+    "scientific_success_does_not_require_profitability": true,
+    "no_profitable_claim_without_positive_frozen_net_economics": true
+  },
+  "instrument": {
+    "exchange": "binance-futures",
+    "symbol": "BTCUSDT",
+    "tick_size": 0.1,
+    "quantity_step": 0.001
+  },
+  "data": {
+    "primary_input": "complete_normalized_event_messages_plus_aggressive_trades",
+    "raw_price_level_rows_are_grouped_before_feature_updates": true,
+    "canonical_cross_stream_clock": "local_timestamp_us",
+    "within_stream_order": "source_row_order",
+    "exact_cross_stream_tie": "completed_book_message_then_trade_source_row_then_decision",
+    "exchange_timestamp_role": "event_semantics_and_post_fill_markout_alignment",
+    "vendor_local_timestamp_is_not_assumed_trading_latency": true,
+    "gap_policy": "invalidate_immediately_and_do_not_quote_until_replacement_snapshot",
+    "primary_input_is_not_100ms_grid": true,
+    "canonical_100ms_book_grid_use": "post_fill_markout_lookup_only",
+    "manifest_content": [
+      "raw_input_sha256",
+      "source_validation_report_sha256",
+      "event_export_sha256",
+      "event_schema",
+      "row_count",
+      "ordering_and_gap_counters"
+    ]
+  },
+  "chronological_splits": {
+    "development_days": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "development_folds": [
+      {
+        "train": ["2026-01-01", "2026-02-01"],
+        "validate": ["2026-03-01"]
+      },
+      {
+        "train": ["2026-01-01", "2026-02-01", "2026-03-01"],
+        "validate": ["2026-04-01"]
+      },
+      {
+        "train": ["2026-01-01", "2026-02-01", "2026-03-01", "2026-04-01"],
+        "validate": ["2026-05-01"]
+      }
+    ],
+    "frozen_historical_evaluation_once": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "native_forward_minimum_days": [7, 14, 30]
+  },
+  "decision_opportunities": {
+    "trigger": "valid_post_event_state_after_BBO_change_or_each_aggressive_trade",
+    "cooldown_ms": 100,
+    "cooldown_rule": "first_eligible_event_at_or_after_previous_decision_plus_100ms",
+    "candidate_sides": ["bid", "ask"],
+    "quote_side_encoding": {"bid": 1, "ask": -1},
+    "side_oriented_feature_rule": "multiply_directional_features_by_quote_side_so_positive_is_favorable",
+    "same_opportunity_for_all_policies": true,
+    "decision_after_same_local_timestamp_market_events": true
+  },
+  "execution": {
+    "quote_price": "actual_same-decision_best_bid_or_best_ask_fixed_for_lifetime",
+    "quote_quantity_btc": 0.005,
+    "quote_lifetime_ms": 1000,
+    "placement_local_time": "max(decision_event_local_time,latest_book_local_time,latest_trade_local_time)",
+    "queue_model": "existing_pessimistic_visible_queue",
+    "initial_queue_ahead": "displayed_quantity_at_fixed_quote_price",
+    "cancellations_or_unexplained_reductions": "never_advance_queue",
+    "later_additions": "behind_hypothetical_order",
+    "same_price_opposite_aggressor_trades": "consume_queue_then_order",
+    "strict_trade_through": "full_fill",
+    "partial_fills": true,
+    "one_active_order_per_side": true,
+    "fees": {"maker_bps": 2.0, "forced_liquidation_taker_bps": 5.0},
+    "inventory": {
+      "start_each_day_btc": 0.0,
+      "soft_limit_abs_btc": 0.015,
+      "hard_limit_abs_btc": 0.025,
+      "risk_increasing_quotes_at_soft_limit": "suppress",
+      "risk_reducing_selector_override": "allow_even_if_model_rejects_subject_to_active_order_and_hard_cap",
+      "hard_limit_may_never_be_breached": true,
+      "day_end": "flatten_at_actual_opposite_BBO"
+    },
+    "pnl": "existing_actual_cashflow_accounting_without_spread_double_count",
+    "depth_slippage_ticks": 0.0,
+    "market_impact": 0.0
+  },
+  "labels": {
+    "fill": "any_positive_pessimistic_visible_queue_fill_before_1000ms_expiry",
+    "fill_probability_target": "binary_any_fill",
+    "conditional_markout_training_population": "filled_examples_only",
+    "primary_markout": "side_oriented_maker_markout_ticks_from_fixed_quote_price_at_1s_after_first_fill",
+    "diagnostic_markouts_ms": [100, 500, 5000],
+    "future_mid_lookup": "first_canonical_100ms_grid_at_or_after_fill_exchange_time_plus_horizon",
+    "same_valid_book_segment_required": true,
+    "auxiliary_next_move": "not_used_for_selection_or_primary_economics"
+  },
+  "features": {
+    "state": [
+      "side_obi_l1", "side_obi_l5", "side_obi_l10", "side_weighted_obi_l10",
+      "side_weighted_mid_minus_mid_ticks", "spread_ticks", "bid_depth_l1_lots",
+      "ask_depth_l1_lots", "bid_depth_l5_lots", "ask_depth_l5_lots",
+      "bid_depth_l10_lots", "ask_depth_l10_lots", "queue_ahead_lots", "queue_to_l1_ratio"
+    ],
+    "windows_ms": [10, 50, 100, 500, 1000],
+    "book_dynamics_per_window": [
+      "side_delta_obi_l10", "side_ofi_lots", "side_add_lots", "side_cancel_lots",
+      "side_depletion_lots", "side_replenishment_lots", "bbo_change_count", "depth_change_count"
+    ],
+    "trade_flow_per_window": [
+      "side_trade_qty_imbalance", "side_trade_count_imbalance", "trade_intensity",
+      "average_trade_size_lots", "side_last_trade_streak"
+    ],
+    "timing": [
+      "time_since_trade_ms", "time_since_book_ms", "time_since_bbo_change_ms",
+      "time_since_mid_change_ms", "event_arrival_intensity_100ms"
+    ],
+    "volatility": ["backward_mid_return_abs_sum_100ms", "backward_mid_return_abs_sum_1000ms"],
+    "add_cancel_semantics": "aggregate_level_update_proxies_only_not_order_id_events",
+    "normalization": "train_fold_finite_median_and_IQR_only_clipped_to_plus_minus_10",
+    "future_or_full_day_normalization": false
+  },
+  "model_families": {
+    "neutral": {"decision": "quote_both_sides_subject_to_common_inventory_controls"},
+    "obi_rule": {"source": "existing_frozen_continuous_MM_absolute_weighted_obi_l10_threshold_0.8"},
+    "event_rule": {
+      "votes": [
+        "side_obi_l10_positive", "side_delta_obi_l10_100ms_positive",
+        "side_ofi_lots_100ms_positive", "side_trade_qty_imbalance_100ms_positive",
+        "side_weighted_mid_minus_mid_ticks_positive", "side_depletion_lots_100ms_positive"
+      ],
+      "development_vote_thresholds": [3, 4, 5],
+      "score": "votes_divided_by_6"
+    },
+    "lightgbm": {
+      "B1": "binary_fill_classifier",
+      "B2": "conditional_1s_maker_markout_regressor_on_filled_training_examples",
+      "expected_score_ticks": "p_fill_times_predicted_markout_ticks",
+      "fee_and_risk_adjustment": "selector_margin_and_common_inventory_controls_not_simulator_PnL_target",
+      "hyperparameter_budget": [
+        {"num_leaves": 15, "max_depth": 5, "learning_rate": 0.05, "min_child_samples": 200},
+        {"num_leaves": 31, "max_depth": 7, "learning_rate": 0.03, "min_child_samples": 300}
+      ],
+      "num_boost_round_max": 300,
+      "early_stopping_rounds": 30,
+      "seed": 20260816,
+      "ablations": ["static", "flow", "queue", "full"]
+    },
+    "deep": {
+      "framework": "pytorch_cpu",
+      "architecture": "small_causal_TCN_multitask_fill_and_conditional_markout",
+      "sequence_lengths_development": [128, 256],
+      "channels": [32, 32],
+      "kernel_size": 3,
+      "dilations": [1, 2],
+      "dropout": 0.1,
+      "batch_size": 256,
+      "epochs_max": 12,
+      "early_stopping_patience": 2,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "fill_loss": "binary_cross_entropy_logits",
+      "markout_loss": "Huber_on_filled_examples_only",
+      "seed": 20260816,
+      "device": "cpu",
+      "training_sample_cap_per_fold": 250000,
+      "validation_sample_cap_per_day": 250000,
+      "sampling": "deterministic_evenly_spaced_rows_after_label_validity_filter"
+    }
+  },
+  "selector": {
+    "interface": ["quote", "score", "predicted_fill_probability", "predicted_markout_ticks", "model_id"],
+    "event_rule_threshold_selection": "maximize_fold_median_net_PnL_then_worst_fold_then_lower_complexity",
+    "model_expected_value_margins_ticks": [-1.0, 0.0, 1.0],
+    "model_margin_selection": "maximize_fold_median_net_PnL_then_worst_fold_then_lower_selectivity",
+    "no_pooled_only_maximization": true,
+    "same_simulator_for_all_models": true
+  },
+  "development_gate": {
+    "pooled_gross_pnl_positive": true,
+    "pooled_net_pnl_positive": true,
+    "positive_validation_folds_minimum": 2,
+    "validation_folds_total": 3,
+    "worst_fold_net_pnl_usdt_minimum": -1000.0,
+    "maker_fill_orders_minimum_total": 500,
+    "inventory_limit_violations": 0,
+    "all_conditions_required": true,
+    "gate_may_not_be_weakened_after_results": true
+  },
+  "metrics": {
+    "primary_economic": [
+      "gross_pnl_usdt", "net_pnl_usdt", "net_bps_on_one_way_notional", "fees_usdt",
+      "positive_days", "worst_day_net_pnl_usdt", "fills_per_day", "turnover_usdt",
+      "maximum_absolute_inventory_btc", "inventory_limit_violations", "maximum_drawdown_usdt",
+      "break_even_maker_fee_bps"
+    ],
+    "exploratory": ["daily_sharpe"],
+    "predictive": [
+      "fill_ROC_AUC", "fill_log_loss", "fill_Brier", "calibration_by_decile",
+      "markout_MAE_ticks", "markout_RMSE_ticks", "markout_rank_correlation"
+    ],
+    "manual_audit_categories": [
+      "quoted", "rejected", "filled_bid", "filled_ask", "adverse_fill", "favorable_fill"
+    ]
+  },
+  "reproducibility": {
+    "python_hash_seed": 20260816,
+    "numpy_seed": 20260816,
+    "lightgbm_seed": 20260816,
+    "torch_seed": 20260816,
+    "torch_deterministic_algorithms": true,
+    "repeat_frozen_evaluation_twice": true,
+    "large_raw_and_model_outputs_ignored": true
+  },
+  "freeze_outputs": [
+    "research/specs/event_rule_frozen.json",
+    "research/specs/lightgbm_selective_maker_frozen.json",
+    "research/specs/deep_selective_maker_frozen.json"
+  ],
+  "prohibited": [
+    "continue_directional_threshold_loops", "tune_on_june_july_august",
+    "train_on_native_forward_data", "change_queue_or_fees_between_models",
+    "use_raw_price_level_rows_as_independent_samples", "use_primary_100ms_model_input",
+    "claim_order_id_adds_or_cancels", "transformer_first", "reinforcement_learning",
+    "neural_architecture_search", "place_real_orders", "authenticated_trading_API",
+    "modify_or_stop_native_collector"
+  ]
+}

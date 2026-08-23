@@ -1,0 +1,125 @@
+{
+  "aws_rotation_chain": [
+    "BTCUSDT-LONDON-20260820T000000Z.chft.zst",
+    "BTCUSDT-LONDON-20260821T000000Z.chft.zst",
+    "BTCUSDT-LONDON-20260822T000000Z.chft.zst"
+  ],
+  "files": [
+    {
+      "crossed_book_states": 0,
+      "depth_events": 44687,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260817T210035Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-17T21:00:36.379982129Z",
+      "last_event_timestamp_utc": "2026-08-17T22:16:36.150602605Z",
+      "parse_failures": 0,
+      "raw_records": 64060,
+      "sequence_gaps": 0,
+      "snapshots": 1,
+      "synchronized_usable_duration_s": 4558.382223055,
+      "trade_events": 19367
+    },
+    {
+      "crossed_book_states": 0,
+      "depth_events": 289039,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260817T221753Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-17T22:17:53.911753477Z",
+      "last_event_timestamp_utc": "2026-08-18T06:29:18.640230723Z",
+      "parse_failures": 0,
+      "raw_records": 446700,
+      "sequence_gaps": 0,
+      "snapshots": 1,
+      "synchronized_usable_duration_s": 29482.609481215,
+      "trade_events": 157655
+    },
+    {
+      "crossed_book_states": 0,
+      "depth_events": 2185984,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-18T06:29:19.640900219Z",
+      "last_event_timestamp_utc": "2026-08-20T20:26:09.913449151Z",
+      "parse_failures": 0,
+      "raw_records": 7184834,
+      "sequence_gaps": 0,
+      "snapshots": 5,
+      "synchronized_usable_duration_s": 222996.617733317,
+      "trade_events": 4998828
+    },
+    {
+      "crossed_book_states": 0,
+      "depth_events": 125765,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260820T000000Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-20T20:26:10.531416241Z",
+      "last_event_timestamp_utc": "2026-08-20T23:59:59.919097138Z",
+      "parse_failures": 0,
+      "raw_records": 361880,
+      "sequence_gaps": 0,
+      "snapshots": 1,
+      "synchronized_usable_duration_s": 12828.151303831,
+      "trade_events": 236111
+    },
+    {
+      "crossed_book_states": 0,
+      "depth_events": 846967,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260821T000000Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-21T00:00:00.022110900Z",
+      "last_event_timestamp_utc": "2026-08-21T23:59:59.942440864Z",
+      "parse_failures": 0,
+      "raw_records": 5648968,
+      "sequence_gaps": 0,
+      "snapshots": 1,
+      "synchronized_usable_duration_s": 86397.60915809,
+      "trade_events": 4801996
+    },
+    {
+      "crossed_book_states": 0,
+      "depth_events": 843738,
+      "empty_ask_states": 0,
+      "empty_bid_states": 0,
+      "filename": "BTCUSDT-LONDON-20260822T000000Z.chft.zst",
+      "first_event_timestamp_utc": "2026-08-22T00:00:00.027223328Z",
+      "last_event_timestamp_utc": "2026-08-22T23:59:59.952105918Z",
+      "parse_failures": 0,
+      "raw_records": 2464645,
+      "sequence_gaps": 0,
+      "snapshots": 1,
+      "synchronized_usable_duration_s": 86397.50619215,
+      "trade_events": 1620902
+    }
+  ],
+  "replay_engine": "cpp/replay/event_replayer.cpp",
+  "schema": "crypto-hft-native-executable-pnl-qc-v1",
+  "totals": {
+    "crossed_book_states": 0,
+    "depth_events": 4336180,
+    "empty_ask_states": 0,
+    "empty_bid_states": 0,
+    "nonduplicated_synchronized_usable_duration_s": 442660.876091658,
+    "parse_failures": 0,
+    "raw_records": 16171087,
+    "sequence_gaps": 0,
+    "snapshots": 10,
+    "trade_events": 11834859
+  },
+  "verification": {
+    "all_included_events_before_holdout": true,
+    "aws_chain_replay_qc": {
+      "parse_failures": 0,
+      "raw_records": 8475493,
+      "sequence_gaps": 0,
+      "snapshots": 3
+    },
+    "candidate_raw_range_overlap_count": 0,
+    "duplicate_temporal_interval_count": 0,
+    "remote_smoke_files_included": false
+  }
+}

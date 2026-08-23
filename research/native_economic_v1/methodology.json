@@ -1,0 +1,124 @@
+{
+  "corpus": {
+    "development_only": true,
+    "forward_data_untouched": [
+      "the rotation-enabled AWS capture file",
+      "every later AWS capture",
+      "Tardis June/July/August holdout"
+    ],
+    "is_out_of_sample": false,
+    "spec": "research/specs/native_dev_v1.json"
+  },
+  "economic_object": {
+    "ask": "signed_markout_h = quote_price - mid(T_fill + h)",
+    "bid": "signed_markout_h = mid(T_fill + h) - quote_price",
+    "horizons_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "no_fee_schedule_applied": true,
+    "required_execution_benefit": "-E[signed_markout_h], the benefit that would have to be earned elsewhere to neutralise the observed markout, before any fee, rebate, spread capture or inventory assumption",
+    "units": "ticks; positive favours the passive trader"
+  },
+  "inputs": {
+    "corpus_spec_sha256": "c4ecaded8085cd87817a18cbffb2f6917140c52b93e6891bb58007e81465ec50",
+    "git_commit": "8f80e4b83f0ac1032a45b419456cbfc090ec95fa",
+    "mid_path_sha256": {
+      "file0": "defe2d1c72a6fa13a32d868768878503ef9a6cb085715e4efa48d2ba105a8030",
+      "file1": "7a9a3195f34587d0eff52b3cb55de0dc1d010d68bcfde9a725df04eb65b10581",
+      "file2": "10defe5782276a9f56bdfa5103bd732c6d5bcb15f033b9e70722bfe9aab92ee2"
+    },
+    "phase2_methodology_sha256": "fbded4089b3f2f0ba7e1e2f8b5cb836e099ba85acce70edaa0cd0d4c93b092fa",
+    "phase2_oof_sha256": "c6be3037331c7630190bb1b4a38027469893743f68eda9eed07a8689efb61167",
+    "queue_fills_sha256": {
+      "file0": "df33c4fb7bb8b40676ab3a52b1995126bc768374657fedcce9db3935ce6aecd4",
+      "file1": "6a8c3487ff0115315bf2f872332ee8c84b0a1b810facf9055a1747622b0bc9e8",
+      "file2": "d02e798b7ca5a5da8b1b0e81e565dec9e66f1ab0a714b9fdb3d5bef61a12f007"
+    }
+  },
+  "objective": "quantify the distance from break-even of the best-touch passive maker setup and decompose it into queue position, treatment of unexplained displayed-depth removals, fill mechanism, post-fill horizon and observable state",
+  "out_of_fold_reuse": {
+    "in_sample_predictions_used": false,
+    "join_key": [
+      "timestamp_ns",
+      "file_index",
+      "segment_id",
+      "side"
+    ],
+    "refitting_in_this_phase": false,
+    "source": "data/research/native_predictive_v1/oof_side_predictions.csv.zst"
+  },
+  "phase": "native_economic_v1",
+  "population": {
+    "censoring": "a markout is only observed when the fill and the horizon after it both fall inside the segment and inside the observation window; censored outcomes leave the denominator and are counted separately",
+    "observation_window_ms": 30000,
+    "order_lots": 5,
+    "placement_interval_ms": 1000,
+    "segments": "maximal intervals with a synchronized depth book and a connected aggressive-trade stream, unchanged from phase 1"
+  },
+  "prohibited_in_this_phase": [
+    "threshold selection of any kind",
+    "holding period, quote distance or order size tuning",
+    "fee or rebate optimisation",
+    "choosing a best alpha or beta",
+    "selecting a surface cell to trade",
+    "strategy PnL, Sharpe or walk-forward backtest"
+  ],
+  "queue_model": {
+    "alpha_is_not_an_estimate_of_queue_position": true,
+    "alpha_meaning": "fraction of the displayed quantity at the quote assumed to be ahead of the hypothetical order at placement",
+    "alpha_percents": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "beta_credit_stops_once_the_queue_ahead_is_empty": true,
+    "beta_is_not_a_cancellation_rate": true,
+    "beta_meaning": "fraction of an unexplained displayed-quantity removal ahead of the order credited as queue advancement",
+    "beta_percents": [
+      0,
+      25,
+      50,
+      75,
+      100
+    ],
+    "conservative_cell": [
+      100,
+      0
+    ],
+    "midpoint_cell": [
+      50,
+      50
+    ],
+    "optimistic_cell": [
+      0,
+      100
+    ],
+    "print_at_the_placement_instant_cannot_fill_the_order": true,
+    "removal_attribution_order": [
+      "quantity added at the quote after placement, which sits behind the order",
+      "aggressive prints at the quote not yet used to explain a reduction",
+      "remainder is unexplained and eligible for the beta credit"
+    ],
+    "trade_through_fills_regardless_of_alpha_and_beta": true
+  },
+  "reporting": {
+    "dependence_aware_interval": "moving block bootstrap, 30 minute blocks, 500 draws",
+    "iid_standard_errors_used": false,
+    "label": "development estimates; nothing here is out of sample",
+    "quantiles": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ]
+  },
+  "schema": "crypto-hft-native-economic-v1",
+  "seed": 0,
+  "status": "descriptive_feasibility_decomposition"
+}

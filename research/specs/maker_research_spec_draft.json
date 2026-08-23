@@ -1,0 +1,218 @@
+{
+  "schema": "crypto-hft-passive-fill-research-v1",
+  "status": "draft_before_maker_results",
+  "experiment_id": "btc-tardis-passive-fill-2026-v1",
+  "audit": {
+    "code_commit_before_maker_experiment": "628618bfcc264fd09da67db52d817b24b960251d",
+    "alpha_spec_path": "research/specs/research_spec_frozen.json",
+    "alpha_spec_sha256": "011ea143ddf646b4ba482b0030a6e86d416a7692e16349daa1017543ef0a6f84",
+    "execution_spec_path": "research/specs/execution_spec_frozen.json",
+    "execution_spec_sha256": "de04949d11e8788c926992b7abc217b01997d9f5b534d8cfc792cc9da94533d2",
+    "l2_manifest_sha256": "5893274ec07dde310d41d48b3b1e66bd01af4ab7507dc02aa11d409583a97a03",
+    "trades_manifest_sha256": "ec3af0d61e9aa8258becaf4af980d09822385aeba15c992aa9ce35b87c79ae06",
+    "dataset_bundle_sha256": "e8ae8653d67ee23ffd66eb9d717bb040f645f7657e176e515354d2b7affdfed6"
+  },
+  "split": {
+    "stage_a_single_development_day": [
+      "2026-05-01"
+    ],
+    "development": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "validation": [
+      "2026-06-01"
+    ],
+    "historical_holdout": [
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "holdout_naming_note": "July_and_August_were_seen_in_prior_alpha_and_taker_work_but_not_for_maker_fill_results"
+  },
+  "instrument": {
+    "exchange": "binance-futures",
+    "symbol": "BTCUSDT",
+    "tick_size": 0.1,
+    "quantity_step": 0.001
+  },
+  "alpha": {
+    "source": "frozen_100ms_feature_rows_and_frozen_development_OLS",
+    "models_path": "data/research/tardis/reports/development/fitted_models.json",
+    "transforms_path": "data/research/tardis/reports/development/development_transforms.json",
+    "frozen_model": "combined:1000",
+    "preserved_signals": [
+      "obi_l1",
+      "obi_l5",
+      "obi_l10",
+      "weighted_obi_l10",
+      "weighted_mid_minus_mid_ticks",
+      "normalized_ofi_1s",
+      "ti_1s",
+      "combined_prediction_1s_ticks"
+    ],
+    "obi_bins": "existing_development_decile_thresholds_from_development_transforms",
+    "feature_changes_allowed": false
+  },
+  "placement": {
+    "decision_grid_ms": 100,
+    "candidate_sides": [
+      "bid",
+      "ask"
+    ],
+    "quote_lifetimes_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "quote_price": "BBO_price_from_the_frozen_100ms_state_at_decision_and_never_repriced",
+    "quote_quantity_btc": 0.005,
+    "quote_quantity_basis": "predeclared_small_fixed_five_minimum_lots_not_optimized",
+    "placement_local_time": "max(decision_time_us,latest_book_local_time_us,latest_trade_local_time_us)",
+    "placement_local_time_use": "causal_cross_stream_ordering_only_not_real_trading_latency",
+    "orders_are_independent_research_probes": true,
+    "continuous_market_making": false
+  },
+  "cross_stream_ordering": {
+    "primary_key": "local_timestamp_us_ascending",
+    "within_file_tie_breaker": "preserve_source_row_order",
+    "l2_message_group": "all_incremental_book_L2_rows_with_same_local_timestamp",
+    "cross_file_exact_tie_rule": "completed_book_message_then_trade_source_row_then_new_hypothetical_placement",
+    "expiry_tie_rule": "expire_before_processing_market_event_at_exact_expiry_time",
+    "same_local_trade_can_fill_new_order": false,
+    "rationale": "Tardis_preserves_capture_order_but_separate_exchange_channels_have_no_exchange_level_cross_channel_order_guarantee;placing_after_same_time_market_events_is_conservative",
+    "vendor_local_timestamp_is_our_latency": false
+  },
+  "queue_models": {
+    "headline": "pessimistic_visible_queue",
+    "pessimistic_visible_queue": {
+      "initial_queue_ahead": "displayed_BBO_quantity_at_placement",
+      "same_price_opposite_aggressor_trades": "consume_queue_ahead_then_our_order",
+      "cancellations_or_unexplained_reductions": "never_improve_queue_position",
+      "later_additions": "behind_our_order_and_do_not_change_queue_ahead",
+      "trade_through": "full_fill_if_opposite_aggressor_trade_price_is_strictly_through_fixed_quote",
+      "partial_fills": true
+    },
+    "sensitivity_upper_bound": {
+      "name": "optimistic_front_of_queue",
+      "initial_queue_ahead": 0,
+      "interpretation": "deliberately_optimistic_fill_probability_upper_bound_not_FIFO_reconstruction_or_headline"
+    },
+    "exact_fifo_claimed": false,
+    "fitted_queue_model": false
+  },
+  "trade_qualification": {
+    "bid_same_price": "aggressor_side_sell_and_trade_price_equals_quote_price",
+    "ask_same_price": "aggressor_side_buy_and_trade_price_equals_quote_price",
+    "bid_trade_through": "aggressor_side_sell_and_trade_price_below_quote_price",
+    "ask_trade_through": "aggressor_side_buy_and_trade_price_above_quote_price",
+    "event_interval": "placement_local_time_less_than_trade_local_time_less_than_expiry_local_time"
+  },
+  "gap_snapshot_policy": {
+    "invalid_feature_row": "candidate_recorded_as_invalid_at_placement",
+    "replacement_snapshot_during_lifetime": "cancel_immediately_and_mark_snapshot_and_gap_invalid",
+    "day_boundary_before_expiry": "cancel_and_mark_gap_invalid",
+    "full_fill_before_snapshot": "retain_fill",
+    "partial_fill_before_snapshot": "retain_partial_quantity_but_mark_order_invalidated",
+    "disconnect_limitation": "normalized_CSV_has_no_disconnect_messages_so_replacement_snapshot_intervals_are_the_available_conservative_proxy",
+    "fabricate_order_survival": false
+  },
+  "markouts": {
+    "horizons_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "fill_reference_time": "first_nonzero_fill_exchange_timestamp",
+    "book_lookup": "first_canonical_100ms_grid_at_or_after_fill_exchange_timestamp",
+    "future_lookup": "fill_grid_plus_horizon",
+    "require_same_valid_feature_segment": true,
+    "bid_maker_markout_ticks": "(future_mid-fill_price)/tick_size",
+    "ask_maker_markout_ticks": "(fill_price-future_mid)/tick_size",
+    "bid_post_fill_mid_move_ticks": "(future_mid-fill_grid_mid)/tick_size",
+    "ask_post_fill_mid_move_ticks": "(fill_grid_mid-future_mid)/tick_size",
+    "spread_double_count": false,
+    "economic_normalization_usdt": 1000.0
+  },
+  "quote_filter": {
+    "signal": "combined_prediction_1s_ticks",
+    "threshold_source": "development_signal_distribution_only_not_maker_outcomes",
+    "bearish_quantile": 0.2,
+    "bullish_quantile": 0.8,
+    "filtered_bid": "exclude_if_prediction_below_frozen_development_20th_percentile",
+    "filtered_ask": "exclude_if_prediction_above_frozen_development_80th_percentile",
+    "threshold_fit_dates": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "maker_outcome_optimization": false
+  },
+  "fees": {
+    "unit": "bps_on_passive_fill_notional",
+    "maker_fee_scenarios_bps": [
+      -1.0,
+      0.0,
+      1.0,
+      2.0
+    ],
+    "negative_value_means_rebate": true,
+    "headline": "pre_fee_passive_edge_and_break_even_fee",
+    "current_fee_schedule_claimed": false
+  },
+  "inference": {
+    "primary": "Newey-West_HAC_mean_standard_error",
+    "lag_observations": "max(quote_lifetime_ms,markout_horizon_ms)/100ms",
+    "reset_at_day_boundary": true,
+    "naive_iid_primary": false,
+    "also_report_day_level_results": true
+  },
+  "manual_audit": {
+    "development_day": "2026-05-01",
+    "deterministic_seed": 20260816,
+    "minimum_examples_per_available_category": 3,
+    "categories": [
+      "filled_bid",
+      "filled_ask",
+      "unfilled_bid",
+      "unfilled_ask",
+      "partial_fill",
+      "trade_through",
+      "snapshot_or_gap_invalid"
+    ],
+    "raw_trace_sources": [
+      "incremental_book_L2",
+      "trades"
+    ]
+  },
+  "output": {
+    "raw_probe_schema": "tardis-passive-probes-v1",
+    "labeled_probe_format": "parquet_zstd",
+    "preserve_every_candidate": true,
+    "machine_report_root": "data/research/tardis/reports/passive"
+  },
+  "prohibited": [
+    "alpha_feature_changes",
+    "maker_threshold_tuning_on_validation_or_holdout",
+    "exact_FIFO_claim",
+    "continuous_two_sided_market_maker",
+    "inventory_process",
+    "reservation_price",
+    "Avellaneda_Stoikov",
+    "inventory_skew",
+    "dynamic_quote_width",
+    "portfolio_PnL",
+    "maker_Sharpe",
+    "queue_model_fitting",
+    "machine_learning_fill_model",
+    "maker_taker_switching",
+    "live_order_placement",
+    "authenticated_Binance_trading"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "collector_location": "aws_london",
+  "corpus_id": "native_dev_v1",
+  "created_at": "2026-08-21T00:11:58Z",
+  "development_only": true,
+  "files": [
+    {
+      "file_index": 0,
+      "filename": "BTCUSDT-LONDON-20260817T210035Z.chft.zst",
+      "final_book_checksum": "0x427ab1966b6b4308",
+      "final_update_id": 11308285715933,
+      "first_exchange_time_ms": 1787000437345,
+      "first_local_receive_ns": 1787000436379982129,
+      "last_exchange_time_ms": 1787004995469,
+      "last_local_receive_ns": 1787004996150602605,
+      "raw_records": 64060,
+      "segments": [
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 4558.38222306,
+          "end_ns": 1787004995939705713,
+          "segment_id": 1,
+          "start_ns": 1787000437557482658
+        }
+      ],
+      "sha256": "99b6d4878ef32f4a237545e4019c9062d1bdaa56e9cf064b1d22b5b6a2109541",
+      "size_bytes": 13523656,
+      "snapshots": 1
+    },
+    {
+      "file_index": 1,
+      "filename": "BTCUSDT-LONDON-20260817T221753Z.chft.zst",
+      "final_book_checksum": "0x1980a6324a23dce0",
+      "final_update_id": 11310884884827,
+      "first_exchange_time_ms": 1787005074852,
+      "first_local_receive_ns": 1787005073911753477,
+      "last_exchange_time_ms": 1787034557896,
+      "last_local_receive_ns": 1787034558640230723,
+      "raw_records": 446700,
+      "segments": [
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 29482.6094812,
+          "end_ns": 1787034557777702408,
+          "segment_id": 1,
+          "start_ns": 1787005075168221193
+        }
+      ],
+      "sha256": "e093130b8f6f4bad640829871ff223474dfa5d3f9d93371d2fbfe05ac35cf35e",
+      "size_bytes": 100720915,
+      "snapshots": 1
+    },
+    {
+      "file_index": 2,
+      "filename": "BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+      "final_book_checksum": "0xf2e1fea4c7a85f84",
+      "final_update_id": 11335825079071,
+      "first_exchange_time_ms": 1787034560637,
+      "first_local_receive_ns": 1787034559640900219,
+      "last_exchange_time_ms": 1787257569203,
+      "last_local_receive_ns": 1787257569913449151,
+      "raw_records": 7184834,
+      "segments": [
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 82800.1664876,
+          "end_ns": 1787117361028023824,
+          "segment_id": 1,
+          "start_ns": 1787034560861536259
+        },
+        {
+          "close_reason": "trade_stream_down",
+          "duration_s": 72636.5591921,
+          "end_ns": 1787190000204730265,
+          "segment_id": 2,
+          "start_ns": 1787117363645538205
+        },
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 117.758088654,
+          "end_ns": 1787190120140290577,
+          "segment_id": 3,
+          "start_ns": 1787190002382201923
+        },
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 17037.2583051,
+          "end_ns": 1787207160126192608,
+          "segment_id": 4,
+          "start_ns": 1787190122867887515
+        },
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 16197.7418627,
+          "end_ns": 1787223360129494079,
+          "segment_id": 5,
+          "start_ns": 1787207162387631389
+        },
+        {
+          "close_reason": "depth_desync",
+          "duration_s": 34207.1337973,
+          "end_ns": 1787257569824773317,
+          "segment_id": 6,
+          "start_ns": 1787223362690976062
+        }
+      ],
+      "sha256": "2867d44487ec066dfb66581ea2da4faa0b5b571c7f9787f0b8b5b110085d3f25",
+      "size_bytes": 1473358183,
+      "snapshots": 5
+    }
+  ],
+  "git_commit": "8f80e4b83f0ac1032a45b419456cbfc090ec95fa",
+  "is_out_of_sample": false,
+  "notes": {
+    "boundary_rule": "no feature window, no forward target and no passive-fill simulation may cross a segment boundary",
+    "concatenation": "forbidden: each file is a separate collector process with its own REST snapshot",
+    "dataset_location": "data/research/native_dev_v1",
+    "excluded": "the rotation-enabled forward capture file and every later AWS file are not part of this corpus",
+    "segment_definition": "maximal interval with a synchronized depth book and a connected aggressive-trade stream"
+  },
+  "schema": "crypto-hft-native-dev-corpus-v1",
+  "source": "native_binance_usdm",
+  "symbol": "BTCUSDT",
+  "venue": "Binance USD-M perpetual futures"
+}

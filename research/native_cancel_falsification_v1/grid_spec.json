@@ -1,0 +1,188 @@
+{
+  "added_or_removed_after_seeing_results": false,
+  "baseline": "never",
+  "cancel_latencies_ms": [
+    0,
+    25,
+    50,
+    100
+  ],
+  "cancel_thresholds": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7,
+    0.8,
+    0.9
+  ],
+  "catastrophic_thresholds_ticks": [
+    25,
+    50,
+    100
+  ],
+  "fixed_before_any_result": true,
+  "headline_cells": [
+    {
+      "latency_ms": 0,
+      "queue_cell": "conservative",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "conservative",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "conservative",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "conservative",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "conservative",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "conservative",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "conservative",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "conservative",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "conservative",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "midpoint",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "midpoint",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "midpoint",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "midpoint",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "midpoint",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "midpoint",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "midpoint",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "midpoint",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "midpoint",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "optimistic",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "optimistic",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 0,
+      "queue_cell": "optimistic",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "optimistic",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "optimistic",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 50,
+      "queue_cell": "optimistic",
+      "threshold": 0.7
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "optimistic",
+      "threshold": 0.3
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "optimistic",
+      "threshold": 0.5
+    },
+    {
+      "latency_ms": 100,
+      "queue_cell": "optimistic",
+      "threshold": 0.7
+    }
+  ],
+  "lead_time_bins_ms": [
+    0.0,
+    25.0,
+    50.0,
+    100.0,
+    250.0,
+    500.0
+  ],
+  "queue_cells": {
+    "conservative": {
+      "alpha_pct": 100,
+      "beta_pct": 0
+    },
+    "midpoint": {
+      "alpha_pct": 50,
+      "beta_pct": 50
+    },
+    "optimistic": {
+      "alpha_pct": 0,
+      "beta_pct": 100
+    }
+  },
+  "schema": "crypto-hft-cancel-grid-v1",
+  "score_deciles": 10
+}

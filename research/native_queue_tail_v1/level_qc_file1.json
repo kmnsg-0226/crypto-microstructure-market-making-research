@@ -1,0 +1,19 @@
+{
+  "schema": "crypto-hft-level-lifecycle-v1",
+  "raw_file": "BTCUSDT-LONDON-20260817T221753Z.chft.zst",
+  "file_index": 1,
+  "grid_ms": 100,
+  "raw_records": 446700,
+  "parse_failures": 0,
+  "segments": 1,
+  "episodes": 8444,
+  "grid_rows": 589652,
+  "depth_events": 289036,
+  "trade_events": 157654,
+  "prints_at_quote": 79022,
+  "prints_through": 66728,
+  "prints_outside": 11904,
+  "explained_removal_lots": 18366079,
+  "unexplained_removal_lots": 207207067,
+  "replenished_lots": 90121117
+}

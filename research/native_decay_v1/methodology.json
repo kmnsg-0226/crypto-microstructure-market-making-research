@@ -1,0 +1,222 @@
+{
+  "classification_order": [
+    "reversal",
+    "medium_horizon_persistence",
+    "short_continuation",
+    "ultra_short_only",
+    "ambiguous"
+  ],
+  "classification_rules": {
+    "ambiguous": "resolved incremental edges of both signs across horizons, or a resolved edge that fails the block-stability floor, or a sign that flips between the raw and demeaned views",
+    "medium_horizon_persistence": "the incremental edge after 5 s is resolved, positive and stable at some h >= 120 s",
+    "reversal": "the incremental edge after 5 s is resolved and negative at some h > 5 s, and no resolved positive incremental edge at any longer horizon",
+    "short_continuation": "the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s",
+    "ultra_short_only": "cumulative edge is resolved at some h <= 5 s, and the incremental edge after 5 s is unresolved at every h > 5 s"
+  },
+  "classifications": {
+    "direction_p2_lightgbm": "short_continuation",
+    "direction_p2_logistic": "short_continuation",
+    "obi_l1": "short_continuation",
+    "obi_l10": "short_continuation",
+    "obi_l5": "short_continuation",
+    "sweep_dir_p4a": "short_continuation"
+  },
+  "combined_frozen_oof_score_available": false,
+  "corpus": {
+    "development_only": true,
+    "forward_data_untouched": [
+      "the rotation-enabled AWS capture file",
+      "every later AWS capture",
+      "every post-native_dev_v1 native capture",
+      "the Tardis June/July/August holdout"
+    ],
+    "is_out_of_sample": false,
+    "label": "blocked out-of-fold development estimates",
+    "spec": "research/specs/native_dev_v1.json"
+  },
+  "cost_hurdles": {
+    "grid": [
+      1.0,
+      2.0,
+      3.0,
+      5.0,
+      7.5,
+      10.0
+    ],
+    "is_a_live_account_fee_tier": false,
+    "label": "diagnostic sensitivity values only",
+    "pnl_or_sharpe_computed": false,
+    "repository_reference_values": {
+      "maker_bps_per_leg": 2.0,
+      "taker_bps_per_side": 5.0
+    },
+    "round_trip": "twice the one-way hurdle, reported as arithmetic",
+    "units": "basis points of notional, one way"
+  },
+  "dependence": {
+    "block_seconds_by_horizon": {
+      "1": 1800.0,
+      "10": 1800.0,
+      "120": 1800.0,
+      "2": 1800.0,
+      "30": 1800.0,
+      "300": 3600.0,
+      "5": 1800.0,
+      "60": 1800.0,
+      "600": 7200.0
+    },
+    "draws": 500,
+    "effective_sample_size_reported": true,
+    "iid_standard_errors_used": false,
+    "non_overlapping_anchor_rule": "within each segment, keep the rows whose index from the segment's first row is an exact multiple of h / 100 ms, so consecutive kept windows touch but never overlap",
+    "rows_treated_as_independent": false,
+    "scheme": "horizon-aware moving block bootstrap",
+    "seed": 0
+  },
+  "drift_control": {
+    "controls": [
+      "raw",
+      "demeaned"
+    ],
+    "decision_control": "demeaned",
+    "demean_block_minutes": 30,
+    "future_returns_used_as_features": false,
+    "reason": "the corpus is a three-day 13-14 % BTC rally; at minute horizons the unconditional drift is a first-order contaminant of any mean markout",
+    "sides_reported_separately": true
+  },
+  "horizons_s": [
+    1,
+    2,
+    5,
+    10,
+    30,
+    60,
+    120,
+    300,
+    600
+  ],
+  "inputs": {
+    "folds": "a41ad0db2cfb1d09c92cb3de0d7118056e523d8cb929137d4fb426438942448c",
+    "native_dev_v1_spec": "c4ecaded8085cd87817a18cbffb2f6917140c52b93e6891bb58007e81465ec50",
+    "native_features_100ms_file0": "5020dec4df58d62a0179647adc797107ed5ff6f02cecff36500e453bce439bf4",
+    "native_features_100ms_file1": "71ef1e778da785d67a29186279ba07f0bcd47750db248249ff21bed87a40587d",
+    "native_features_100ms_file2": "1c101eaae9c4763342566933eba9f9eacb564ca79115fed9198df36a0bac61c5",
+    "phase2_oof_price_predictions": "3ce08f46bcd6e6464a613e17191d91594ce67c83a6cc4bcfb03e0a5de1cf7682",
+    "phase4b_sweep_scores": "4fd69151cdaf21ea120401e606627aa9a73b3b0d181441245df080d6ed26bea5"
+  },
+  "models_trained_in_this_phase": 0,
+  "no_primary_horizon": "the phase reports the profile across horizons; nominating one would be the selection this phase forbids",
+  "phase": "native_decay_v1",
+  "pivot_s": 5,
+  "population": {
+    "full_corpus_secondary_for": [
+      "obi_l1",
+      "obi_l5",
+      "obi_l10"
+    ],
+    "headline": "oof_scored_rows",
+    "reason": "the rows that carry every signal, so signals are compared on identical rows"
+  },
+  "prohibited_in_this_phase": [
+    "training any model, horizon specific or otherwise",
+    "combining signals into a new score",
+    "selecting a horizon, threshold, decile or regime as best",
+    "any entry or exit rule, position sizing, stops, targets or holding-period optimisation",
+    "strategy PnL, Sharpe or equity curve",
+    "live account fees",
+    "using any future return as a feature",
+    "reopening the falsified passive market-making line",
+    "reopening the falsified sub-second directional monetisation line",
+    "reading, loading or summarising post-native_dev_v1 AWS data or the Tardis holdout",
+    "re-freezing the failing passive_binary_sha256 audit gate"
+  ],
+  "purge": {
+    "applied_as": "an evaluated row must sit at least (h + 60 s) after the start of its own validation block",
+    "base_s": 60.0,
+    "by_horizon_s": {
+      "1": 61.0,
+      "10": 70.0,
+      "120": 180.0,
+      "2": 62.0,
+      "30": 90.0,
+      "300": 360.0,
+      "5": 65.0,
+      "60": 120.0,
+      "600": 660.0
+    },
+    "old_flat_purge_reused": false,
+    "rule": "horizon specific, purge = horizon + 60 s"
+  },
+  "question": "does microstructure information that is real inside one second persist beyond five seconds, and does signal strength at t predict additional movement after t + 5 s rather than merely inheriting the first five seconds of it?",
+  "schema": "crypto-hft-native-decay-v1",
+  "seed": 0,
+  "signals": {
+    "direction_p2_lightgbm": {
+      "is_out_of_fold": true,
+      "kind": "frozen_oof_model_score",
+      "role": "secondary",
+      "source": "native_predictive_v1 oof_price_predictions price_direction_lightgbm",
+      "transform": "2p - 1"
+    },
+    "direction_p2_logistic": {
+      "is_out_of_fold": true,
+      "kind": "frozen_oof_model_score",
+      "note": "phase 2 headline direction model, blocked OOF, ROC AUC 0.7412",
+      "role": "primary",
+      "source": "native_predictive_v1 oof_price_predictions price_direction_linear",
+      "transform": "2p - 1"
+    },
+    "obi_l1": {
+      "is_out_of_fold": false,
+      "kind": "raw_book_state",
+      "note": "a raw observable, not a fitted score; it needs no fold and is defined on every row of the corpus",
+      "role": "primary",
+      "source": "native_dev_v1 phase 1 grid column obi_l1",
+      "transform": "identity"
+    },
+    "obi_l10": {
+      "is_out_of_fold": false,
+      "kind": "raw_book_state",
+      "role": "secondary",
+      "source": "native_dev_v1 phase 1 grid column obi_l10",
+      "transform": "identity"
+    },
+    "obi_l5": {
+      "is_out_of_fold": false,
+      "kind": "raw_book_state",
+      "role": "secondary",
+      "source": "native_dev_v1 phase 1 grid column obi_l5",
+      "transform": "identity"
+    },
+    "sweep_dir_p4a": {
+      "is_out_of_fold": true,
+      "kind": "frozen_oof_model_score",
+      "note": "phase 4A sweep model, scored OOF at 100 ms by phase 4B; the difference is the phase 5A direction convention expressed per instant and is not a fitted combination",
+      "role": "primary",
+      "source": "native_cancel_falsification_v1 sweep_scores sweep_p, both sides",
+      "transform": "p(side=ask) - p(side=bid)"
+    }
+  },
+  "stability_min_block_share": 0.6,
+  "status": "descriptive decay study on frozen signals and development data; no model is trained and no horizon is selected",
+  "targets": {
+    "agreement_horizons_s": [
+      1,
+      2,
+      5
+    ],
+    "agreement_rule": "regenerated 1 s and 5 s must equal the frozen phase 1 columns exactly; 2 s is checked against the phase 5A reconstruction at that artifact's own published tolerance. Disagreement stops the phase.",
+    "censoring": "a horizon that would cross a segment edge is censored, never zero",
+    "construction": "forward shift of h / 100 ms rows inside the same segment",
+    "definition": "mid(t + h) - mid(t) in ticks, both mids read from the frozen phase 1 100 ms grid column mid_ticks",
+    "no_target_crosses_a_segment_boundary": true
+  },
+  "verdict": "B",
+  "verdict_rules": {
+    "A": "current L2 monetisation closed - no signal shows a resolved positive incremental edge after 5 s at any horizon, and no gross edge at any horizon and any decile reaches the cheapest one-way hurdle of 1 bp",
+    "B": "longer-horizon information survives but is marginal - a resolved, stable positive incremental edge after 5 s exists, but the gross edge stays below a 2 bp round trip (the cheapest hurdle in the grid taken as 1 bp per side)",
+    "C": "economically material persistence - a resolved, stable gross edge at some horizon exceeds a 2 bp round trip, driven by incremental movement after 5 s rather than inherited from the first 5 s",
+    "D": "reversal structure - a resolved, stable negative incremental edge after 5 s dominates the profile",
+    "E": "insufficient data - at every horizon of 120 s and beyond the bootstrap interval on the decision quantity spans zero by more than the quantity itself, so the corpus cannot resolve the question either way"
+  }
+}

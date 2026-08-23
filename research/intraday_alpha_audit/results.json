@@ -1,0 +1,1548 @@
+{
+  "generated_at": "2026-08-23T00:00:21.875210+00:00",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "datasets": {
+    "ohlcv_1m": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/klines",
+        "vision_prefix": "data/futures/um/daily/klines/{symbol}/1m/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2019-12-31.zip",
+            "size": 56711
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/BTCUSDT/1m/BTCUSDT-1m-2026-05-15.zip",
+            "size": 61333
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2019-12-31.zip",
+            "size": 50701
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/ETHUSDT/1m/ETHUSDT-1m-2026-05-15.zip",
+            "size": 62775
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2020-09-14",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/SOLUSDT/1m/SOLUSDT-1m-2020-09-14.zip",
+            "size": 34437
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/SOLUSDT/1m/SOLUSDT-1m-2026-05-15.zip",
+            "size": 56347
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T23:41:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            60000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787442060000,
+              "77014.30",
+              "77034.60",
+              "77014.20",
+              "77034.50",
+              "10.550",
+              1787442119999,
+              "812634.62170",
+              520,
+              "9.100",
+              "700944.10010",
+              "0"
+            ],
+            [
+              1787442120000,
+              "77034.60",
+              "77048.20",
+              "77034.50",
+              "77048.20",
+              "7.456",
+              1787442179999,
+              "574426.54860",
+              528,
+              "6.742",
+              "519417.72740",
+              "0"
+            ]
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T23:41:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            60000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787442060000,
+              "2419.56",
+              "2420.20",
+              "2419.33",
+              "2420.20",
+              "681.574",
+              1787442119999,
+              "1649346.95353",
+              1360,
+              "460.180",
+              "1113600.62463",
+              "0"
+            ],
+            [
+              1787442120000,
+              "2420.20",
+              "2421.28",
+              "2420.19",
+              "2421.25",
+              "1872.143",
+              1787442179999,
+              "4532168.26368",
+              2133,
+              "573.313",
+              "1387885.60491",
+              "0"
+            ]
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T23:41:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            60000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787442060000,
+              "93.6800",
+              "93.6900",
+              "93.6500",
+              "93.6800",
+              "6451.80",
+              1787442119999,
+              "604342.242700",
+              485,
+              "4891.52",
+              "458185.603300",
+              "0"
+            ],
+            [
+              1787442120000,
+              "93.6900",
+              "93.7500",
+              "93.6900",
+              "93.7100",
+              "5693.67",
+              1787442179999,
+              "533641.316100",
+              591,
+              "4428.26",
+              "415046.210400",
+              "0"
+            ]
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 60000
+      }
+    },
+    "ohlcv_5m": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/klines",
+        "vision_prefix": "data/futures/um/daily/klines/{symbol}/5m/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/BTCUSDT/5m/BTCUSDT-5m-2019-12-31.zip",
+            "size": 12813
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/BTCUSDT/5m/BTCUSDT-5m-2026-05-15.zip",
+            "size": 13717
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/ETHUSDT/5m/ETHUSDT-5m-2019-12-31.zip",
+            "size": 11737
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/ETHUSDT/5m/ETHUSDT-5m-2026-05-15.zip",
+            "size": 14075
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2020-09-14",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/klines/SOLUSDT/5m/SOLUSDT-5m-2020-09-14.zip",
+            "size": 7922
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/klines/SOLUSDT/5m/SOLUSDT-5m-2026-05-15.zip",
+            "size": 12748
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "77125.60",
+              "77166.60",
+              "77056.80",
+              "77056.80",
+              "135.073",
+              1787437799999,
+              "10417608.34510",
+              6414,
+              "52.430",
+              "4044004.13030",
+              "0"
+            ],
+            [
+              1787437800000,
+              "77056.90",
+              "77071.60",
+              "76833.90",
+              "76956.70",
+              "674.369",
+              1787438099999,
+              "51885017.01640",
+              13362,
+              "135.170",
+              "10401894.09790",
+              "0"
+            ]
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "2421.26",
+              "2424.54",
+              "2421.11",
+              "2422.43",
+              "8943.256",
+              1787437799999,
+              "21668110.03187",
+              13929,
+              "5543.705",
+              "13431592.76320",
+              "0"
+            ],
+            [
+              1787437800000,
+              "2422.43",
+              "2422.73",
+              "2407.01",
+              "2413.40",
+              "29663.054",
+              1787438099999,
+              "71607352.06617",
+              32411,
+              "7588.422",
+              "18311201.67859",
+              "0"
+            ]
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "93.8200",
+              "93.9900",
+              "93.8000",
+              "93.9200",
+              "52143.39",
+              1787437799999,
+              "4896089.346100",
+              6423,
+              "35287.05",
+              "3313342.776900",
+              "0"
+            ],
+            [
+              1787437800000,
+              "93.9200",
+              "93.9500",
+              "93.5400",
+              "93.7600",
+              "88315.53",
+              1787438099999,
+              "8280006.765200",
+              9294,
+              "34876.71",
+              "3269960.469700",
+              "0"
+            ]
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 300000
+      }
+    },
+    "aggTrades": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/aggTrades",
+        "vision_prefix": "data/futures/um/daily/aggTrades/{symbol}/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2019-12-31.zip",
+            "size": 1518388
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/aggTrades/BTCUSDT/BTCUSDT-aggTrades-2026-05-15.zip",
+            "size": 16412656
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-31",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2019-12-31.zip",
+            "size": 518596
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/aggTrades/ETHUSDT/ETHUSDT-aggTrades-2026-05-15.zip",
+            "size": 14627477
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2020-09-14",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/aggTrades/SOLUSDT/SOLUSDT-aggTrades-2020-09-14.zip",
+            "size": 684330
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/aggTrades/SOLUSDT/SOLUSDT-aggTrades-2026-05-15.zip",
+            "size": 3834891
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "T",
+            "a",
+            "f",
+            "l",
+            "m",
+            "nq",
+            "p",
+            "q"
+          ],
+          "first_timestamp": "2026-08-23T00:01:01.499000+00:00",
+          "last_timestamp": "2026-08-23T00:01:07.932000+00:00",
+          "timestamp_deltas_ms": [
+            38,
+            48,
+            71,
+            124,
+            134,
+            155,
+            162,
+            178,
+            193,
+            237,
+            244,
+            300,
+            410,
+            478,
+            515,
+            597,
+            658,
+            837,
+            1054
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            {
+              "a": 3421676562,
+              "p": "77134.20",
+              "q": "0.011",
+              "nq": "0.011",
+              "f": 8004263288,
+              "l": 8004263289,
+              "T": 1787443261499,
+              "m": false
+            },
+            {
+              "a": 3421676563,
+              "p": "77134.10",
+              "q": "0.002",
+              "nq": "0.002",
+              "f": 8004263290,
+              "l": 8004263291,
+              "T": 1787443261547,
+              "m": true
+            }
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "T",
+            "a",
+            "f",
+            "l",
+            "m",
+            "nq",
+            "p",
+            "q"
+          ],
+          "first_timestamp": "2026-08-23T00:01:01.615000+00:00",
+          "last_timestamp": "2026-08-23T00:01:09.400000+00:00",
+          "timestamp_deltas_ms": [
+            0,
+            11,
+            13,
+            37,
+            123,
+            155,
+            187,
+            218,
+            448,
+            512,
+            564,
+            593,
+            599,
+            721,
+            734,
+            767,
+            803,
+            1300
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            {
+              "a": 3056959965,
+              "p": "2423.43",
+              "q": "0.032",
+              "nq": "0.032",
+              "f": 8610929176,
+              "l": 8610929178,
+              "T": 1787443261615,
+              "m": false
+            },
+            {
+              "a": 3056959966,
+              "p": "2423.44",
+              "q": "0.018",
+              "nq": "0.018",
+              "f": 8610929179,
+              "l": 8610929180,
+              "T": 1787443261615,
+              "m": false
+            }
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "T",
+            "a",
+            "f",
+            "l",
+            "m",
+            "nq",
+            "p",
+            "q"
+          ],
+          "first_timestamp": "2026-08-23T00:01:03.101000+00:00",
+          "last_timestamp": "2026-08-23T00:01:09.500000+00:00",
+          "timestamp_deltas_ms": [
+            15,
+            21,
+            27,
+            51,
+            54,
+            71,
+            97,
+            138,
+            141,
+            144,
+            267,
+            303,
+            321,
+            378,
+            453,
+            733,
+            776,
+            786,
+            1623
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            {
+              "a": 1089885248,
+              "p": "93.9900",
+              "q": "3.25",
+              "nq": "3.25",
+              "f": 3472281478,
+              "l": 3472281479,
+              "T": 1787443263101,
+              "m": false
+            },
+            {
+              "a": 1089885249,
+              "p": "93.9800",
+              "q": "0.12",
+              "nq": "0.12",
+              "f": 3472281480,
+              "l": 3472281480,
+              "T": 1787443263152,
+              "m": true
+            }
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": null
+      }
+    },
+    "fundingRate": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/fundingRate",
+        "vision_prefix": "data/futures/um/daily/fundingRate/{symbol}/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": null,
+          "latest": null,
+          "sample_archive": null,
+          "latest_archive": null,
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": null,
+          "latest": null,
+          "sample_archive": null,
+          "latest_archive": null,
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": null,
+          "latest": null,
+          "sample_archive": null,
+          "latest_archive": null,
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "fundingRate",
+            "fundingTime",
+            "markPrice",
+            "rateType",
+            "symbol"
+          ],
+          "first_timestamp": "2026-08-16T16:00:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            28799995,
+            28799996,
+            28799997,
+            28799999,
+            28800000,
+            28800001,
+            28800002,
+            28800004,
+            28800005
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "BTCUSDT",
+              "fundingTime": 1786896000000,
+              "fundingRate": "0.00005000",
+              "markPrice": "63114.26984783",
+              "rateType": "Regular"
+            },
+            {
+              "symbol": "BTCUSDT",
+              "fundingTime": 1786924800001,
+              "fundingRate": "0.00003818",
+              "markPrice": "62876.00000000",
+              "rateType": "Regular"
+            }
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "fundingRate",
+            "fundingTime",
+            "markPrice",
+            "rateType",
+            "symbol"
+          ],
+          "first_timestamp": "2026-08-16T16:00:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            28799995,
+            28799996,
+            28799997,
+            28799999,
+            28800000,
+            28800001,
+            28800002,
+            28800004,
+            28800005
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "ETHUSDT",
+              "fundingTime": 1786896000000,
+              "fundingRate": "0.00003970",
+              "markPrice": "1883.31891473",
+              "rateType": "Regular"
+            },
+            {
+              "symbol": "ETHUSDT",
+              "fundingTime": 1786924800001,
+              "fundingRate": "0.00002723",
+              "markPrice": "1875.22000000",
+              "rateType": "Regular"
+            }
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "fundingRate",
+            "fundingTime",
+            "markPrice",
+            "rateType",
+            "symbol"
+          ],
+          "first_timestamp": "2026-08-16T16:00:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            28799995,
+            28799996,
+            28799997,
+            28799999,
+            28800000,
+            28800001,
+            28800002,
+            28800004,
+            28800005
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "SOLUSDT",
+              "fundingTime": 1786896000000,
+              "fundingRate": "-0.00001428",
+              "markPrice": "75.54000000",
+              "rateType": "Regular"
+            },
+            {
+              "symbol": "SOLUSDT",
+              "fundingTime": 1786924800001,
+              "fundingRate": "-0.00004738",
+              "markPrice": "74.57000000",
+              "rateType": "Regular"
+            }
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 28800000
+      }
+    },
+    "markPriceKlines": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/markPriceKlines",
+        "vision_prefix": "data/futures/um/daily/markPriceKlines/{symbol}/5m/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-23",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2019-12-23.zip",
+            "size": 5117
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2026-05-15.zip",
+            "size": 7797
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-23",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/ETHUSDT/5m/ETHUSDT-5m-2019-12-23.zip",
+            "size": 4344
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/ETHUSDT/5m/ETHUSDT-5m-2026-05-15.zip",
+            "size": 7205
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2020-09-13",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/SOLUSDT/5m/SOLUSDT-5m-2020-09-13.zip",
+            "size": 3777
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/markPriceKlines/SOLUSDT/5m/SOLUSDT-5m-2026-05-15.zip",
+            "size": 6399
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "77125.22055797",
+              "77161.92327536",
+              "77059.35221034",
+              "77059.36532609",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "77055.53815217",
+              "77066.95415217",
+              "76894.57002297",
+              "76951.97374638",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "2421.13179845",
+              "2424.53000000",
+              "2421.12947287",
+              "2422.96042636",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "2422.55437984",
+              "2422.72000000",
+              "2407.80741085",
+              "2413.40000000",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "93.81000000",
+              "93.96714410",
+              "93.81000000",
+              "93.93191823",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "93.92142902",
+              "93.94023625",
+              "93.57313970",
+              "93.75518756",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 300000
+      }
+    },
+    "indexPriceKlines": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/indexPriceKlines",
+        "vision_prefix": "data/futures/um/daily/indexPriceKlines/{symbol}/5m/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-23",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2019-12-23.zip",
+            "size": 4942
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2026-05-15.zip",
+            "size": 7960
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-23",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/ETHUSDT/5m/ETHUSDT-5m-2019-12-23.zip",
+            "size": 3908
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/ETHUSDT/5m/ETHUSDT-5m-2026-05-15.zip",
+            "size": 7123
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2021-01-01",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/SOLUSDT/5m/SOLUSDT-5m-2021-01-01.zip",
+            "size": 7397
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/indexPriceKlines/SOLUSDT/5m/SOLUSDT-5m-2026-05-15.zip",
+            "size": 8242
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "77115.87021739",
+              "77148.28391304",
+              "77054.09217391",
+              "77054.09217391",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "77050.66304348",
+              "77060.19956522",
+              "76893.19021739",
+              "76944.91260870",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "2421.72279070",
+              "2424.91372093",
+              "2421.70511628",
+              "2423.43534884",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "2423.02697674",
+              "2423.43348837",
+              "2409.64767442",
+              "2414.37093023",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "93.78640357",
+              "93.96536692",
+              "93.78640357",
+              "93.91966803",
+              "0",
+              1787437799999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "93.90174457",
+              "93.92631919",
+              "93.57294186",
+              "93.74348526",
+              "0",
+              1787438099999,
+              "0",
+              300,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 300000
+      }
+    },
+    "premiumIndexKlines": {
+      "source": {
+        "rest": "https://fapi.binance.com/fapi/v1/premiumIndexKlines",
+        "vision_prefix": "data/futures/um/daily/premiumIndexKlines/{symbol}/5m/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2019-12-24",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/BTCUSDT/5m/BTCUSDT-5m-2019-12-24.zip",
+            "size": 5131
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/BTCUSDT/5m/BTCUSDT-5m-2026-05-15.zip",
+            "size": 6274
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2019-12-24",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/ETHUSDT/5m/ETHUSDT-5m-2019-12-24.zip",
+            "size": 4973
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/ETHUSDT/5m/ETHUSDT-5m-2026-05-15.zip",
+            "size": 6323
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2020-09-14",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/SOLUSDT/5m/SOLUSDT-5m-2020-09-14.zip",
+            "size": 1730
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/premiumIndexKlines/SOLUSDT/5m/SOLUSDT-5m-2026-05-15.zip",
+            "size": 6304
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "0.00012487",
+              "0.00027075",
+              "-0.00009642",
+              "0.00003625",
+              "0",
+              1787437799999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "0.00007965",
+              "0.00020697",
+              "-0.00015113",
+              "0.00007629",
+              "0",
+              1787438099999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "-0.00018697",
+              "-0.00007817",
+              "-0.00049001",
+              "-0.00041200",
+              "0",
+              1787437799999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "-0.00024225",
+              "-0.00024225",
+              "-0.00130958",
+              "-0.00035031",
+              "0",
+              1787438099999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": "array[12]",
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": false,
+          "sample": [
+            [
+              1787437500000,
+              "0.00025160",
+              "0.00058198",
+              "-0.00016701",
+              "0.00004655",
+              "0",
+              1787437799999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              1787437800000,
+              "0.00000000",
+              "0.00026254",
+              "-0.00044496",
+              "0.00006053",
+              "0",
+              1787438099999,
+              "0",
+              60,
+              "0",
+              "0",
+              "0"
+            ]
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 300000
+      }
+    },
+    "openInterestHist": {
+      "source": {
+        "rest": "https://fapi.binance.com/futures/data/openInterestHist",
+        "vision_prefix": "data/futures/um/daily/metrics/{symbol}/"
+      },
+      "vision_metadata": {
+        "BTCUSDT": {
+          "status": 200,
+          "earliest": "2020-09-01",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2020-09-01.zip",
+            "size": 12191
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/metrics/BTCUSDT/BTCUSDT-metrics-2026-05-15.zip",
+            "size": 11523
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "earliest": "2021-12-01",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2021-12-01.zip",
+            "size": 14930
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/metrics/ETHUSDT/ETHUSDT-metrics-2026-05-15.zip",
+            "size": 12078
+          },
+          "late_probe_status": 200,
+          "error": null
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "earliest": "2021-12-01",
+          "latest": "2026-05-15",
+          "sample_archive": {
+            "key": "data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2021-12-01.zip",
+            "size": 14146
+          },
+          "latest_archive": {
+            "key": "data/futures/um/daily/metrics/SOLUSDT/SOLUSDT-metrics-2026-05-15.zip",
+            "size": 11690
+          },
+          "late_probe_status": 200,
+          "error": null
+        }
+      },
+      "samples": {
+        "BTCUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "CMCCirculatingSupply",
+            "sumOpenInterest",
+            "sumOpenInterestValue",
+            "symbol",
+            "timestamp"
+          ],
+          "first_timestamp": "2026-08-22T22:20:00+00:00",
+          "last_timestamp": "2026-08-22T23:55:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "BTCUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "BTCUSDT",
+              "sumOpenInterest": "105973.48300000",
+              "sumOpenInterestValue": "8166520165.31247700",
+              "CMCCirculatingSupply": "20071518.00000000",
+              "timestamp": 1787437200000
+            },
+            {
+              "symbol": "BTCUSDT",
+              "sumOpenInterest": "105963.50500000",
+              "sumOpenInterestValue": "8172473667.32475500",
+              "CMCCirculatingSupply": "20071518.00000000",
+              "timestamp": 1787437500000
+            }
+          ]
+        },
+        "ETHUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "CMCCirculatingSupply",
+            "sumOpenInterest",
+            "sumOpenInterestValue",
+            "symbol",
+            "timestamp"
+          ],
+          "first_timestamp": "2026-08-22T22:20:00+00:00",
+          "last_timestamp": "2026-08-22T23:55:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "ETHUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "ETHUSDT",
+              "sumOpenInterest": "2371734.09900000",
+              "sumOpenInterestValue": "5733165829.15347400",
+              "CMCCirculatingSupply": "120681688.04317872",
+              "timestamp": 1787437200000
+            },
+            {
+              "symbol": "ETHUSDT",
+              "sumOpenInterest": "2371976.63000000",
+              "sumOpenInterestValue": "5743267014.21900000",
+              "CMCCirculatingSupply": "120681688.04317872",
+              "timestamp": 1787437500000
+            }
+          ]
+        },
+        "SOLUSDT": {
+          "status": 200,
+          "rows": 20,
+          "schema": [
+            "CMCCirculatingSupply",
+            "sumOpenInterest",
+            "sumOpenInterestValue",
+            "symbol",
+            "timestamp"
+          ],
+          "first_timestamp": "2026-08-22T22:25:00+00:00",
+          "last_timestamp": "2026-08-23T00:00:00+00:00",
+          "timestamp_deltas_ms": [
+            300000
+          ],
+          "obvious_gap_count": 0,
+          "symbol_scope": "SOLUSDT",
+          "symbol_field_present": true,
+          "sample": [
+            {
+              "symbol": "SOLUSDT",
+              "sumOpenInterest": "8047069.39000000",
+              "sumOpenInterestValue": "754949574.58727060",
+              "CMCCirculatingSupply": "583177482.86305330",
+              "timestamp": 1787437500000
+            },
+            {
+              "symbol": "SOLUSDT",
+              "sumOpenInterest": "8044599.52000000",
+              "sumOpenInterestValue": "755644664.30573730",
+              "CMCCirculatingSupply": "583177482.86305330",
+              "timestamp": 1787437800000
+            }
+          ]
+        }
+      },
+      "frequency": {
+        "interval_ms": 300000
+      }
+    }
+  },
+  "alignment": {
+    "same_exchange_clock": true,
+    "causal_join_rule": "floor observations to the target bar and use only timestamps <= decision timestamp; lag close-derived features by one complete bar",
+    "lookahead_free": true,
+    "caveats": [
+      "funding is event-time data and must not be forward-filled before its funding timestamp",
+      "open-interest history is a separate 5m observation series and must be lagged like any other feature",
+      "aggTrades are event-time rows and require bar aggregation before joining"
+    ]
+  },
+  "rest_boundary_probes": {
+    "fundingRate": {
+      "BTCUSDT": {
+        "earliest_returned_at_or_before_2021": "2020-07-18T08:00:00.001000+00:00",
+        "rows": 500
+      },
+      "ETHUSDT": {
+        "earliest_returned_at_or_before_2021": "2020-07-18T08:00:00.001000+00:00",
+        "rows": 500
+      },
+      "SOLUSDT": {
+        "earliest_returned_at_or_before_2021": "2020-09-13T16:00:00.004000+00:00",
+        "rows": 328
+      }
+    },
+    "aggTrades": "REST search window is restricted to the recent 2 days; use Vision archives for older bulk history.",
+    "openInterestHist": "REST rejects endTime/startTime boundary parameters in this probe; endpoint is recent-history only in practice. Use Vision metrics for bulk history."
+  }
+}

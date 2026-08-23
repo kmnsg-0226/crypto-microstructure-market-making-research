@@ -1,0 +1,63 @@
+{
+  "schema": "crypto-hft-continuous-inventory-mm-result-v1",
+  "spec_sha256": "d085e81e59977f1daa1cff4074466ba1d7317445bc5d668ee2ff8d5ba4c59f2d",
+  "development": {
+    "dates": ["2026-01-01", "2026-02-01", "2026-03-01"],
+    "neutral": {
+      "maker_fill_orders": 67818,
+      "maker_turnover_usdt": 25014411.392299898,
+      "gross_pnl_usdt": -2864.9867999999187,
+      "net_pnl_usdt": -7869.439458209942,
+      "net_bps_on_one_way_notional": -6.291134648554151,
+      "positive_days": 0,
+      "inventory_limit_violations": 0
+    },
+    "obi_aware": {
+      "maker_fill_orders": 58653,
+      "maker_turnover_usdt": 21586802.76050002,
+      "gross_pnl_usdt": -2538.707399999917,
+      "net_pnl_usdt": -6857.4600453499315,
+      "net_bps_on_one_way_notional": -6.352562522093837,
+      "positive_days": 0,
+      "inventory_limit_violations": 0
+    }
+  },
+  "frozen_validation": {
+    "dates": ["2026-04-01", "2026-05-01"],
+    "neutral": {
+      "maker_fill_orders": 37351,
+      "maker_turnover_usdt": 13408094.25180004,
+      "gross_pnl_usdt": -1414.003799999959,
+      "net_pnl_usdt": -4096.871070359965,
+      "net_bps_on_one_way_notional": -6.109903795165321,
+      "positive_days": 0,
+      "inventory_limit_violations": 0
+    },
+    "obi_aware": {
+      "maker_fill_orders": 31487,
+      "maker_turnover_usdt": 11307315.206000004,
+      "gross_pnl_usdt": -1227.5157999999672,
+      "net_pnl_usdt": -3489.982579699962,
+      "net_bps_on_one_way_notional": -6.171868426649545,
+      "positive_days": 0,
+      "inventory_limit_violations": 0
+    },
+    "gate_checks": {
+      "obi_aware_net_positive_each_day": false,
+      "obi_aware_pooled_net_positive": false,
+      "obi_aware_improves_neutral_pooled_net": true,
+      "obi_aware_minimum_fill_activity": true,
+      "zero_inventory_limit_violations": true
+    },
+    "gate_passes": false
+  },
+  "replication_split_opened": false,
+  "conclusion": "OBI suppression reduced turnover and absolute loss but did not create positive gross or net market-making edge",
+  "artifact_hashes": {
+    "development_day_metrics_sha256": "8329eec5f84b69bc3ac1a7d12e4aacfaac16f8f165010756c8d1760041e7bc48",
+    "development_summary_sha256": "f51712b60acd75a170deb2d1f8a28ed84604b6b62a26183c127632bf4f448d4c",
+    "validation_day_metrics_sha256": "cd26af2c8e47c001e2d4e0ed757961336c4f82d64ba6d0f03393de2f4d695eca",
+    "validation_summary_sha256": "af192c7322147953c6ec48ae2b2146cf73423bb733bf12a7ff9f97e8f1a1f250",
+    "validation_receipt_sha256": "10f6e5c335e94ab80de6ffd66377ea77a04ef9f657a6e0f241dea009ad12f6eb"
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "schema": "crypto-hft-execution-economics-v1",
+  "status": "draft_before_execution_results",
+  "experiment_id": "btc-tardis-taker-economics-2026-v1",
+  "audit": {
+    "alpha_spec_path": "research/specs/research_spec_frozen.json",
+    "alpha_spec_sha256": "011ea143ddf646b4ba482b0030a6e86d416a7692e16349daa1017543ef0a6f84",
+    "code_commit_before_execution_experiment": "bf9605fd3c487ad2192d8d327ba82ff4bee928e8",
+    "l2_manifest_sha256": "5893274ec07dde310d41d48b3b1e66bd01af4ab7507dc02aa11d409583a97a03",
+    "trades_manifest_sha256": "ec3af0d61e9aa8258becaf4af980d09822385aeba15c992aa9ce35b87c79ae06",
+    "dataset_bundle_sha256": "e8ae8653d67ee23ffd66eb9d717bb040f645f7657e176e515354d2b7affdfed6"
+  },
+  "split": {
+    "development": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "validation": [
+      "2026-06-01"
+    ],
+    "oos": [
+      "2026-07-01",
+      "2026-08-01"
+    ]
+  },
+  "instrument": {
+    "exchange": "binance-futures",
+    "symbol": "BTCUSDT",
+    "tick_size": 0.1,
+    "quantity_step": 0.001
+  },
+  "alpha": {
+    "source": "frozen_development_ols_models",
+    "models_path": "data/research/tardis/reports/development/fitted_models.json",
+    "transforms_path": "data/research/tardis/reports/development/development_transforms.json",
+    "candidate_models": [
+      "obi_only",
+      "ti_only",
+      "combined"
+    ],
+    "candidate_absolute_prediction_threshold_ticks": [
+      0.0,
+      5.0,
+      10.0,
+      20.0
+    ],
+    "diagnostic_horizons_ms": [
+      100,
+      500,
+      1000,
+      5000
+    ],
+    "canonical_horizon_ms": 1000,
+    "canonical_horizon_basis": "highest_persistent_frozen_predictive_IC_before_execution_PnL",
+    "direction": "long_if_prediction_at_least_positive_threshold_short_if_at_most_negative_threshold"
+  },
+  "development_selection": {
+    "fit_split": "development",
+    "select_model_and_threshold_only": true,
+    "objective": "maximum_development_layer3_average_net_ticks_per_trade",
+    "minimum_completed_trades_total": 500,
+    "minimum_completed_trades_per_development_day": 50,
+    "tie_breakers": [
+      "higher_fraction_of_positive_days",
+      "higher_layer1_average_executable_ticks",
+      "lower_prediction_threshold",
+      "lexicographically_smaller_model_name"
+    ],
+    "sharpe_is_not_a_selection_objective": true
+  },
+  "timing": {
+    "decision_grid_ms": 100,
+    "latency_scenarios_ms": [
+      0,
+      25,
+      50,
+      100,
+      250
+    ],
+    "baseline_latency_ms": 50,
+    "entry_lookup": "first_valid_100ms_book_sample_at_or_after_decision_plus_latency",
+    "exit_time": "decision_time_plus_frozen_horizon",
+    "reject_if_latency_not_less_than_horizon": true,
+    "latency_resolution_limitation": "25ms_50ms_and_250ms_round_to_the_100ms_100ms_and_300ms_quotes_respectively"
+  },
+  "position": {
+    "overlap_rule": "one_position_at_a_time_per_day",
+    "signals_during_pending_or_open_position": "skip_and_count",
+    "primary_notional_usdt": 1000.0,
+    "capacity_notional_scenarios_usdt": [
+      100.0,
+      1000.0,
+      10000.0
+    ],
+    "quantity_rule": "floor_primary_notional_divided_by_entry_touch_to_quantity_step",
+    "leverage_optimization": false
+  },
+  "fills": {
+    "long_entry": "buy_asks",
+    "long_exit": "sell_bids",
+    "short_entry": "sell_bids",
+    "short_exit": "buy_asks",
+    "depth_levels": 10,
+    "vwap_walk_if_quantity_exceeds_touch": true,
+    "reject_if_top10_depth_insufficient": true,
+    "reject_if_decision_entry_or_exit_crosses_feature_segment": true,
+    "unrealistic_visible_liquidity_participation_threshold": 0.25
+  },
+  "fees": {
+    "unit": "bps_per_side_notional",
+    "scenarios_bps_per_side": [
+      0.0,
+      2.0,
+      5.0,
+      7.5
+    ],
+    "baseline_bps_per_side": 5.0,
+    "baseline_is_configurable_research_assumption_not_current_fee_claim": true
+  },
+  "slippage_stress": {
+    "execution_penalty_ticks_per_fill": [
+      0.0,
+      1.0,
+      5.0
+    ],
+    "baseline_stress_ticks_per_fill": 1.0,
+    "depth_slippage_is_calculated_separately_from_penalty": true
+  },
+  "cost_layers": {
+    "layer0": "decision_mid_to_exit_mid_signed_markout",
+    "layer1": "latency0_top10_depth_executable_entry_and_exit_no_fee",
+    "layer2": "layer1_plus_baseline_fee",
+    "layer3": "top10_depth_plus_baseline_fee_plus_baseline_latency",
+    "layer4": "layer3_plus_baseline_stress_penalty"
+  },
+  "performance": {
+    "primary_sharpe_frequency": "daily",
+    "annualized_daily_sharpe_is_exploratory_low_sample": true,
+    "daily_bootstrap_samples": 10000,
+    "daily_bootstrap_seed": 20260816,
+    "report_per_one_usdt_and_per_trade_ticks": true
+  },
+  "prohibited": [
+    "alpha_feature_changes",
+    "alpha_refit_on_validation_or_oos",
+    "execution_threshold_fit_on_validation_or_oos",
+    "sharpe_optimization",
+    "market_making",
+    "passive_fill_model",
+    "queue_model",
+    "hidden_liquidity_fabrication",
+    "constant_spread_substitution",
+    "mid_price_execution"
+  ]
+}

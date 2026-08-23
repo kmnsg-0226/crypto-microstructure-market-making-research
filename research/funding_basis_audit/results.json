@@ -1,0 +1,2527 @@
+{
+  "requested_period": {
+    "start_month": "2021-01",
+    "end_month": "2026-05"
+  },
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT"
+  ],
+  "horizons_hours": {
+    "8h": 8,
+    "24h": 24,
+    "3d": 72,
+    "7d": 168,
+    "30d": 720
+  },
+  "costs": {
+    "optimistic": 2.0,
+    "realistic_retail_api": 8.0,
+    "conservative": 20.0
+  },
+  "coverage_by_symbol_year": {
+    "BTCUSDT": {
+      "2021": {
+        "first": "2021-01-01T00:00:00+00:00",
+        "last": "2021-12-31T23:00:00+00:00",
+        "rows": 8747
+      },
+      "2022": {
+        "first": "2022-01-01T00:00:00+00:00",
+        "last": "2022-12-31T23:00:00+00:00",
+        "rows": 8760
+      },
+      "2023": {
+        "first": "2023-01-01T00:00:00+00:00",
+        "last": "2023-12-31T23:00:00+00:00",
+        "rows": 8759
+      },
+      "2024": {
+        "first": "2024-01-01T00:00:00+00:00",
+        "last": "2024-12-31T23:00:00+00:00",
+        "rows": 8784
+      },
+      "2025": {
+        "first": "2025-01-01T00:00:00+00:00",
+        "last": "2025-12-31T23:00:00+00:00",
+        "rows": 8760
+      },
+      "2026": {
+        "first": "2026-01-01T00:00:00+00:00",
+        "last": "2026-05-31T23:00:00+00:00",
+        "rows": 3624
+      }
+    },
+    "ETHUSDT": {
+      "2021": {
+        "first": "2021-01-01T00:00:00+00:00",
+        "last": "2021-12-31T23:00:00+00:00",
+        "rows": 8747
+      },
+      "2022": {
+        "first": "2022-01-01T00:00:00+00:00",
+        "last": "2022-12-31T23:00:00+00:00",
+        "rows": 8760
+      },
+      "2023": {
+        "first": "2023-01-01T00:00:00+00:00",
+        "last": "2023-12-31T23:00:00+00:00",
+        "rows": 8759
+      },
+      "2024": {
+        "first": "2024-01-01T00:00:00+00:00",
+        "last": "2024-12-31T23:00:00+00:00",
+        "rows": 8784
+      },
+      "2025": {
+        "first": "2025-01-01T00:00:00+00:00",
+        "last": "2025-12-31T23:00:00+00:00",
+        "rows": 8760
+      },
+      "2026": {
+        "first": "2026-01-01T00:00:00+00:00",
+        "last": "2026-05-31T23:00:00+00:00",
+        "rows": 3624
+      }
+    },
+    "SOLUSDT": {
+      "2021": {
+        "first": "2021-01-01T00:00:00+00:00",
+        "last": "2021-12-31T23:00:00+00:00",
+        "rows": 8747
+      },
+      "2022": {
+        "first": "2022-01-01T00:00:00+00:00",
+        "last": "2022-12-31T23:00:00+00:00",
+        "rows": 8640
+      },
+      "2023": {
+        "first": "2023-01-01T00:00:00+00:00",
+        "last": "2023-12-31T23:00:00+00:00",
+        "rows": 8759
+      },
+      "2024": {
+        "first": "2024-01-01T00:00:00+00:00",
+        "last": "2024-12-31T23:00:00+00:00",
+        "rows": 8784
+      },
+      "2025": {
+        "first": "2025-01-01T00:00:00+00:00",
+        "last": "2025-12-31T23:00:00+00:00",
+        "rows": 8760
+      },
+      "2026": {
+        "first": "2026-01-01T00:00:00+00:00",
+        "last": "2026-05-31T23:00:00+00:00",
+        "rows": 3624
+      }
+    }
+  },
+  "symbols_result": {
+    "BTCUSDT": {
+      "spot": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 0
+      },
+      "perpetual": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 53
+      },
+      "aligned_rows": 47434,
+      "aligned_first": "2021-01-01T00:00:00+00:00",
+      "aligned_last": "2026-05-31T23:00:00+00:00",
+      "aligned_years": 5.412616929044034,
+      "funding_event_count": 5931,
+      "funding_first": "2021-01-01T00:00:00.002000+00:00",
+      "funding_last": "2026-05-31T16:00:00.004000+00:00",
+      "analyses": {
+        "8h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 850,
+            "adjacent_pairs": 5930,
+            "frequency": 0.1433389544688027
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0131302682638772,
+              "basis_pnl_bps": -0.005189854663229039,
+              "gross_bps": -1.0183201229271062,
+              "net_bps": -5.018320122927106,
+              "annualized_return_on_2N": -0.27475302673025903,
+              "max_drawdown": 0.7740515744929168,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.8070088029500906,
+                  "mean_net_bps": -6.807008802950091,
+                  "positive_net_trade_fraction": 0.08142726440988106
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.38798928402306365,
+                  "mean_net_bps": -4.387989284023064,
+                  "positive_net_trade_fraction": 0.021004566210045664
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7377022388867044,
+                  "mean_net_bps": -4.737702238886705,
+                  "positive_net_trade_fraction": 0.010054844606946984
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.0825992961305007,
+                  "mean_net_bps": -5.082599296130501,
+                  "positive_net_trade_fraction": 0.004553734061930784
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4673565118706154,
+                  "mean_net_bps": -4.467356511870615,
+                  "positive_net_trade_fraction": 0.0018264840182648401
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.07782925656545742,
+                  "mean_net_bps": -4.077829256565457,
+                  "positive_net_trade_fraction": 0.0022123893805309734
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0131302682638772,
+              "basis_pnl_bps": -0.005189854663229039,
+              "gross_bps": -1.0183201229271062,
+              "net_bps": -17.018320122927104,
+              "annualized_return_on_2N": -0.931753026730259,
+              "max_drawdown": 0.9935624610670873,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.8070088029500906,
+                  "mean_net_bps": -18.80700880295009,
+                  "positive_net_trade_fraction": 0.0054894784995425435
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.38798928402306365,
+                  "mean_net_bps": -16.387989284023064,
+                  "positive_net_trade_fraction": 0.0009132420091324201
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7377022388867044,
+                  "mean_net_bps": -16.7377022388867,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.0825992961305007,
+                  "mean_net_bps": -17.0825992961305,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4673565118706154,
+                  "mean_net_bps": -16.467356511870616,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.07782925656545742,
+                  "mean_net_bps": -16.077829256565458,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0131302682638772,
+              "basis_pnl_bps": -0.005189854663229039,
+              "gross_bps": -1.0183201229271062,
+              "net_bps": -41.01832012292711,
+              "annualized_return_on_2N": -2.245753026730259,
+              "max_drawdown": 0.9999948077556207,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.8070088029500906,
+                  "mean_net_bps": -42.807008802950094,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.38798928402306365,
+                  "mean_net_bps": -40.387989284023064,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7377022388867044,
+                  "mean_net_bps": -40.737702238886705,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.0825992961305007,
+                  "mean_net_bps": -41.082599296130496,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4673565118706154,
+                  "mean_net_bps": -40.46735651187062,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.07782925656545742,
+                  "mean_net_bps": -40.07782925656546,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "24h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 850,
+            "adjacent_pairs": 5930,
+            "frequency": 0.1433389544688027
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.039627304964539,
+              "basis_pnl_bps": -0.01054514952177821,
+              "gross_bps": -3.0501724544863174,
+              "net_bps": -7.050172454486317,
+              "annualized_return_on_2N": -0.12866564729437527,
+              "max_drawdown": 0.5014601657735216,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.422100141885318,
+                  "mean_net_bps": -12.42210014188532,
+                  "positive_net_trade_fraction": 0.04945054945054945
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.1454260679338395,
+                  "mean_net_bps": -5.1454260679338395,
+                  "positive_net_trade_fraction": 0.03561643835616438
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.2224096578126566,
+                  "mean_net_bps": -6.222409657812656,
+                  "positive_net_trade_fraction": 0.008241758241758242
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.2341126426711324,
+                  "mean_net_bps": -7.234112642671132,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.3994656774376275,
+                  "mean_net_bps": -5.399465677437627,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.22578762525138502,
+                  "mean_net_bps": -4.225787625251384,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.039627304964539,
+              "basis_pnl_bps": -0.01054514952177821,
+              "gross_bps": -3.0501724544863174,
+              "net_bps": -19.050172454486315,
+              "annualized_return_on_2N": -0.3476656472943752,
+              "max_drawdown": 0.8475997922767664,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.422100141885318,
+                  "mean_net_bps": -24.42210014188532,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.1454260679338395,
+                  "mean_net_bps": -17.14542606793384,
+                  "positive_net_trade_fraction": 0.0027397260273972603
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.2224096578126566,
+                  "mean_net_bps": -18.22240965781266,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.2341126426711324,
+                  "mean_net_bps": -19.234112642671132,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.3994656774376275,
+                  "mean_net_bps": -17.399465677437625,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.22578762525138502,
+                  "mean_net_bps": -16.225787625251385,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.039627304964539,
+              "basis_pnl_bps": -0.01054514952177821,
+              "gross_bps": -3.0501724544863174,
+              "net_bps": -43.05017245448632,
+              "annualized_return_on_2N": -0.7856656472943754,
+              "max_drawdown": 0.9857888596904263,
+              "worst_basis_widening_bps": 198.59490602615938,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.422100141885318,
+                  "mean_net_bps": -48.422100141885316,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.1454260679338395,
+                  "mean_net_bps": -41.14542606793384,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.2224096578126566,
+                  "mean_net_bps": -42.222409657812655,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.2341126426711324,
+                  "mean_net_bps": -43.234112642671136,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.3994656774376275,
+                  "mean_net_bps": -41.399465677437625,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.22578762525138502,
+                  "mean_net_bps": -40.225787625251385,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "3d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 850,
+            "adjacent_pairs": 5930,
+            "frequency": 0.1433389544688027
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.12325775075988,
+              "basis_pnl_bps": -0.03702924397965357,
+              "gross_bps": -9.160286994739533,
+              "net_bps": -13.160286994739533,
+              "annualized_return_on_2N": -0.08005841255133216,
+              "max_drawdown": 0.35165417331673554,
+              "worst_basis_widening_bps": 186.86106718078577,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -25.2478307667518,
+                  "mean_net_bps": -29.2478307667518,
+                  "positive_net_trade_fraction": 0.05737704918032787
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -3.4090933729375883,
+                  "mean_net_bps": -7.409093372937588,
+                  "positive_net_trade_fraction": 0.06557377049180328
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.6571731922374555,
+                  "mean_net_bps": -10.657173192237456,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -9.705125288939913,
+                  "mean_net_bps": -13.705125288939913,
+                  "positive_net_trade_fraction": 0.00819672131147541
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.2012196316051185,
+                  "mean_net_bps": -8.201219631605118,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.5965726720261397,
+                  "mean_net_bps": -4.59657267202614,
+                  "positive_net_trade_fraction": 0.08163265306122448
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.12325775075988,
+              "basis_pnl_bps": -0.03702924397965357,
+              "gross_bps": -9.160286994739533,
+              "net_bps": -25.160286994739533,
+              "annualized_return_on_2N": -0.15305841255133215,
+              "max_drawdown": 0.5633004719702657,
+              "worst_basis_widening_bps": 186.86106718078577,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -25.2478307667518,
+                  "mean_net_bps": -41.2478307667518,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -3.4090933729375883,
+                  "mean_net_bps": -19.40909337293759,
+                  "positive_net_trade_fraction": 0.00819672131147541
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.6571731922374555,
+                  "mean_net_bps": -22.657173192237458,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -9.705125288939913,
+                  "mean_net_bps": -25.70512528893991,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.2012196316051185,
+                  "mean_net_bps": -20.20121963160512,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.5965726720261397,
+                  "mean_net_bps": -16.596572672026138,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.12325775075988,
+              "basis_pnl_bps": -0.03702924397965357,
+              "gross_bps": -9.160286994739533,
+              "net_bps": -49.16028699473953,
+              "annualized_return_on_2N": -0.29905841255133214,
+              "max_drawdown": 0.8020182318526377,
+              "worst_basis_widening_bps": 186.86106718078577,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -25.2478307667518,
+                  "mean_net_bps": -65.2478307667518,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -3.4090933729375883,
+                  "mean_net_bps": -43.40909337293759,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.6571731922374555,
+                  "mean_net_bps": -46.65717319223745,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -9.705125288939913,
+                  "mean_net_bps": -49.70512528893991,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.2012196316051185,
+                  "mean_net_bps": -44.20121963160512,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.5965726720261397,
+                  "mean_net_bps": -40.59657267202614,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "7d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 850,
+            "adjacent_pairs": 5930,
+            "frequency": 0.1433389544688027
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 281,
+              "funding_pnl_bps": -21.31228647686833,
+              "basis_pnl_bps": -0.1186670692557122,
+              "gross_bps": -21.43095354612404,
+              "net_bps": -25.43095354612404,
+              "annualized_return_on_2N": -0.06630212888810912,
+              "max_drawdown": 0.30091786368051787,
+              "worst_basis_widening_bps": 200.1261713764846,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -58.43899863587139,
+                  "mean_net_bps": -62.43899863587139,
+                  "positive_net_trade_fraction": 0.05660377358490566
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -7.784356018656889,
+                  "mean_net_bps": -11.78435601865689,
+                  "positive_net_trade_fraction": 0.07692307692307693
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -15.970395505360097,
+                  "mean_net_bps": -19.9703955053601,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -22.445224147111148,
+                  "mean_net_bps": -26.445224147111148,
+                  "positive_net_trade_fraction": 0.038461538461538464
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.78530690759694,
+                  "mean_net_bps": -13.78530690759694,
+                  "positive_net_trade_fraction": 0.019230769230769232
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -1.4079390557775273,
+                  "mean_net_bps": -5.407939055777527,
+                  "positive_net_trade_fraction": 0.23809523809523808
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 281,
+              "funding_pnl_bps": -21.31228647686833,
+              "basis_pnl_bps": -0.1186670692557122,
+              "gross_bps": -21.43095354612404,
+              "net_bps": -37.43095354612404,
+              "annualized_return_on_2N": -0.0975878431738234,
+              "max_drawdown": 0.4095397559556344,
+              "worst_basis_widening_bps": 200.1261713764846,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -58.43899863587139,
+                  "mean_net_bps": -74.43899863587139,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -7.784356018656889,
+                  "mean_net_bps": -23.78435601865689,
+                  "positive_net_trade_fraction": 0.019230769230769232
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -15.970395505360097,
+                  "mean_net_bps": -31.9703955053601,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -22.445224147111148,
+                  "mean_net_bps": -38.44522414711115,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.78530690759694,
+                  "mean_net_bps": -25.78530690759694,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -1.4079390557775273,
+                  "mean_net_bps": -17.40793905577753,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 281,
+              "funding_pnl_bps": -21.31228647686833,
+              "basis_pnl_bps": -0.1186670692557122,
+              "gross_bps": -21.43095354612404,
+              "net_bps": -61.430953546124044,
+              "annualized_return_on_2N": -0.16015927174525196,
+              "max_drawdown": 0.5789019533838413,
+              "worst_basis_widening_bps": 200.1261713764846,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -58.43899863587139,
+                  "mean_net_bps": -98.43899863587139,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -7.784356018656889,
+                  "mean_net_bps": -47.78435601865689,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -15.970395505360097,
+                  "mean_net_bps": -55.9703955053601,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -22.445224147111148,
+                  "mean_net_bps": -62.44522414711115,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.78530690759694,
+                  "mean_net_bps": -49.78530690759693,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -1.4079390557775273,
+                  "mean_net_bps": -41.407939055777526,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "30d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 850,
+            "adjacent_pairs": 5930,
+            "frequency": 0.1433389544688027
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 65,
+              "funding_pnl_bps": -92.02660153846156,
+              "basis_pnl_bps": -0.24719638392251425,
+              "gross_bps": -92.27379792238408,
+              "net_bps": -96.27379792238408,
+              "annualized_return_on_2N": -0.058566560402783636,
+              "max_drawdown": 0.2712040692844083,
+              "worst_basis_widening_bps": 201.24005166663352,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -239.84133568916923,
+                  "mean_net_bps": -243.84133568916923,
+                  "positive_net_trade_fraction": 0.07692307692307693
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -35.17893630925975,
+                  "mean_net_bps": -39.17893630925975,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -67.66683643521922,
+                  "mean_net_bps": -71.66683643521922,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -95.765603157802,
+                  "mean_net_bps": -99.765603157802,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -41.41613017866019,
+                  "mean_net_bps": -45.41613017866018,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 0.11764299388230137,
+                  "mean_net_bps": -3.8823570061176986,
+                  "positive_net_trade_fraction": 0.75
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 65,
+              "funding_pnl_bps": -92.02660153846156,
+              "basis_pnl_bps": -0.24719638392251425,
+              "gross_bps": -92.27379792238408,
+              "net_bps": -108.27379792238408,
+              "annualized_return_on_2N": -0.06586656040278364,
+              "max_drawdown": 0.2985915527208315,
+              "worst_basis_widening_bps": 201.24005166663352,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -239.84133568916923,
+                  "mean_net_bps": -255.84133568916923,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -35.17893630925975,
+                  "mean_net_bps": -51.17893630925975,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -67.66683643521922,
+                  "mean_net_bps": -83.66683643521922,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -95.765603157802,
+                  "mean_net_bps": -111.765603157802,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -41.41613017866019,
+                  "mean_net_bps": -57.41613017866018,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 0.11764299388230137,
+                  "mean_net_bps": -15.882357006117699,
+                  "positive_net_trade_fraction": 0.25
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 65,
+              "funding_pnl_bps": -92.02660153846156,
+              "basis_pnl_bps": -0.24719638392251425,
+              "gross_bps": -92.27379792238408,
+              "net_bps": -132.27379792238406,
+              "annualized_return_on_2N": -0.08046656040278363,
+              "max_drawdown": 0.351280183352621,
+              "worst_basis_widening_bps": 201.24005166663352,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -239.84133568916923,
+                  "mean_net_bps": -279.8413356891692,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -35.17893630925975,
+                  "mean_net_bps": -75.17893630925975,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -67.66683643521922,
+                  "mean_net_bps": -107.66683643521922,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -95.765603157802,
+                  "mean_net_bps": -135.76560315780202,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -41.41613017866019,
+                  "mean_net_bps": -81.41613017866018,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 0.11764299388230137,
+                  "mean_net_bps": -39.882357006117694,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ETHUSDT": {
+      "spot": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 0
+      },
+      "perpetual": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 53
+      },
+      "aligned_rows": 47434,
+      "aligned_first": "2021-01-01T00:00:00+00:00",
+      "aligned_last": "2026-05-31T23:00:00+00:00",
+      "aligned_years": 5.412616929044034,
+      "funding_event_count": 5931,
+      "funding_first": "2021-01-01T00:00:00.002000+00:00",
+      "funding_last": "2026-05-31T16:00:00.004000+00:00",
+      "analyses": {
+        "8h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 898,
+            "adjacent_pairs": 5930,
+            "frequency": 0.15143338954468802
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0906467690231145,
+              "basis_pnl_bps": -0.008316230119880195,
+              "gross_bps": -1.0989629991429948,
+              "net_bps": -5.098962999142995,
+              "annualized_return_on_2N": -0.27916822420307896,
+              "max_drawdown": 0.7794012401431589,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -3.4529624552321443,
+                  "mean_net_bps": -7.452962455232145,
+                  "positive_net_trade_fraction": 0.09240622140896615
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.07973597410113675,
+                  "mean_net_bps": -4.079735974101137,
+                  "positive_net_trade_fraction": 0.039269406392694065
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7695231265594886,
+                  "mean_net_bps": -4.769523126559489,
+                  "positive_net_trade_fraction": 0.010968921389396709
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.180960653818045,
+                  "mean_net_bps": -5.180960653818045,
+                  "positive_net_trade_fraction": 0.00273224043715847
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4544748076022509,
+                  "mean_net_bps": -4.454474807602251,
+                  "positive_net_trade_fraction": 0.0027397260273972603
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.03529165495197507,
+                  "mean_net_bps": -4.035291654951975,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0906467690231145,
+              "basis_pnl_bps": -0.008316230119880195,
+              "gross_bps": -1.0989629991429948,
+              "net_bps": -17.098962999142994,
+              "annualized_return_on_2N": -0.9361682242030789,
+              "max_drawdown": 0.9937149700441688,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -3.4529624552321443,
+                  "mean_net_bps": -19.452962455232147,
+                  "positive_net_trade_fraction": 0.006404391582799634
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.07973597410113675,
+                  "mean_net_bps": -16.079735974101137,
+                  "positive_net_trade_fraction": 0.0027397260273972603
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7695231265594886,
+                  "mean_net_bps": -16.769523126559488,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.180960653818045,
+                  "mean_net_bps": -17.180960653818047,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4544748076022509,
+                  "mean_net_bps": -16.454474807602253,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.03529165495197507,
+                  "mean_net_bps": -16.035291654951976,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 5927,
+              "funding_pnl_bps": -1.0906467690231145,
+              "basis_pnl_bps": -0.008316230119880195,
+              "gross_bps": -1.0989629991429948,
+              "net_bps": -41.098962999143,
+              "annualized_return_on_2N": -2.250168224203079,
+              "max_drawdown": 0.9999949309093489,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -3.4529624552321443,
+                  "mean_net_bps": -43.45296245523214,
+                  "positive_net_trade_fraction": 0.0009149130832570906
+                },
+                "2022": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.07973597410113675,
+                  "mean_net_bps": -40.07973597410113,
+                  "positive_net_trade_fraction": 0.0009132420091324201
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.7695231265594886,
+                  "mean_net_bps": -40.769523126559484,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.180960653818045,
+                  "mean_net_bps": -41.18096065381804,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.4544748076022509,
+                  "mean_net_bps": -40.45447480760225,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": -0.03529165495197507,
+                  "mean_net_bps": -40.035291654951976,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "24h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 898,
+            "adjacent_pairs": 5930,
+            "frequency": 0.15143338954468802
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.2704672239108414,
+              "basis_pnl_bps": -0.03580971529538051,
+              "gross_bps": -3.3062769392062212,
+              "net_bps": -7.306276939206222,
+              "annualized_return_on_2N": -0.13333955414051354,
+              "max_drawdown": 0.5139411954617186,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -10.424880331538779,
+                  "mean_net_bps": -14.424880331538779,
+                  "positive_net_trade_fraction": 0.046703296703296704
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.23232657172708235,
+                  "mean_net_bps": -4.232326571727082,
+                  "positive_net_trade_fraction": 0.09315068493150686
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.328175058843751,
+                  "mean_net_bps": -6.328175058843751,
+                  "positive_net_trade_fraction": 0.01098901098901099
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.5333750573403777,
+                  "mean_net_bps": -7.533375057340377,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.35012290982944,
+                  "mean_net_bps": -5.35012290982944,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.09112789426087725,
+                  "mean_net_bps": -4.091127894260878,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.2704672239108414,
+              "basis_pnl_bps": -0.03580971529538051,
+              "gross_bps": -3.3062769392062212,
+              "net_bps": -19.30627693920622,
+              "annualized_return_on_2N": -0.3523395541405135,
+              "max_drawdown": 0.8514174259336831,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -10.424880331538779,
+                  "mean_net_bps": -26.424880331538777,
+                  "positive_net_trade_fraction": 0.005494505494505495
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.23232657172708235,
+                  "mean_net_bps": -16.232326571727082,
+                  "positive_net_trade_fraction": 0.010958904109589041
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.328175058843751,
+                  "mean_net_bps": -18.32817505884375,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.5333750573403777,
+                  "mean_net_bps": -19.533375057340375,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.35012290982944,
+                  "mean_net_bps": -17.35012290982944,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.09112789426087725,
+                  "mean_net_bps": -16.09112789426088,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 1974,
+              "funding_pnl_bps": -3.2704672239108414,
+              "basis_pnl_bps": -0.03580971529538051,
+              "gross_bps": -3.3062769392062212,
+              "net_bps": -43.30627693920622,
+              "annualized_return_on_2N": -0.7903395541405136,
+              "max_drawdown": 0.9861452733672721,
+              "worst_basis_widening_bps": 129.60881264415968,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -10.424880331538779,
+                  "mean_net_bps": -50.42488033153878,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.23232657172708235,
+                  "mean_net_bps": -40.23232657172708,
+                  "positive_net_trade_fraction": 0.005479452054794521
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -2.328175058843751,
+                  "mean_net_bps": -42.32817505884375,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.5333750573403777,
+                  "mean_net_bps": -43.53337505734038,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -1.35012290982944,
+                  "mean_net_bps": -41.35012290982944,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": -0.09112789426087725,
+                  "mean_net_bps": -40.09112789426087,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "3d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 898,
+            "adjacent_pairs": 5930,
+            "frequency": 0.15143338954468802
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.818481762917934,
+              "basis_pnl_bps": -0.10160989353026073,
+              "gross_bps": -9.920091656448193,
+              "net_bps": -13.920091656448195,
+              "annualized_return_on_2N": -0.08468055757672652,
+              "max_drawdown": 0.3677530871256157,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -31.165941447015975,
+                  "mean_net_bps": -35.165941447015975,
+                  "positive_net_trade_fraction": 0.03278688524590164
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -0.6953413977718764,
+                  "mean_net_bps": -4.695341397771876,
+                  "positive_net_trade_fraction": 0.1721311475409836
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.976886030246625,
+                  "mean_net_bps": -10.976886030246625,
+                  "positive_net_trade_fraction": 0.008264462809917356
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.604088257773103,
+                  "mean_net_bps": -14.604088257773103,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.034850818712581,
+                  "mean_net_bps": -8.034850818712581,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.207959711993848,
+                  "mean_net_bps": -4.207959711993848,
+                  "positive_net_trade_fraction": 0.12244897959183673
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.818481762917934,
+              "basis_pnl_bps": -0.10160989353026073,
+              "gross_bps": -9.920091656448193,
+              "net_bps": -25.920091656448193,
+              "annualized_return_on_2N": -0.1576805575767265,
+              "max_drawdown": 0.574150515414688,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -31.165941447015975,
+                  "mean_net_bps": -47.165941447015975,
+                  "positive_net_trade_fraction": 0.00819672131147541
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -0.6953413977718764,
+                  "mean_net_bps": -16.695341397771877,
+                  "positive_net_trade_fraction": 0.03278688524590164
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.976886030246625,
+                  "mean_net_bps": -22.976886030246625,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.604088257773103,
+                  "mean_net_bps": -26.604088257773107,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.034850818712581,
+                  "mean_net_bps": -20.03485081871258,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.207959711993848,
+                  "mean_net_bps": -16.207959711993848,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 658,
+              "funding_pnl_bps": -9.818481762917934,
+              "basis_pnl_bps": -0.10160989353026073,
+              "gross_bps": -9.920091656448193,
+              "net_bps": -49.9200916564482,
+              "annualized_return_on_2N": -0.3036805575767266,
+              "max_drawdown": 0.8069430728629787,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -31.165941447015975,
+                  "mean_net_bps": -71.16594144701598,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -0.6953413977718764,
+                  "mean_net_bps": -40.69534139777188,
+                  "positive_net_trade_fraction": 0.01639344262295082
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -6.976886030246625,
+                  "mean_net_bps": -46.976886030246625,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.604088257773103,
+                  "mean_net_bps": -50.60408825777311,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -4.034850818712581,
+                  "mean_net_bps": -44.03485081871258,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 49,
+                  "mean_gross_bps": -0.207959711993848,
+                  "mean_net_bps": -40.20795971199385,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "7d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 898,
+            "adjacent_pairs": 5930,
+            "frequency": 0.15143338954468802
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 281,
+              "funding_pnl_bps": -22.936583985765125,
+              "basis_pnl_bps": -0.1390167613223544,
+              "gross_bps": -23.075600747087478,
+              "net_bps": -27.075600747087478,
+              "annualized_return_on_2N": -0.07058995909062094,
+              "max_drawdown": 0.3170723614240152,
+              "worst_basis_widening_bps": 122.84816534394061,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -71.47516116391928,
+                  "mean_net_bps": -75.47516116391928,
+                  "positive_net_trade_fraction": 0.018867924528301886
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -1.5653655877244184,
+                  "mean_net_bps": -5.565365587724418,
+                  "positive_net_trade_fraction": 0.19230769230769232
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -16.5245782684215,
+                  "mean_net_bps": -20.5245782684215,
+                  "positive_net_trade_fraction": 0.0196078431372549
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -24.54160198399058,
+                  "mean_net_bps": -28.54160198399058,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.34080228113416,
+                  "mean_net_bps": -13.34080228113416,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -0.477273533628918,
+                  "mean_net_bps": -4.477273533628918,
+                  "positive_net_trade_fraction": 0.3333333333333333
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 281,
+              "funding_pnl_bps": -22.936583985765125,
+              "basis_pnl_bps": -0.1390167613223544,
+              "gross_bps": -23.075600747087478,
+              "net_bps": -39.075600747087485,
+              "annualized_return_on_2N": -0.10187567337633524,
+              "max_drawdown": 0.4231923934992575,
+              "worst_basis_widening_bps": 122.84816534394061,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -71.47516116391928,
+                  "mean_net_bps": -87.47516116391927,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -1.5653655877244184,
+                  "mean_net_bps": -17.56536558772442,
+                  "positive_net_trade_fraction": 0.057692307692307696
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -16.5245782684215,
+                  "mean_net_bps": -32.5245782684215,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -24.54160198399058,
+                  "mean_net_bps": -40.54160198399059,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.34080228113416,
+                  "mean_net_bps": -25.340802281134156,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -0.477273533628918,
+                  "mean_net_bps": -16.477273533628917,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 281,
+              "funding_pnl_bps": -22.936583985765125,
+              "basis_pnl_bps": -0.1390167613223544,
+              "gross_bps": -23.075600747087478,
+              "net_bps": -63.07560074708748,
+              "annualized_return_on_2N": -0.1644471019477638,
+              "max_drawdown": 0.5886502981986365,
+              "worst_basis_widening_bps": 122.84816534394061,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -71.47516116391928,
+                  "mean_net_bps": -111.47516116391927,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -1.5653655877244184,
+                  "mean_net_bps": -41.56536558772442,
+                  "positive_net_trade_fraction": 0.019230769230769232
+                },
+                "2023": {
+                  "trade_count": 51,
+                  "mean_gross_bps": -16.5245782684215,
+                  "mean_net_bps": -56.5245782684215,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -24.54160198399058,
+                  "mean_net_bps": -64.54160198399059,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.34080228113416,
+                  "mean_net_bps": -49.34080228113416,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 21,
+                  "mean_gross_bps": -0.477273533628918,
+                  "mean_net_bps": -40.47727353362892,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "30d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 898,
+            "adjacent_pairs": 5930,
+            "frequency": 0.15143338954468802
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 65,
+              "funding_pnl_bps": -99.04707538461538,
+              "basis_pnl_bps": -0.8887503142182094,
+              "gross_bps": -99.9358256988336,
+              "net_bps": -103.9358256988336,
+              "annualized_return_on_2N": -0.06322762730012377,
+              "max_drawdown": 0.29018615493989075,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -294.82727050137083,
+                  "mean_net_bps": -298.82727050137083,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -10.50104571501596,
+                  "mean_net_bps": -14.501045715015962,
+                  "positive_net_trade_fraction": 0.16666666666666666
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -69.32213215489787,
+                  "mean_net_bps": -73.32213215489787,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -104.37894579747093,
+                  "mean_net_bps": -108.37894579747093,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -39.40625462709675,
+                  "mean_net_bps": -43.40625462709676,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 5.056596406853794,
+                  "mean_net_bps": 1.056596406853794,
+                  "positive_net_trade_fraction": 0.75
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 65,
+              "funding_pnl_bps": -99.04707538461538,
+              "basis_pnl_bps": -0.8887503142182094,
+              "gross_bps": -99.9358256988336,
+              "net_bps": -115.9358256988336,
+              "annualized_return_on_2N": -0.07052762730012377,
+              "max_drawdown": 0.31632730683603116,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -294.82727050137083,
+                  "mean_net_bps": -310.82727050137083,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -10.50104571501596,
+                  "mean_net_bps": -26.501045715015962,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -69.32213215489787,
+                  "mean_net_bps": -85.32213215489787,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -104.37894579747093,
+                  "mean_net_bps": -120.37894579747093,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -39.40625462709675,
+                  "mean_net_bps": -55.40625462709675,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 5.056596406853794,
+                  "mean_net_bps": -10.943403593146206,
+                  "positive_net_trade_fraction": 0.25
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 65,
+              "funding_pnl_bps": -99.04707538461538,
+              "basis_pnl_bps": -0.8887503142182094,
+              "gross_bps": -99.9358256988336,
+              "net_bps": -139.93582569883358,
+              "annualized_return_on_2N": -0.08512762730012376,
+              "max_drawdown": 0.3679482436317185,
+              "worst_basis_widening_bps": 121.86549124486912,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -294.82727050137083,
+                  "mean_net_bps": -334.82727050137083,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -10.50104571501596,
+                  "mean_net_bps": -50.501045715015955,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -69.32213215489787,
+                  "mean_net_bps": -109.32213215489787,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -104.37894579747093,
+                  "mean_net_bps": -144.37894579747095,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -39.40625462709675,
+                  "mean_net_bps": -79.40625462709674,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 5.056596406853794,
+                  "mean_net_bps": -34.94340359314621,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "SOLUSDT": {
+      "spot": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 0
+      },
+      "perpetual": {
+        "archives": 65,
+        "missing_months": [],
+        "dropped_rows": 52
+      },
+      "aligned_rows": 47314,
+      "aligned_first": "2021-01-01T00:00:00+00:00",
+      "aligned_last": "2026-05-31T23:00:00+00:00",
+      "aligned_years": 5.412616929044034,
+      "funding_event_count": 6006,
+      "funding_first": "2021-01-01T00:00:00.002000+00:00",
+      "funding_last": "2026-05-31T16:00:00.004000+00:00",
+      "analyses": {
+        "8h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 1127,
+            "adjacent_pairs": 6003,
+            "frequency": 0.18773946360153257
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 5910,
+              "funding_pnl_bps": -0.07509167512690353,
+              "basis_pnl_bps": -0.2233365955714121,
+              "gross_bps": -0.2984282706983157,
+              "net_bps": -4.298428270698316,
+              "annualized_return_on_2N": -0.23533894782073278,
+              "max_drawdown": 0.736352073339365,
+              "worst_basis_widening_bps": 1381.866313699537,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.7665373986287034,
+                  "mean_net_bps": -6.766537398628704,
+                  "positive_net_trade_fraction": 0.20219579139981703
+                },
+                "2022": {
+                  "trade_count": 1078,
+                  "mean_gross_bps": 2.5430456470461587,
+                  "mean_net_bps": -1.4569543529538416,
+                  "positive_net_trade_fraction": 0.21335807050092764
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.18072694426433786,
+                  "mean_net_bps": -4.180726944264338,
+                  "positive_net_trade_fraction": 0.1882998171846435
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.2346925236449777,
+                  "mean_net_bps": -5.234692523644978,
+                  "positive_net_trade_fraction": 0.020036429872495445
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.05025085744206147,
+                  "mean_net_bps": -4.0502508574420615,
+                  "positive_net_trade_fraction": 0.019178082191780823
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": 0.28129081027610014,
+                  "mean_net_bps": -3.7187091897238997,
+                  "positive_net_trade_fraction": 0.03761061946902655
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 5910,
+              "funding_pnl_bps": -0.07509167512690353,
+              "basis_pnl_bps": -0.2233365955714121,
+              "gross_bps": -0.2984282706983157,
+              "net_bps": -16.298428270698317,
+              "annualized_return_on_2N": -0.8923389478207329,
+              "max_drawdown": 0.9923236133952796,
+              "worst_basis_widening_bps": 1381.866313699537,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.7665373986287034,
+                  "mean_net_bps": -18.766537398628703,
+                  "positive_net_trade_fraction": 0.04574565416285453
+                },
+                "2022": {
+                  "trade_count": 1078,
+                  "mean_gross_bps": 2.5430456470461587,
+                  "mean_net_bps": -13.456954352953842,
+                  "positive_net_trade_fraction": 0.04081632653061224
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.18072694426433786,
+                  "mean_net_bps": -16.180726944264336,
+                  "positive_net_trade_fraction": 0.010054844606946984
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.2346925236449777,
+                  "mean_net_bps": -17.234692523644977,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.05025085744206147,
+                  "mean_net_bps": -16.050250857442062,
+                  "positive_net_trade_fraction": 0.0018264840182648401
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": 0.28129081027610014,
+                  "mean_net_bps": -15.718709189723901,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 5910,
+              "funding_pnl_bps": -0.07509167512690353,
+              "basis_pnl_bps": -0.2233365955714121,
+              "gross_bps": -0.2984282706983157,
+              "net_bps": -40.29842827069832,
+              "annualized_return_on_2N": -2.2063389478207327,
+              "max_drawdown": 0.999993533742463,
+              "worst_basis_widening_bps": 1381.866313699537,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 1093,
+                  "mean_gross_bps": -2.7665373986287034,
+                  "mean_net_bps": -42.7665373986287,
+                  "positive_net_trade_fraction": 0.010064043915827997
+                },
+                "2022": {
+                  "trade_count": 1078,
+                  "mean_gross_bps": 2.5430456470461587,
+                  "mean_net_bps": -37.456954352953844,
+                  "positive_net_trade_fraction": 0.015769944341372914
+                },
+                "2023": {
+                  "trade_count": 1094,
+                  "mean_gross_bps": -0.18072694426433786,
+                  "mean_net_bps": -40.180726944264336,
+                  "positive_net_trade_fraction": 0.002742230347349177
+                },
+                "2024": {
+                  "trade_count": 1098,
+                  "mean_gross_bps": -1.2346925236449777,
+                  "mean_net_bps": -41.23469252364497,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 1095,
+                  "mean_gross_bps": -0.05025085744206147,
+                  "mean_net_bps": -40.050250857442066,
+                  "positive_net_trade_fraction": 0.0009132420091324201
+                },
+                "2026": {
+                  "trade_count": 452,
+                  "mean_gross_bps": 0.28129081027610014,
+                  "mean_net_bps": -39.718709189723896,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "24h": {
+          "funding_reversal_frequency": {
+            "sign_changes": 1127,
+            "adjacent_pairs": 6003,
+            "frequency": 0.18773946360153257
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 1967,
+              "funding_pnl_bps": -0.2197018810371125,
+              "basis_pnl_bps": -0.328245391454044,
+              "gross_bps": -0.5479472724911565,
+              "net_bps": -4.5479472724911565,
+              "annualized_return_on_2N": -0.0830000377229636,
+              "max_drawdown": 0.3926324497672199,
+              "worst_basis_widening_bps": 1268.1827249972732,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.085231315844231,
+                  "mean_net_bps": -12.085231315844233,
+                  "positive_net_trade_fraction": 0.12087912087912088
+                },
+                "2022": {
+                  "trade_count": 358,
+                  "mean_gross_bps": 9.343169113020211,
+                  "mean_net_bps": 5.3431691130202115,
+                  "positive_net_trade_fraction": 0.23184357541899442
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -0.5741387942888275,
+                  "mean_net_bps": -4.574138794288827,
+                  "positive_net_trade_fraction": 0.1813186813186813
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.7016764993620517,
+                  "mean_net_bps": -7.701676499362052,
+                  "positive_net_trade_fraction": 0.01092896174863388
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.13384031107258487,
+                  "mean_net_bps": -4.133840311072585,
+                  "positive_net_trade_fraction": 0.043835616438356165
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": 0.8867280329673135,
+                  "mean_net_bps": -3.1132719670326865,
+                  "positive_net_trade_fraction": 0.13333333333333333
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 1967,
+              "funding_pnl_bps": -0.2197018810371125,
+              "basis_pnl_bps": -0.328245391454044,
+              "gross_bps": -0.5479472724911565,
+              "net_bps": -16.547947272491157,
+              "annualized_return_on_2N": -0.30200003772296363,
+              "max_drawdown": 0.8128556677336796,
+              "worst_basis_widening_bps": 1268.1827249972732,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.085231315844231,
+                  "mean_net_bps": -24.08523131584423,
+                  "positive_net_trade_fraction": 0.03021978021978022
+                },
+                "2022": {
+                  "trade_count": 358,
+                  "mean_gross_bps": 9.343169113020211,
+                  "mean_net_bps": -6.6568308869797885,
+                  "positive_net_trade_fraction": 0.0893854748603352
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -0.5741387942888275,
+                  "mean_net_bps": -16.574138794288828,
+                  "positive_net_trade_fraction": 0.013736263736263736
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.7016764993620517,
+                  "mean_net_bps": -19.70167649936205,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.13384031107258487,
+                  "mean_net_bps": -16.133840311072586,
+                  "positive_net_trade_fraction": 0.005479452054794521
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": 0.8867280329673135,
+                  "mean_net_bps": -15.113271967032688,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 1967,
+              "funding_pnl_bps": -0.2197018810371125,
+              "basis_pnl_bps": -0.328245391454044,
+              "gross_bps": -0.5479472724911565,
+              "net_bps": -40.54794727249116,
+              "annualized_return_on_2N": -0.7400000377229636,
+              "max_drawdown": 0.9822701469801023,
+              "worst_basis_widening_bps": 1268.1827249972732,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -8.085231315844231,
+                  "mean_net_bps": -48.08523131584423,
+                  "positive_net_trade_fraction": 0.019230769230769232
+                },
+                "2022": {
+                  "trade_count": 358,
+                  "mean_gross_bps": 9.343169113020211,
+                  "mean_net_bps": -30.65683088697979,
+                  "positive_net_trade_fraction": 0.036312849162011177
+                },
+                "2023": {
+                  "trade_count": 364,
+                  "mean_gross_bps": -0.5741387942888275,
+                  "mean_net_bps": -40.57413879428883,
+                  "positive_net_trade_fraction": 0.008241758241758242
+                },
+                "2024": {
+                  "trade_count": 366,
+                  "mean_gross_bps": -3.7016764993620517,
+                  "mean_net_bps": -43.70167649936205,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 365,
+                  "mean_gross_bps": -0.13384031107258487,
+                  "mean_net_bps": -40.13384031107258,
+                  "positive_net_trade_fraction": 0.0027397260273972603
+                },
+                "2026": {
+                  "trade_count": 150,
+                  "mean_gross_bps": 0.8867280329673135,
+                  "mean_net_bps": -39.11327196703269,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "3d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 1127,
+            "adjacent_pairs": 6003,
+            "frequency": 0.18773946360153257
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 654,
+              "funding_pnl_bps": -0.6551457186544342,
+              "basis_pnl_bps": -1.4110554076299109,
+              "gross_bps": -2.0662011262843447,
+              "net_bps": -6.066201126284345,
+              "annualized_return_on_2N": -0.03690272351822977,
+              "max_drawdown": 0.22609823462296538,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -26.236642726879143,
+                  "mean_net_bps": -30.236642726879143,
+                  "positive_net_trade_fraction": 0.09016393442622951
+                },
+                "2022": {
+                  "trade_count": 118,
+                  "mean_gross_bps": 28.206674703686968,
+                  "mean_net_bps": 24.206674703686968,
+                  "positive_net_trade_fraction": 0.3474576271186441
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -1.9663615240206367,
+                  "mean_net_bps": -5.966361524020638,
+                  "positive_net_trade_fraction": 0.2066115702479339
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.944875034643879,
+                  "mean_net_bps": -14.944875034643879,
+                  "positive_net_trade_fraction": 0.01639344262295082
+                },
+                "2025": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -0.32432440322024325,
+                  "mean_net_bps": -4.324324403220243,
+                  "positive_net_trade_fraction": 0.12396694214876033
+                },
+                "2026": {
+                  "trade_count": 50,
+                  "mean_gross_bps": 2.672700249538628,
+                  "mean_net_bps": -1.327299750461372,
+                  "positive_net_trade_fraction": 0.32
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 654,
+              "funding_pnl_bps": -0.6551457186544342,
+              "basis_pnl_bps": -1.4110554076299109,
+              "gross_bps": -2.0662011262843447,
+              "net_bps": -18.066201126284344,
+              "annualized_return_on_2N": -0.10990272351822977,
+              "max_drawdown": 0.47475223549074497,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -26.236642726879143,
+                  "mean_net_bps": -42.23664272687914,
+                  "positive_net_trade_fraction": 0.05737704918032787
+                },
+                "2022": {
+                  "trade_count": 118,
+                  "mean_gross_bps": 28.206674703686968,
+                  "mean_net_bps": 12.206674703686966,
+                  "positive_net_trade_fraction": 0.1440677966101695
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -1.9663615240206367,
+                  "mean_net_bps": -17.966361524020634,
+                  "positive_net_trade_fraction": 0.03305785123966942
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.944875034643879,
+                  "mean_net_bps": -26.944875034643875,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -0.32432440322024325,
+                  "mean_net_bps": -16.324324403220242,
+                  "positive_net_trade_fraction": 0.01652892561983471
+                },
+                "2026": {
+                  "trade_count": 50,
+                  "mean_gross_bps": 2.672700249538628,
+                  "mean_net_bps": -13.327299750461373,
+                  "positive_net_trade_fraction": 0.06
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 654,
+              "funding_pnl_bps": -0.6551457186544342,
+              "basis_pnl_bps": -1.4110554076299109,
+              "gross_bps": -2.0662011262843447,
+              "net_bps": -42.06620112628435,
+              "annualized_return_on_2N": -0.2559027235182298,
+              "max_drawdown": 0.7601002881771035,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -26.236642726879143,
+                  "mean_net_bps": -66.23664272687914,
+                  "positive_net_trade_fraction": 0.02459016393442623
+                },
+                "2022": {
+                  "trade_count": 118,
+                  "mean_gross_bps": 28.206674703686968,
+                  "mean_net_bps": -11.793325296313034,
+                  "positive_net_trade_fraction": 0.1016949152542373
+                },
+                "2023": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -1.9663615240206367,
+                  "mean_net_bps": -41.966361524020634,
+                  "positive_net_trade_fraction": 0.01652892561983471
+                },
+                "2024": {
+                  "trade_count": 122,
+                  "mean_gross_bps": -10.944875034643879,
+                  "mean_net_bps": -50.94487503464388,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 121,
+                  "mean_gross_bps": -0.32432440322024325,
+                  "mean_net_bps": -40.324324403220245,
+                  "positive_net_trade_fraction": 0.008264462809917356
+                },
+                "2026": {
+                  "trade_count": 50,
+                  "mean_gross_bps": 2.672700249538628,
+                  "mean_net_bps": -37.32729975046137,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "7d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 1127,
+            "adjacent_pairs": 6003,
+            "frequency": 0.18773946360153257
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 281,
+              "funding_pnl_bps": -1.593902491103205,
+              "basis_pnl_bps": -1.4446033652296835,
+              "gross_bps": -3.0385058563328893,
+              "net_bps": -7.03850585633289,
+              "annualized_return_on_2N": -0.018350390268296463,
+              "max_drawdown": 0.17952346954700835,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -54.8709457265645,
+                  "mean_net_bps": -58.8709457265645,
+                  "positive_net_trade_fraction": 0.05660377358490566
+                },
+                "2022": {
+                  "trade_count": 51,
+                  "mean_gross_bps": 74.01290392232241,
+                  "mean_net_bps": 70.01290392232241,
+                  "positive_net_trade_fraction": 0.39215686274509803
+                },
+                "2023": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.29512845060175,
+                  "mean_net_bps": -13.29512845060175,
+                  "positive_net_trade_fraction": 0.23076923076923078
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -25.573014875374863,
+                  "mean_net_bps": -29.573014875374863,
+                  "positive_net_trade_fraction": 0.038461538461538464
+                },
+                "2025": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -1.0002529615346305,
+                  "mean_net_bps": -5.00025296153463,
+                  "positive_net_trade_fraction": 0.18867924528301888
+                },
+                "2026": {
+                  "trade_count": 20,
+                  "mean_gross_bps": 7.291936887602671,
+                  "mean_net_bps": 3.2919368876026702,
+                  "positive_net_trade_fraction": 0.5
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 281,
+              "funding_pnl_bps": -1.593902491103205,
+              "basis_pnl_bps": -1.4446033652296835,
+              "gross_bps": -3.0385058563328893,
+              "net_bps": -19.03850585633289,
+              "annualized_return_on_2N": -0.04963610455401075,
+              "max_drawdown": 0.26222826636513347,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -54.8709457265645,
+                  "mean_net_bps": -70.8709457265645,
+                  "positive_net_trade_fraction": 0.03773584905660377
+                },
+                "2022": {
+                  "trade_count": 51,
+                  "mean_gross_bps": 74.01290392232241,
+                  "mean_net_bps": 58.0129039223224,
+                  "positive_net_trade_fraction": 0.27450980392156865
+                },
+                "2023": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.29512845060175,
+                  "mean_net_bps": -25.29512845060175,
+                  "positive_net_trade_fraction": 0.09615384615384616
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -25.573014875374863,
+                  "mean_net_bps": -41.57301487537487,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -1.0002529615346305,
+                  "mean_net_bps": -17.00025296153463,
+                  "positive_net_trade_fraction": 0.03773584905660377
+                },
+                "2026": {
+                  "trade_count": 20,
+                  "mean_gross_bps": 7.291936887602671,
+                  "mean_net_bps": -8.70806311239733,
+                  "positive_net_trade_fraction": 0.2
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 281,
+              "funding_pnl_bps": -1.593902491103205,
+              "basis_pnl_bps": -1.4446033652296835,
+              "gross_bps": -3.0385058563328893,
+              "net_bps": -43.03850585633288,
+              "annualized_return_on_2N": -0.1122075331254393,
+              "max_drawdown": 0.4730741085896033,
+              "worst_basis_widening_bps": 1339.97798703681,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -54.8709457265645,
+                  "mean_net_bps": -94.8709457265645,
+                  "positive_net_trade_fraction": 0.018867924528301886
+                },
+                "2022": {
+                  "trade_count": 51,
+                  "mean_gross_bps": 74.01290392232241,
+                  "mean_net_bps": 34.0129039223224,
+                  "positive_net_trade_fraction": 0.17647058823529413
+                },
+                "2023": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -9.29512845060175,
+                  "mean_net_bps": -49.295128450601744,
+                  "positive_net_trade_fraction": 0.019230769230769232
+                },
+                "2024": {
+                  "trade_count": 52,
+                  "mean_gross_bps": -25.573014875374863,
+                  "mean_net_bps": -65.57301487537487,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 53,
+                  "mean_gross_bps": -1.0002529615346305,
+                  "mean_net_bps": -41.000252961534635,
+                  "positive_net_trade_fraction": 0.018867924528301886
+                },
+                "2026": {
+                  "trade_count": 20,
+                  "mean_gross_bps": 7.291936887602671,
+                  "mean_net_bps": -32.70806311239733,
+                  "positive_net_trade_fraction": 0.0
+                }
+              }
+            }
+          }
+        },
+        "30d": {
+          "funding_reversal_frequency": {
+            "sign_changes": 1127,
+            "adjacent_pairs": 6003,
+            "frequency": 0.18773946360153257
+          },
+          "scenarios": {
+            "optimistic": {
+              "trade_count": 65,
+              "funding_pnl_bps": -7.082170769230772,
+              "basis_pnl_bps": -0.5388304219633433,
+              "gross_bps": -7.621001191194107,
+              "net_bps": -11.621001191194107,
+              "annualized_return_on_2N": -0.007069442391309748,
+              "max_drawdown": 0.14782941733966512,
+              "worst_basis_widening_bps": 156.45963265472187,
+              "pair_round_trip_cost_bps": 4.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -222.99340285563488,
+                  "mean_net_bps": -226.99340285563488,
+                  "positive_net_trade_fraction": 0.07692307692307693
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": 347.8855785412324,
+                  "mean_net_bps": 343.8855785412324,
+                  "positive_net_trade_fraction": 0.5833333333333334
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -48.308297838769,
+                  "mean_net_bps": -52.308297838769,
+                  "positive_net_trade_fraction": 0.16666666666666666
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -107.00622401576572,
+                  "mean_net_bps": -111.00622401576572,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -4.062173324474267,
+                  "mean_net_bps": -8.062173324474267,
+                  "positive_net_trade_fraction": 0.3333333333333333
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 35.36063983723889,
+                  "mean_net_bps": 31.360639837238896,
+                  "positive_net_trade_fraction": 0.75
+                }
+              }
+            },
+            "realistic_retail_api": {
+              "trade_count": 65,
+              "funding_pnl_bps": -7.082170769230772,
+              "basis_pnl_bps": -0.5388304219633433,
+              "gross_bps": -7.621001191194107,
+              "net_bps": -23.621001191194104,
+              "annualized_return_on_2N": -0.014369442391309745,
+              "max_drawdown": 0.15624514382157068,
+              "worst_basis_widening_bps": 156.45963265472187,
+              "pair_round_trip_cost_bps": 16.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -222.99340285563488,
+                  "mean_net_bps": -238.99340285563488,
+                  "positive_net_trade_fraction": 0.07692307692307693
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": 347.8855785412324,
+                  "mean_net_bps": 331.8855785412324,
+                  "positive_net_trade_fraction": 0.5833333333333334
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -48.308297838769,
+                  "mean_net_bps": -64.30829783876901,
+                  "positive_net_trade_fraction": 0.16666666666666666
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -107.00622401576572,
+                  "mean_net_bps": -123.00622401576572,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -4.062173324474267,
+                  "mean_net_bps": -20.06217332447427,
+                  "positive_net_trade_fraction": 0.25
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 35.36063983723889,
+                  "mean_net_bps": 19.360639837238892,
+                  "positive_net_trade_fraction": 0.75
+                }
+              }
+            },
+            "conservative": {
+              "trade_count": 65,
+              "funding_pnl_bps": -7.082170769230772,
+              "basis_pnl_bps": -0.5388304219633433,
+              "gross_bps": -7.621001191194107,
+              "net_bps": -47.62100119119411,
+              "annualized_return_on_2N": -0.02896944239130975,
+              "max_drawdown": 0.17742430775446363,
+              "worst_basis_widening_bps": 156.45963265472187,
+              "pair_round_trip_cost_bps": 40.0,
+              "year_by_year": {
+                "2021": {
+                  "trade_count": 13,
+                  "mean_gross_bps": -222.99340285563488,
+                  "mean_net_bps": -262.9934028556349,
+                  "positive_net_trade_fraction": 0.07692307692307693
+                },
+                "2022": {
+                  "trade_count": 12,
+                  "mean_gross_bps": 347.8855785412324,
+                  "mean_net_bps": 307.8855785412324,
+                  "positive_net_trade_fraction": 0.4166666666666667
+                },
+                "2023": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -48.308297838769,
+                  "mean_net_bps": -88.30829783876901,
+                  "positive_net_trade_fraction": 0.16666666666666666
+                },
+                "2024": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -107.00622401576572,
+                  "mean_net_bps": -147.00622401576572,
+                  "positive_net_trade_fraction": 0.0
+                },
+                "2025": {
+                  "trade_count": 12,
+                  "mean_gross_bps": -4.062173324474267,
+                  "mean_net_bps": -44.062173324474266,
+                  "positive_net_trade_fraction": 0.08333333333333333
+                },
+                "2026": {
+                  "trade_count": 4,
+                  "mean_gross_bps": 35.36063983723889,
+                  "mean_net_bps": -4.639360162761106,
+                  "positive_net_trade_fraction": 0.75
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "verdict": "C"
+}

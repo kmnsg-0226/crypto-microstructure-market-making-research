@@ -1,0 +1,95 @@
+{
+  "schema": "crypto-hft-loop6-frozen-ablation-v1",
+  "status": "frozen_before_loop6_ablation_and_june_july_august_replication",
+  "experiment_id": "btc-loop6-frozen-ablation-2026-v1",
+  "audit": {
+    "repository_commit_before_freeze": "ec310bf1b1896cd657bd9e9b12e81694e7b14490",
+    "all_eight_historical_dates_previously_seen_in_other_research": true,
+    "june_july_august_not_used_to_select_loop6_policy": true,
+    "loop6_development_ranking_sha256": "5fdb9be53ae02c5af635990774180aefd81f911981b9f07de3a3c25e1d6018dd",
+    "loop6_shortlist_sha256": "2a70b669f288c2d64cf0ee0be0ccf7a6ba57d38640767483102d788b4bd00330",
+    "obi_thresholds_sha256": "f30d5d9824538e4395d257e78c1b672536d7562f67c79431755d56c4a9b8d5a8",
+    "validation_outcomes_read_for_this_frozen_policy": false
+  },
+  "interpretation": {
+    "ablation_is_non_tuning": true,
+    "june_july_august_is_retrospective_chronological_replication_not_pristine_oos": true,
+    "replication_success_does_not_override_exact_capacity_failure": true,
+    "replication_success_does_not_prove_live_profitability": true,
+    "no_more_directional_loop_search_after_this_test": true
+  },
+  "development_dates": [
+    "2026-01-01",
+    "2026-02-01",
+    "2026-03-01",
+    "2026-04-01",
+    "2026-05-01"
+  ],
+  "single_use_retrospective_dates": [
+    "2026-06-01",
+    "2026-07-01",
+    "2026-08-01"
+  ],
+  "frozen_obi_plus_momentum_policy": {
+    "source_development_rank": 1,
+    "policy": "combined_prediction_1s_ticks__maker_trend__absq0.8000__fixed_lifetime__entry5000ms__hold3600000ms__exit1000ms__reversal_against_1h",
+    "signal": "combined_prediction_1s_ticks",
+    "absolute_signal_threshold": 17.014853991683662,
+    "direction": "maker_trend",
+    "entry_quote_lifetime_ms": 5000,
+    "entry_cancel_mode": "fixed_lifetime",
+    "hold_ms": 3600000,
+    "exit_quote_lifetime_ms": 1000,
+    "regime": "reversal_against_1h",
+    "order_size_btc": 0.005
+  },
+  "momentum_only_ablation": {
+    "remove_only": "combined_prediction_1s_ticks_absolute_tail_requirement",
+    "retain_direction_from": "position_side_selected_by_reversal_against_1h",
+    "retain_all_execution_and_cost_parameters": true,
+    "no_alternative_threshold_or_policy_search": true
+  },
+  "momentum_definition": {
+    "five_minute": "position_sign_times_mid_now_minus_mid_5m_ago_gt_zero",
+    "one_hour": "position_sign_times_mid_now_minus_mid_1h_ago_lt_zero",
+    "same_feature_segment_required": true,
+    "past_only": true
+  },
+  "execution": {
+    "queue_model": "pessimistic_visible_queue",
+    "full_fills_required_on_both_legs": true,
+    "partial_fills_are_not_completed_roundtrips": true,
+    "maker_fee_bps_per_leg": 2.0,
+    "minimum_exit_placement_delay_after_entry_fill_ms": 100,
+    "no_mid_price_execution": true,
+    "screen_pairs_may_overlap": true,
+    "known_exact_capacity_failure": "one_position_maximum_23_roundtrips_per_day"
+  },
+  "retrospective_success_gate": {
+    "obi_plus_momentum_net_bps_positive_each_month": true,
+    "obi_plus_momentum_completed_roundtrips_minimum_each_month": 50,
+    "obi_plus_momentum_pooled_net_bps_positive": true,
+    "obi_plus_momentum_pooled_net_bps_greater_than_momentum_only": true,
+    "all_conditions_required": true
+  },
+  "branch_if_retrospective_gate_passes": {
+    "create_local_branch": true,
+    "branch_name": "research/loop6-intraday-frozen",
+    "branch_means": "preserved_retrospective_intraday_research_not_live_profitability"
+  },
+  "validation_run_policy": {
+    "open_june_july_august_once": true,
+    "refuse_second_evaluation_when_receipt_exists": true,
+    "verification_reads_saved_hashes_without_recomputing_outcomes": true
+  },
+  "prohibited": [
+    "select_another_loop6_policy_after_validation",
+    "change_threshold_after_validation",
+    "rerun_validation_as_another_trial",
+    "call_overlapping_screen_exact_execution",
+    "call_retrospective_replication_live_profitability",
+    "continue_directional_loop_search",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

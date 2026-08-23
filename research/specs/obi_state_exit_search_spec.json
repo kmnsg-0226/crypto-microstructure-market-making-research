@@ -1,0 +1,119 @@
+{
+  "schema": "crypto-hft-obi-state-exit-search-v1",
+  "status": "declared_after_loop4_failure_before_state_exit_outcomes",
+  "experiment_id": "btc-tardis-obi-state-exit-2026-v1",
+  "audit": {
+    "repository_commit_before_search": "484c7e47a3a17d1bf866ff9b86ff4357ec79d4a6",
+    "all_historical_dates_previously_seen": true,
+    "loop4_results_seen": true,
+    "known_loop4_result": "23_pooled_positive_cells_but_zero_positive_on_four_or_five_days",
+    "state_conditioned_exit_pair_outcomes_seen": false,
+    "obi_stage1_thresholds_sha256": "f30d5d9824538e4395d257e78c1b672536d7562f67c79431755d56c4a9b8d5a8",
+    "passive_approach_thresholds_sha256": "15523628391fcdbc74d8a6263a3c76e408cc67c7f99f0ff71d1502ee719ff6f2"
+  },
+  "interpretation": {
+    "historical_search_is_exploratory": true,
+    "june_july_august_not_used_for_selection": true,
+    "historical_positive_cannot_complete_profitability_goal": true,
+    "genuine_success_requires_frozen_post_freeze_native_data": true
+  },
+  "data": {
+    "development_search": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_only_if_development_gate_passes": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "passive_labels": "data/research/tardis/passive/YYYY-MM-DD/labeled_probes.parquet",
+    "features": "data/research/tardis/YYYY-MM-DD/features_100ms.parquet",
+    "queue_model": "pessimistic_visible_queue",
+    "full_fills_required_on_both_legs": true,
+    "partial_fills_count_as_no_roundtrip": true,
+    "carry_across_day_boundary": false
+  },
+  "entry": {
+    "signals": [
+      "obi_l1",
+      "obi_l5",
+      "weighted_obi_l10",
+      "weighted_mid_minus_mid_ticks",
+      "combined_prediction_1s_ticks",
+      "ti_1s"
+    ],
+    "absolute_tail_quantiles": [0.8, 0.95],
+    "directions": ["maker_contrarian", "maker_trend"],
+    "quote_lifetimes_ms": [1000, 5000],
+    "cancel_modes": ["fixed_lifetime", "cancel_on_tail_exit"],
+    "cancel_latency_ms": 100,
+    "order_size_btc": 0.005
+  },
+  "placement_regimes": [
+    "all",
+    "queue_bottom20",
+    "utc_00_08",
+    "utc_08_16",
+    "utc_16_24",
+    "queue_bottom20_utc_00_08",
+    "queue_bottom20_utc_08_16",
+    "queue_bottom20_utc_16_24"
+  ],
+  "exit": {
+    "causal_clock": "first_100ms_feature_decision_at_least_100ms_after_entry_full_fill_local_time",
+    "state_conditions": [
+      "entry_tail_exit",
+      "entry_sign_exit",
+      "entry_opposite_tail"
+    ],
+    "condition_definition": "first_future_entry_oriented_signal_below_tail_at_or_below_zero_or_at_or_below_negative_tail",
+    "maximum_holding_ms": [3600000, 14400000],
+    "if_condition_not_seen_before_cap": "place_exit_at_maximum_holding_cap",
+    "quote_lifetimes_ms": [1000, 5000],
+    "style": "opposite_side_maker_probe_at_first_causal_state_condition_or_cap",
+    "full_fill_required": true,
+    "dynamic_requote": false,
+    "reject_if_entry_trigger_and_exit_cross_feature_segment": true
+  },
+  "fees": {
+    "maker_fee_bps_per_leg_scenarios": [0.0, 1.0, 2.0],
+    "primary_maker_fee_bps_per_leg": 2.0,
+    "rebates_assumed": false
+  },
+  "screen": {
+    "all_eligible_probe_pairs_may_overlap": true,
+    "purpose": "optimistic_state_exit_screen_before_one_position_exact_execution",
+    "no_mid_price_execution": true,
+    "no_fabricated_fill": true
+  },
+  "development_gate": {
+    "minimum_completed_roundtrips_total": 500,
+    "minimum_completed_roundtrips_each_day": 50,
+    "pooled_primary_fee_net_bps_positive": true,
+    "all_five_days_primary_fee_net_bps_positive": true,
+    "shortlist_size": 25
+  },
+  "exact_followup_if_gate_passes": {
+    "one_pending_or_open_position_at_a_time": true,
+    "entry_and_exit_both_use_pessimistic_full_fill_labels": true,
+    "partial_fill_inventory_must_be_accounted": true,
+    "fee_and_latency_stress": true,
+    "must_repeat_on_june_july_august_without_selection": true
+  },
+  "forward_gate_inherited_from": "research/specs/obi_profitability_search_spec.json",
+  "prohibited": [
+    "use_future_signal_before_exit_decision",
+    "search_exit_after_observing_price_outcome",
+    "count_partial_fill_as_full",
+    "mid_price_exit",
+    "zero_fee_profitability_claim",
+    "select_on_june_july_august",
+    "call_historical_result_profitable",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

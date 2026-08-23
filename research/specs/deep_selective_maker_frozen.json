@@ -1,0 +1,118 @@
+{
+  "architecture": {
+    "architecture": "small_causal_TCN_multitask_fill_and_conditional_markout",
+    "batch_size": 256,
+    "channels": [
+      32,
+      32
+    ],
+    "device": "cpu",
+    "dilations": [
+      1,
+      2
+    ],
+    "dropout": 0.1,
+    "early_stopping_patience": 2,
+    "epochs_max": 12,
+    "fill_loss": "binary_cross_entropy_logits",
+    "framework": "pytorch_cpu",
+    "kernel_size": 3,
+    "learning_rate": 0.001,
+    "markout_loss": "Huber_on_filled_examples_only",
+    "sampling": "deterministic_evenly_spaced_rows_after_label_validity_filter",
+    "seed": 20260816,
+    "sequence_lengths_development": [
+      128,
+      256
+    ],
+    "training_sample_cap_per_fold": 250000,
+    "validation_sample_cap_per_day": 250000,
+    "weight_decay": 0.0001
+  },
+  "code_commit_at_plan_freeze": "192945d",
+  "development_dates": [
+    "2026-01-01",
+    "2026-02-01",
+    "2026-03-01",
+    "2026-04-01",
+    "2026-05-01"
+  ],
+  "development_gate": {
+    "checks": {
+      "minimum_fills": false,
+      "pooled_gross_positive": false,
+      "pooled_net_positive": false,
+      "positive_folds": false,
+      "worst_fold_tolerance": true,
+      "zero_inventory_violations": true
+    },
+    "passes": false
+  },
+  "features": [
+    "side_obi_l1",
+    "side_obi_l5",
+    "side_obi_l10",
+    "side_weighted_obi_l10",
+    "side_weighted_mid_minus_mid_ticks",
+    "spread_ticks",
+    "queue_ahead_lots",
+    "side_delta_obi_l10_100ms",
+    "side_ofi_lots_100ms",
+    "side_depletion_lots_100ms",
+    "side_replenishment_lots_100ms",
+    "side_trade_qty_imbalance_100ms",
+    "side_trade_count_imbalance_100ms",
+    "trade_intensity_100ms",
+    "side_delta_obi_l10_1000ms",
+    "side_ofi_lots_1000ms",
+    "side_trade_qty_imbalance_1000ms",
+    "trade_intensity_1000ms",
+    "time_since_trade_ms",
+    "time_since_book_ms",
+    "time_since_bbo_change_ms",
+    "event_arrival_intensity_100ms",
+    "backward_mid_return_abs_sum_100ms",
+    "backward_mid_return_abs_sum_1000ms"
+  ],
+  "margin_ticks": 0.0,
+  "model_artifact_sha256": null,
+  "model_id": "deep_tcn_128_margin_+0",
+  "parameter_count": 5506,
+  "plan_sha256": "98c055b7a27f68e98b15d057ca28265f5d2532e9f2d75d6fb002927877a7d767",
+  "queue_and_execution": {
+    "cancellations_or_unexplained_reductions": "never_advance_queue",
+    "depth_slippage_ticks": 0.0,
+    "fees": {
+      "forced_liquidation_taker_bps": 5.0,
+      "maker_bps": 2.0
+    },
+    "initial_queue_ahead": "displayed_quantity_at_fixed_quote_price",
+    "inventory": {
+      "day_end": "flatten_at_actual_opposite_BBO",
+      "hard_limit_abs_btc": 0.025,
+      "hard_limit_may_never_be_breached": true,
+      "risk_increasing_quotes_at_soft_limit": "suppress",
+      "risk_reducing_selector_override": "allow_even_if_model_rejects_subject_to_active_order_and_hard_cap",
+      "soft_limit_abs_btc": 0.015,
+      "start_each_day_btc": 0.0
+    },
+    "later_additions": "behind_hypothetical_order",
+    "market_impact": 0.0,
+    "one_active_order_per_side": true,
+    "partial_fills": true,
+    "placement_local_time": "max(decision_event_local_time,latest_book_local_time,latest_trade_local_time)",
+    "pnl": "existing_actual_cashflow_accounting_without_spread_double_count",
+    "queue_model": "existing_pessimistic_visible_queue",
+    "quote_lifetime_ms": 1000,
+    "quote_price": "actual_same-decision_best_bid_or_best_ask_fixed_for_lifetime",
+    "quote_quantity_btc": 0.005,
+    "same_price_opposite_aggressor_trades": "consume_queue_then_order",
+    "strict_trade_through": "full_fill"
+  },
+  "schema": "deep-selective-maker-frozen-v1",
+  "seed": 20260816,
+  "sequence_length": 128,
+  "status": "rejected_development_gate",
+  "training_declaration_sha256": "13462cf661b245da54c5651f903c99ec25d6f23c7a9f827de6ce957036649d48",
+  "transforms": "training_fold_finite_median_IQR_clip_plus_minus_10"
+}

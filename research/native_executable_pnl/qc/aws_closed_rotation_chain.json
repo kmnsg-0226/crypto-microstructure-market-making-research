@@ -1,0 +1,24 @@
+{
+  "raw_files": ["BTCUSDT-LONDON-20260820T000000Z.chft.zst", "BTCUSDT-LONDON-20260821T000000Z.chft.zst", "BTCUSDT-LONDON-20260822T000000Z.chft.zst"],
+  "raw_records": 8475493,
+  "depth_events": 1816470,
+  "trade_events": 6659009,
+  "snapshots": 3,
+  "first_local_receive_ns": 1787257570531416241,
+  "last_local_receive_ns": 1787443199952105918,
+  "first_exchange_time_ms": 1787257571335,
+  "last_exchange_time_ms": 1787443199838,
+  "applied_depth_events": 1816463,
+  "stale_depth_events": 7,
+  "sequence_gaps": 0,
+  "parse_failures": 0,
+  "crossed_book_states": 0,
+  "empty_bid_states": 0,
+  "empty_ask_states": 0,
+  "usable_duration_ns": 185623454450297,
+  "segments": [
+    {"start_ns": 1787257571767793307, "end_ns": 1787340372025035999, "duration_ns": 82800257242692, "close_reason": "depth_desync"},
+    {"start_ns": 1787340374336207873, "end_ns": 1787423174622798081, "duration_ns": 82800286590208, "close_reason": "depth_desync"},
+    {"start_ns": 1787423177041488521, "end_ns": 1787443199952105918, "duration_ns": 20022910617397, "close_reason": "end_of_input"}
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "schema": "crypto-hft-obi-momentum-gate-search-v1",
+  "status": "declared_after_loop5_failure_before_momentum_gate_outcomes",
+  "experiment_id": "btc-tardis-obi-momentum-gate-2026-v1",
+  "audit": {
+    "repository_commit_before_search": "c51565daa697d17d423aeaa5b2faa3592e4ca40d",
+    "all_historical_dates_previously_seen": true,
+    "loop4_and_loop5_results_seen": true,
+    "known_loop4_result": "long_fixed_holds_had_pooled_positive_but_date_unstable_cells",
+    "known_loop5_result": "state_transition_exits_had_zero_positive_primary_fee_cells",
+    "momentum_gated_pair_outcomes_seen": false,
+    "obi_stage1_thresholds_sha256": "f30d5d9824538e4395d257e78c1b672536d7562f67c79431755d56c4a9b8d5a8",
+    "passive_approach_thresholds_sha256": "15523628391fcdbc74d8a6263a3c76e408cc67c7f99f0ff71d1502ee719ff6f2"
+  },
+  "interpretation": {
+    "historical_search_is_exploratory": true,
+    "june_july_august_not_used_for_selection": true,
+    "historical_positive_cannot_complete_profitability_goal": true,
+    "genuine_success_requires_frozen_post_freeze_native_data": true
+  },
+  "data": {
+    "development_search": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_only_if_development_gate_passes": [
+      "2026-06-01",
+      "2026-07-01",
+      "2026-08-01"
+    ],
+    "queue_model": "pessimistic_visible_queue",
+    "full_fills_required_on_both_legs": true,
+    "partial_fills_count_as_no_roundtrip": true,
+    "carry_across_day_boundary": false
+  },
+  "entry": {
+    "signals": [
+      "obi_l1",
+      "obi_l5",
+      "weighted_obi_l10",
+      "weighted_mid_minus_mid_ticks",
+      "combined_prediction_1s_ticks",
+      "ti_1s"
+    ],
+    "absolute_tail_quantiles": [0.8, 0.95],
+    "directions": ["maker_contrarian", "maker_trend"],
+    "quote_lifetimes_ms": [1000, 5000],
+    "cancel_modes": ["fixed_lifetime", "cancel_on_tail_exit"],
+    "cancel_latency_ms": 100,
+    "order_size_btc": 0.005
+  },
+  "causal_momentum": {
+    "price": "mid",
+    "lookbacks_ms": [300000, 3600000],
+    "require_same_feature_segment_at_now_and_lag": true,
+    "orientation": "position_sign_times_mid_now_minus_mid_lag",
+    "zero_return_is_neither_aligned_nor_opposed": true
+  },
+  "placement_regimes": [
+    "all",
+    "queue_bottom20",
+    "momentum_5m_aligned",
+    "momentum_5m_opposed",
+    "momentum_1h_aligned",
+    "momentum_1h_opposed",
+    "momentum_both_aligned",
+    "momentum_both_opposed",
+    "pullback_with_1h_aligned",
+    "reversal_against_1h",
+    "momentum_both_aligned_queue_bottom20",
+    "momentum_both_opposed_queue_bottom20",
+    "pullback_with_1h_aligned_queue_bottom20"
+  ],
+  "exit": {
+    "style": "opposite_side_maker_probe_after_fixed_hold",
+    "minimum_placement_delay_after_entry_fill_ms": 100,
+    "additional_hold_delays_ms": [3600000, 14400000],
+    "quote_lifetimes_ms": [1000, 5000],
+    "full_fill_required": true,
+    "dynamic_requote": false,
+    "reject_if_entry_and_exit_cross_feature_segment": true
+  },
+  "fees": {
+    "maker_fee_bps_per_leg_scenarios": [0.0, 1.0, 2.0],
+    "primary_maker_fee_bps_per_leg": 2.0,
+    "rebates_assumed": false
+  },
+  "screen": {
+    "all_eligible_probe_pairs_may_overlap": true,
+    "purpose": "optimistic_causal_regime_screen_before_one_position_exact_execution",
+    "no_mid_price_execution": true,
+    "no_fabricated_fill": true
+  },
+  "development_gate": {
+    "minimum_completed_roundtrips_total": 500,
+    "minimum_completed_roundtrips_each_day": 50,
+    "pooled_primary_fee_net_bps_positive": true,
+    "all_five_days_primary_fee_net_bps_positive": true,
+    "shortlist_size": 25
+  },
+  "exact_followup_if_gate_passes": {
+    "one_pending_or_open_position_at_a_time": true,
+    "partial_fill_inventory_must_be_accounted": true,
+    "fee_and_latency_stress": true,
+    "must_repeat_on_june_july_august_without_selection": true
+  },
+  "forward_gate_inherited_from": "research/specs/obi_profitability_search_spec.json",
+  "prohibited": [
+    "forward_price_in_momentum_gate",
+    "cross_feature_segment_momentum",
+    "count_partial_fill_as_full",
+    "mid_price_execution",
+    "zero_fee_profitability_claim",
+    "select_on_june_july_august",
+    "call_historical_result_profitable",
+    "modify_or_stop_live_collector",
+    "live_order_placement"
+  ]
+}

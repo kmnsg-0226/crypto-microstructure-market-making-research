@@ -1,0 +1,21 @@
+{
+  "any_resolved_negative_incremental": false,
+  "any_resolved_positive_incremental": true,
+  "cells_clearing_one_way": 0,
+  "cells_clearing_round_trip": 0,
+  "cells_total": 486,
+  "cheapest_one_way_hurdle_bps": 1.0,
+  "classifications": {
+    "direction_p2_lightgbm": "short_continuation",
+    "direction_p2_logistic": "short_continuation",
+    "obi_l1": "short_continuation",
+    "obi_l10": "short_continuation",
+    "obi_l5": "short_continuation",
+    "sweep_dir_p4a": "short_continuation"
+  },
+  "max_break_even_all_in_cost_bps": 0.6930146981567182,
+  "medium_horizon_unresolvable": false,
+  "stable_positive_medium_horizon": false,
+  "verdict": "B",
+  "verdict_rule": "longer-horizon information survives but is marginal - a resolved, stable positive incremental edge after 5 s exists, but the gross edge stays below a 2 bp round trip (the cheapest hurdle in the grid taken as 1 bp per side)"
+}

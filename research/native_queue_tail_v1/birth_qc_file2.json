@@ -1,0 +1,21 @@
+{
+  "schema": "crypto-hft-queue-sensitivity-v1",
+  "raw_file": "BTCUSDT-LONDON-20260818T062918Z.chft.zst",
+  "file_index": 2,
+  "mode": "level_birth",
+  "placement_interval_ms": 1000,
+  "observation_window_ms": 30000,
+  "order_lots": 5,
+  "raw_records": 7184834,
+  "parse_failures": 0,
+  "crossed_book_states": 0,
+  "segments": 6,
+  "placements": 287811,
+  "emitted_rows": 7195275,
+  "mid_path_points": 144125,
+  "depth_events": 2185938,
+  "trade_events": 4998683,
+  "unexplained_removal_lots": 2138435280,
+  "trade_explained_removal_lots": 242388503,
+  "behind_attributed_removal_lots": 1951527279
+}

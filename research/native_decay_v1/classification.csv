@@ -1,0 +1,7 @@
+signal,classification,rule,resolved_positive_incremental_horizons_s,resolved_negative_incremental_horizons_s,stable_positive_medium_horizons_s,cumulative_resolved_at_or_below_pivot,raw_vs_demeaned_sign_flip
+obi_l1,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s","[10, 30, 60]",[],[],True,False
+obi_l5,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s","[10, 30, 60]",[],[],True,False
+obi_l10,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s","[10, 30, 60]",[],[],True,False
+direction_p2_logistic,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s","[10, 30, 60]",[],[],True,False
+direction_p2_lightgbm,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s","[10, 30, 60]",[],[],True,False
+sweep_dir_p4a,short_continuation,"the incremental edge after 5 s is resolved and positive at some h <= 60 s, and unresolved or negative at every h >= 120 s",[30],[],[],True,False

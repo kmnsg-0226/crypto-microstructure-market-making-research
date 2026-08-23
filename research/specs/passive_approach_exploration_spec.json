@@ -1,0 +1,167 @@
+{
+  "schema": "crypto-hft-passive-approach-exploration-v1",
+  "status": "declared_after_v1_results_before_multi_approach_sweep",
+  "experiment_id": "btc-tardis-passive-approach-exploration-2026-v1",
+  "audit": {
+    "repository_commit_before_exploration": "819b226d6a910ae18ddd6b16d9382f5219e055d8",
+    "maker_v1_spec": "research/specs/maker_research_spec_frozen.json",
+    "maker_v1_spec_sha256": "0cf5762dc08063529ab9bd0a1a23257d4fe6f32692bc02fae02b87b5d1d78101",
+    "alpha_spec_sha256": "011ea143ddf646b4ba482b0030a6e86d416a7692e16349daa1017543ef0a6f84",
+    "dataset_bundle_sha256": "e8ae8653d67ee23ffd66eb9d717bb040f645f7657e176e515354d2b7affdfed6",
+    "v1_result_seen": true,
+    "known_v1_finding": "predeclared_trend_direction_filter_worsened_maker_markout_and_empirical_conditional_direction_was_inverted"
+  },
+  "interpretation": {
+    "research_type": "broad_post_v1_exploration_not_a_new_unseen_holdout_test",
+    "june_already_seen": true,
+    "july_august_already_seen": true,
+    "may_not_call_june_or_july_august_new_unseen_validation": true,
+    "genuine_forward_test": "future_self_collected_native_Binance_data_after_new_rule_is_frozen",
+    "profitability_claim_allowed": false
+  },
+  "data": {
+    "development_for_ranking": [
+      "2026-01-01",
+      "2026-02-01",
+      "2026-03-01",
+      "2026-04-01",
+      "2026-05-01"
+    ],
+    "retrospective_replication": {
+      "june": ["2026-06-01"],
+      "historical_later_dates": ["2026-07-01", "2026-08-01"]
+    },
+    "frozen_probe_labels": "data/research/tardis/passive/YYYY-MM-DD/labeled_probes.parquet",
+    "recompute_fills": false,
+    "change_alpha_features": false
+  },
+  "primary_comparison": {
+    "queue_model": "pessimistic_visible_queue",
+    "quote_lifetime_ms": 1000,
+    "markout_horizon_ms": 1000,
+    "side_aggregation": "bid_and_ask_combined_with_side_results_retained",
+    "baseline": "always_quote",
+    "outcomes": [
+      "candidate_retention",
+      "full_fill_probability",
+      "labeled_fill_probability",
+      "maker_markout_mean_ticks",
+      "maker_markout_median_ticks",
+      "maker_markout_negative_probability",
+      "maker_markout_p05_ticks",
+      "maker_markout_p95_ticks",
+      "post_fill_mid_move_mean_ticks",
+      "gross_passive_edge_mean_bps"
+    ]
+  },
+  "thresholds": {
+    "existing_frozen_development_deciles": [
+      "obi_l1",
+      "obi_l5",
+      "obi_l10",
+      "weighted_obi_l10",
+      "weighted_mid_minus_mid_ticks",
+      "ti_1s"
+    ],
+    "development_only_descriptive_quantiles": [
+      "normalized_ofi_1s",
+      "combined_prediction_1s_ticks",
+      "queue_ahead_initial",
+      "spread_ticks"
+    ],
+    "quantiles": [0.2, 0.5, 0.8],
+    "maker_outcomes_used_to_fit_thresholds": false,
+    "threshold_artifact_must_be_written_before_sweep": true
+  },
+  "policy_families": {
+    "single_signal": {
+      "signals": [
+        "obi_l1",
+        "obi_l5",
+        "obi_l10",
+        "weighted_obi_l10",
+        "weighted_mid_minus_mid_ticks",
+        "normalized_ofi_1s",
+        "ti_1s",
+        "combined_prediction_1s_ticks"
+      ],
+      "rules_per_signal": [
+        "trend_tail20_bid_high_ask_low",
+        "contrarian_tail20_bid_low_ask_high",
+        "trend_half_bid_above_median_ask_below_median",
+        "contrarian_half_bid_below_median_ask_above_median",
+        "trend_broad80_exclude_opposite_tail",
+        "contrarian_broad80_exclude_opposite_tail",
+        "central60_quote_both_sides_only_in_middle_regime"
+      ]
+    },
+    "consensus": [
+      "obi_depth_majority_trend_tail",
+      "obi_depth_majority_contrarian_tail",
+      "obi_depth_majority_trend_half",
+      "obi_depth_majority_contrarian_half",
+      "micro_signal_majority_trend_tail",
+      "micro_signal_majority_contrarian_tail",
+      "micro_signal_majority_trend_half",
+      "micro_signal_majority_contrarian_half",
+      "prediction_and_obi_l5_joint_trend_tail",
+      "prediction_and_obi_l5_joint_contrarian_tail",
+      "prediction_and_obi_l5_joint_trend_broad",
+      "prediction_and_obi_l5_joint_contrarian_broad"
+    ],
+    "liquidity_and_time": [
+      "low_queue_ahead_bottom20",
+      "high_queue_ahead_top20",
+      "middle_queue_ahead_60",
+      "one_tick_spread",
+      "wider_than_one_tick_spread",
+      "utc_00_08",
+      "utc_08_16",
+      "utc_16_24"
+    ]
+  },
+  "development_ranking": {
+    "minimum_candidate_retention": 0.05,
+    "minimum_labeled_fills": 10000,
+    "sort_order": [
+      "number_of_development_days_with_positive_markout_improvement_desc",
+      "worst_development_day_markout_improvement_desc",
+      "pooled_development_mean_markout_improvement_desc",
+      "day_weighted_p05_improvement_desc",
+      "candidate_retention_desc",
+      "policy_name_asc"
+    ],
+    "shortlist_size": 10,
+    "shortlist_written_before_retrospective_replication": true,
+    "do_not_require_positive_absolute_edge_for_ranking": true
+  },
+  "shortlist_sensitivity": {
+    "quote_lifetimes_ms": [100, 500, 1000, 5000],
+    "markout_horizons_ms": [100, 500, 1000, 5000],
+    "queue_models": [
+      "pessimistic_visible_queue",
+      "optimistic_front_of_queue_upper_bound"
+    ],
+    "retain_bid_ask_combined_and_separate": true
+  },
+  "inference": {
+    "primary_robustness": "day_by_day_sign_and_worst_day_improvement",
+    "iid_t_statistics": false,
+    "v1_HAC_results_remain_reference": true,
+    "reason": "100ms_hypothetical_probes_overlap_heavily_and_only_five_development_days_exist"
+  },
+  "prohibited": [
+    "refit_frozen_alpha",
+    "modify_v1_fill_labels",
+    "claim_new_unseen_validation_on_already_seen_dates",
+    "select_rules_using_june_july_august",
+    "continuous_market_maker",
+    "inventory_process",
+    "portfolio_PnL",
+    "maker_Sharpe",
+    "queue_model_fitting",
+    "machine_learning_fill_model",
+    "live_order_placement",
+    "authenticated_trading"
+  ]
+}
